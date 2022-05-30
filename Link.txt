@@ -2,4 +2,6 @@ Hệ thống thu phí điện tử: https://luattrongtay.vn/ViewFullText/Id/2f3f
 Vehicle detection system using magnetic sensors: https://www.researchgate.net/publication/287944531_Vehicle_detection_system_using_magnetic_sensors
 https://www.bannerengineering.com/th/en/products/capabilities/vehicle-detection.html?pageNum=1&#all
 http://huyphuc.vn/sensor-khong-day-monnit/cam-bien-phat-hien-xe-va-dem-xe
+https://www.youtube.com/watch?v=GrC7Ywo_Dto
+
 ADC FPGA:
