@@ -56,14 +56,28 @@ div
             sen1 = 1;
             @(negedge clk);
             sen2 = 1;
+            @(negedge clk);
 
-        wait(done);
+            wait(done);
             //#(50*N);
             sen1 = 0;
             sen2 = 0;   
             #1000;         
         end
 
+        @(negedge clk);
+        divisor = 480;
+        dividend = 4000*3.6;
+        sen1 = 1;
+        @(negedge clk);
+        sen2 = 1;
+        @(negedge clk);
+
+        wait(done);
+        //#(50*N);
+        sen1 = 0;
+        sen2 = 0;   
+        #1000; 
         $stop;
     end
 endmodule
