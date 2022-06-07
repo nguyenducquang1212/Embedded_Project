@@ -7,6 +7,7 @@ module cotroller (
 	input            valid_Epass,
 	input            enable     ,
 	input      [1:0] num_veh    ,
+	input            done       ,
 	output reg       init       ,
 	output reg       count      ,
 	output reg       cal        ,
@@ -52,7 +53,6 @@ always @(*) begin
 	count = 0;
 	cal = 0;
 	up = 0;
-	down = 0;
 	en = 0;
 	dis = 0;
 	case (current_state)
@@ -62,7 +62,7 @@ always @(*) begin
 				next_state = COUNT_TIME;
 			end
 			else begin 
-				next_state = current_statel;
+				next_state = current_state;
 			end
 		end
 
@@ -85,20 +85,43 @@ always @(*) begin
 				dis = 1;
 			end
 
-			if (reg_sensor3 & (!sensor3)) begin
-				down = 1;
-			end
-
-			if (num_veh != 0) begin
-				en = 1;
-			end
-			else begin 
-				dis = 1;
-			end
+			// if (num_veh == 0) begin
+			// 	dis = 1;
+			// end
+			// else begin 
+			// 	en = 1;
+			// end
 			next_state = START;
 		end
 		default : next_state = current_state;
 	endcase
 end
+
+
+/**============================================
+ * 	          Update value for down
+ *=============================================*/
+always @(*) begin
+	if (reg_sensor3 & !sensor3) begin
+		down = 1;
+	end
+	else begin 
+		down = 0;
+	end
+end
+
+
+/**============================================
+ * 	          Update value for dis
+ *=============================================*/
+always @(*) begin
+	if (num_veh == 0) begin
+		dis = 1;
+	end
+	else begin 
+		en = 1;
+	end
+end
+
 
 endmodule
