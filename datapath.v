@@ -15,8 +15,8 @@ module datapath
 	input                        en         ,
 	input                        dis        ,
 	output reg [1:0]             num_veh    ,
-	output reg [WIDTH_SPEED-1:0] speed      ,
-	output reg                   done       ,
+	output     [WIDTH_SPEED-1:0] speed      ,
+	output                       done       ,
 	output reg                   en_barrier 
 );
 
@@ -65,17 +65,16 @@ end
 div 
 #( 
 	.N(WIDTH_SPEED)
-) 
-	div_DUT (
-		.clk     (clk    ),
-		.reset_n (reset_n),
-		.dividend(14400  ),
-		.divisor (time_ms),
-		.sen1    (init   ),
-		.sen2    (cal    ),
-		.Q       (speed  ),
-		.done    (done   )
-	)
+) div_DUT (
+	.clk     (clk                ),
+	.reset_n (reset_n            ),
+	.dividend(14'b11100001000000 ),	// 14400
+	.divisor ({5'b0, time_ms}    ),
+	.sen1    (init               ),
+	.sen2    (cal                ),
+	.Q       (speed              ),
+	.done    (done               )
+);
 
 
 /**============================================
@@ -89,9 +88,6 @@ always @(posedge clk or negedge reset_n) begin
 			en_barrier <= 1;
 		end
 		else if (dis) begin
-			en_barrier <= 0;
-		end
-		else begin 
 			en_barrier <= 0;
 		end
 	end
@@ -110,7 +106,7 @@ always @(posedge clk or negedge reset_n) begin
 				num_veh <= num_veh + 1;
 			end
 			2'b01: begin 
-				num_veh <= num_veh -1 ;
+				num_veh <= num_veh - 1 ;
 			end
 			default : num_veh <= num_veh;
 		endcase
