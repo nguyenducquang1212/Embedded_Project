@@ -5,16 +5,16 @@ module non_stop_ETC
 	parameter WIDTH_SPEED = 14
 )
 (
-	input                        clk        ,
-	input                        reset_n    ,
-	input                        sensor1    ,
-	input                        sensor2    ,
-	input                        sensor3    ,
-	input                        valid_Epass,
-	input                        enable     ,
-	output reg [WIDTH_SPEED-1:0] speed      ,
-	output reg                   done       ,
-	output reg                   en_barrier 
+	input                     clk        ,
+	input                     reset_n    ,
+	input                     sensor1    ,
+	input                     sensor2    ,
+	input                     sensor3    ,
+	input                     valid_Epass,
+	input                     enable     ,
+	output  [WIDTH_SPEED-1:0] speed      ,
+	output                    done       ,
+	output                    barrier    
 );
 
 
@@ -26,7 +26,7 @@ wire       up         ;
 wire       down       ;
 wire       en         ;
 wire       dis        ;
-wire       num_veh    ;
+wire       en_barrier ;
 
 
 cotroller cotroller_DUT (
@@ -38,6 +38,7 @@ cotroller cotroller_DUT (
 	.valid_Epass(valid_Epass),
 	.enable     (enable     ),
 	.num_veh    (num_veh    ),
+	.done       (done       ),
 	.init       (init       ),
 	.count      (count      ),
 	.cal        (cal        ),
@@ -47,13 +48,12 @@ cotroller cotroller_DUT (
 	.dis        (dis        )
 );
 
-datapath datapath_DUT
+datapath 
 #(
 	.WIDTH_TIK   (WIDTH_TIK   ),
 	.WIDTH_MS    (WIDTH_MS    ),
 	.WIDTH_SPEED (WIDTH_SPEED )
-)
-(
+) datapath_DUT (
 	.clk        (clk        ),
 	.reset_n    (reset_n    ),
 	.init       (init       ),
@@ -68,5 +68,7 @@ datapath datapath_DUT
 	.done       (done       ),
 	.en_barrier (en_barrier )
 );
+
+assign barrier = enable ? 1'b1 : en_barrier;
 
 endmodule
