@@ -52,7 +52,10 @@ always @(posedge clk or negedge reset_n) begin
 	if(~reset_n) begin
 		time_ms <= 0;
 	end else begin
-		if (time_tik == 49999) begin
+		if (init) begin
+			time_ms <= 0;
+		end
+		else if (time_tik == 49999) begin
 			time_ms <= time_ms + 1;
 		end
 	end
