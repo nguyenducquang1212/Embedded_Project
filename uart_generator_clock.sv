@@ -1,16 +1,5 @@
-//-----------------------------------------------------------------------------------------------------------
-//    Copyright (C) 2021 by Dolphin Technology
-//    All right reserved.
-//
-//    Copyright Notification
-//    No part may be reproduced except as authorized by written permission.
-//
-//    Module: uart_protocol.uart_generator_clock.sv
-//    Company: Dolphin Technology
-//    Author: lampn0
-//    Date: 08:26:49 08/01/22
-//-----------------------------------------------------------------------------------------------------------
-module uart_generator_clock #(
+module uart_generator_clock 
+#(
   parameter SYS_FREQ  = 100000000,
   parameter BAUD_RATE = 9600,
   parameter CLOCK     = SYS_FREQ/BAUD_RATE,

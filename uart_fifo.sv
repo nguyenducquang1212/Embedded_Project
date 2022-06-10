@@ -1,16 +1,5 @@
-//-----------------------------------------------------------------------------------------------------------
-//    Copyright (C) 2021 by Dolphin Technology
-//    All right reserved.
-//
-//    Copyright Notification
-//    No part may be reproduced except as authorized by written permission.
-//
-//    Module: uart_protocol.uart_fifo.sv
-//    Company: Dolphin Technology
-//    Author: lampn0
-//    Date: 08:26:49 01/08/22
-//-----------------------------------------------------------------------------------------------------------
-module uart_fifo #(
+module uart_fifo 
+#(
   parameter DATA_SIZE   = 8,
             SIZE_FIFO   = 8,
             ADDR_WIDTH  = $clog2(SIZE_FIFO)
