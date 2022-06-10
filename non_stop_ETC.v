@@ -71,4 +71,63 @@ datapath
 
 assign barrier = enable ? 1'b1 : en_barrier;
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                           UART
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+parameter DATA_SIZE       = WIDTH_SPEED,
+          SIZE_FIFO       = 8,
+          BIT_COUNT_SIZE  = $clog2(DATA_SIZE+3),
+          SYS_FREQ        = 50000000,
+          BAUD_RATE       = 11500,
+          CLOCK           = SYS_FREQ/BAUD_RATE,
+          SAMPLE          = 16,
+          BAUD_DVSR       = SYS_FREQ/(SAMPLE*BAUD_RATE);
+
+
+wire                     clock     ;
+wire                     sample_clk;
+wire [DATA_SIZE - 1 : 0] tx_data_in;
+wire                     tx_done;
+wire                     tx_full;
+wire                     tx_empty;
+
+
+// -------------------------------------------------------------
+// Generator Clock
+// -------------------------------------------------------------
+uart_generator_clock #(SYS_FREQ,BAUD_RATE,CLOCK,SAMPLE,BAUD_DVSR)
+uart_generator_clock (
+  .clk       (clk       ),
+  .reset_n   (reset_n   ),
+  .clock     (clock     ),
+  .sample_clk(sample_clk)
+  );
+
+uart_transmitter #(
+  .DATA_SIZE (DATA_SIZE))
+uart_transmitter(
+  .clk            (clock          ),
+  .reset_n        (reset_n        ),
+  .tx_start_n     (tx_empty     ),
+  .data_in        (tx_data_in     ),
+  .serial_data_out(serial_data_out),
+  .tx_done        (tx_done        )
+  );
+
+uart_fifo #(
+  .DATA_SIZE (WIDTH_SPEED),
+  .SIZE_FIFO (SIZE_FIFO))
+uart_fifo_transmitter(
+  .clk     (clk         ),
+  .reset_n (reset_n     ),
+  .data_in (speed ),
+  .data_out(tx_data_in  ),
+  .write   (done  ),
+  .read    (tx_done     ),
+  .full    (tx_full     ),
+  .empty   (tx_empty    )
+  );
+
+
 endmodule
