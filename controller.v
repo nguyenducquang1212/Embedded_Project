@@ -17,9 +17,9 @@ module cotroller (
 	output reg       dis        
 );
 
-localparam START = 2'b00     ,
+localparam START      = 2'b00,
 		   COUNT_TIME = 2'b01,
-		   CALC = 2'b10      ;
+		   CALC       = 2'b10;
 
 reg       reg_sensor3;		// reg_sensor3 is a register stores the value of sensor3
 reg [1:0] next_state, current_state;
