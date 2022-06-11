@@ -17,7 +17,10 @@ reg                    enable     ;
 // wire                   done       ;
 wire                   serial_data_out    ;
 
-top DUT (
+top  
+#(
+	.SYS_FREQ(50000000)
+) DUT (
 	.clk        (clk        ),
 	.reset_n    (reset_n    ),
 	.sensor1    (sensor1    ),
