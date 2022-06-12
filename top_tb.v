@@ -6,15 +6,16 @@ module top_tb #(
 	parameter WIDTH_SPEED = 14
 )();
 
-reg                    clk        ;
-reg                    reset_n    ;
-reg                    sensor1    ;
-reg                    sensor2    ;
-reg                    sensor3    ;
-reg                    valid_Epass;
-reg                    enable     ;
+reg                    clk           ;
+reg                    reset_n       ;
+reg                    sensor1       ;
+reg                    sensor2       ;
+reg                    sensor3       ;
+reg                    valid_Epass   ;
+reg                    enable        ;
 // wire [WIDTH_SPEED-1:0] speed      ;
 // wire                   done       ;
+wire                   barrier       ;
 wire                   serial_data_out    ;
 
 top  
@@ -28,9 +29,7 @@ top
 	.sensor3    (sensor3    ),
 	.valid_Epass(valid_Epass),
 	.enable     (enable     ),
-	// .speed      (speed      ),
-	// .done       (done       ),
-	// .barrier    (barrier    )
+	.barrier    (barrier    ),
 	.serial_data_out(serial_data_out)
 );
 
