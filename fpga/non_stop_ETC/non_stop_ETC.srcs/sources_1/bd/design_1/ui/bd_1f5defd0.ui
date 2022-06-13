@@ -1,0 +1,32 @@
+{
+   ExpandedHierarchyInLayout: "",
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 TLS
+#  -string -flagsOSRD
+preplace port enable -pg 1 -y 230 -defaultsOSRD
+preplace port sensor1 -pg 1 -y 150 -defaultsOSRD
+preplace port valid_Epass -pg 1 -y 210 -defaultsOSRD
+preplace port sensor2 -pg 1 -y 170 -defaultsOSRD
+preplace port sensor3 -pg 1 -y 190 -defaultsOSRD
+preplace port serial_data_out -pg 1 -y 180 -defaultsOSRD
+preplace port reset_n -pg 1 -y 20 -defaultsOSRD
+preplace port clk -pg 1 -y 90 -defaultsOSRD
+preplace port barrier -pg 1 -y 160 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -y 80 -defaultsOSRD
+preplace inst top_0 -pg 1 -lvl 2 -y 170 -defaultsOSRD
+preplace netloc sensor2_1 1 0 2 NJ 170 NJ
+preplace netloc top_0_barrier 1 2 1 NJ
+preplace netloc sensor1_1 1 0 2 NJ 150 NJ
+preplace netloc sensor3_1 1 0 2 NJ 190 NJ
+preplace netloc clk_in1_0_1 1 0 1 NJ
+preplace netloc clk_wiz_0_clk_out1 1 1 1 220
+preplace netloc top_0_serial_data_out 1 2 1 NJ
+preplace netloc enable_1 1 0 2 NJ 230 NJ
+preplace netloc valid_Epass_1 1 0 2 NJ 210 NJ
+preplace netloc reset_n_1 1 0 2 20 10 230J
+levelinfo -pg 1 0 120 380 550 -top 0 -bot 290
+",
+}
+{
+   da_board_cnt: "1",
+   da_clkrst_cnt: "1",
+}
