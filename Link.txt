@@ -5,4 +5,5 @@ http://huyphuc.vn/sensor-khong-day-monnit/cam-bien-phat-hien-xe-va-dem-xe
 https://www.youtube.com/watch?v=GrC7Ywo_Dto
 https://vinfastauto.com/vn_vi/cac-loi-chu-xe-can-tranh-khi-qua-tram-thu-phi#:~:text=Khi%20qua%20tr%E1%BA%A1m%20thu%20ph%C3%AD%20ETC%2C%20c%C3%A1c%20t%C3%A0i%20x%E1%BA%BF%20c%C5%A9ng,th%C3%B4ng%20v%C3%A0%20tr%E1%BA%A1ng%20th%C3%A1i%20Barrie.
 
-ADC FPGA:
+Quartus:
+https://www.youtube.com/watch?v=6be0HmsQQHE
