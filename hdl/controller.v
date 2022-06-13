@@ -4,7 +4,7 @@ module cotroller (
 	input            sensor1    ,
 	input            sensor2    ,
 	input            sensor3    ,
-	input            valid_Epass,
+	input      [1:0] valid_Epass,
 	input            enable     ,
 	input      [1:0] num_veh    ,
 	input            done       ,
@@ -85,21 +85,20 @@ always @(*) begin
 		end
 
 		CALC: begin 
-			cal = 1;
-			if (valid_Epass) begin
-				up = 1;
+			if (valid_Epass == 2'b00 || valid_Epass == 2'b11) begin
+				next_state = CALC;
 			end
-			else begin 
-				dis = 1;
-			end
+			else begin
+				cal = 1;
+				if (valid_Epass == 2'b10) begin
+					up = 1;
+				end
+				else if (valid_Epass == 2'b01) begin 
+					dis = 1;
+				end
 
-			// if (num_veh == 0) begin
-			// 	dis = 1;
-			// end
-			// else begin 
-			// 	en = 1;
-			// end
-			next_state = START;
+				next_state = START;
+			end
 		end
 		default : next_state = current_state;
 	endcase
@@ -118,18 +117,6 @@ always @(*) begin
 	end
 end
 
-
-/**============================================
- * 	          Update value for dis
- *=============================================*/
-// always @(*) begin
-// 	if (num_veh == 0) begin
-// 		dis = 1;
-// 	end
-// 	else begin 
-// 		en = 1;
-// 	end
-// end
 
 
 endmodule

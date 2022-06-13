@@ -17,11 +17,18 @@ module top
 	input                     sensor1        ,
 	input                     sensor2        ,
 	input                     sensor3        ,
-	input                     valid_Epass    ,
+	input        [1:0]        valid_Epass    ,
 	input                     enable         ,
+	output                    led1           ,
+	output                    led2           ,
+	output                    led3           ,
 	output                    barrier        ,
 	output                    serial_data_out
 );
+
+assign led1 = sensor1;
+assign led2 = sensor2;
+assign led3 = sensor3;
 
 // -------------------------------------------------------------
 //                non_stop_ETC
