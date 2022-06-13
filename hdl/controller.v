@@ -55,13 +55,6 @@ always @(*) begin
 	up = 0;
 	en = 0;
 	dis = 0;
-	
-	if (num_veh == 0) begin
-		dis = 1;
-	end
-	else begin 
-		en = 1;
-	end
 
 	case (current_state)
 		START: begin 
@@ -85,23 +78,30 @@ always @(*) begin
 		end
 
 		CALC: begin 
+			cal = 1;
 			if (valid_Epass == 2'b00 || valid_Epass == 2'b11) begin
 				next_state = CALC;
 			end
 			else begin
-				cal = 1;
 				if (valid_Epass == 2'b10) begin
 					up = 1;
 				end
 				else if (valid_Epass == 2'b01) begin 
 					dis = 1;
 				end
-
 				next_state = START;
 			end
 		end
 		default : next_state = current_state;
 	endcase
+	
+	if (num_veh == 0) begin
+		dis = 1;
+	end
+	else begin 
+		en = 1;
+	end
+
 end
 
 
