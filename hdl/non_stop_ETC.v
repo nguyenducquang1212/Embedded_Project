@@ -1,8 +1,9 @@
 module non_stop_ETC 
 #(
-	parameter WIDTH_TIK   = 16,
-	parameter WIDTH_MS    =  9,
-	parameter WIDTH_SPEED = 14
+	parameter WIDTH_TIK   = 16      ,
+	parameter WIDTH_MS    =  9      ,
+	parameter WIDTH_SPEED = 14      ,
+	parameter SYS_FREQ    = 50000000
 )
 (
 	input                     clk        ,

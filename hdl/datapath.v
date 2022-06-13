@@ -1,8 +1,9 @@
 module datapath 
 #(
-	parameter WIDTH_TIK   = 16,
-	parameter WIDTH_MS    =  9,
-	parameter WIDTH_SPEED = 14
+	parameter WIDTH_TIK   = 16      ,
+	parameter WIDTH_MS    =  9      ,
+	parameter WIDTH_SPEED = 14      ,
+	parameter SYS_FREQ    = 50000000
 )
 (
 	input                        clk        ,    
@@ -31,7 +32,7 @@ always @(posedge clk or negedge reset_n) begin
 	if(~reset_n) begin
 		time_tik <= 0;
 	end 
-	else if (time_tik == 49999) begin // 50M/1000 - 1
+	else if (time_tik == (SYS_FREQ/1000 - 1)) begin // 50M/1000 - 1
 		time_tik <= 0;
 	end
 	else begin
@@ -55,7 +56,7 @@ always @(posedge clk or negedge reset_n) begin
 		if (init) begin
 			time_ms <= 0;
 		end
-		else if (time_tik == 49999) begin
+		else if (time_tik == (SYS_FREQ/1000 - 1)) begin
 			time_ms <= time_ms + 1;
 		end
 	end

@@ -55,6 +55,14 @@ always @(*) begin
 	up = 0;
 	en = 0;
 	dis = 0;
+	
+	if (num_veh == 0) begin
+		dis = 1;
+	end
+	else begin 
+		en = 1;
+	end
+
 	case (current_state)
 		START: begin 
 			init = 1;
@@ -114,14 +122,14 @@ end
 /**============================================
  * 	          Update value for dis
  *=============================================*/
-always @(*) begin
-	if (num_veh == 0) begin
-		dis = 1;
-	end
-	else begin 
-		en = 1;
-	end
-end
+// always @(*) begin
+// 	if (num_veh == 0) begin
+// 		dis = 1;
+// 	end
+// 	else begin 
+// 		en = 1;
+// 	end
+// end
 
 
 endmodule

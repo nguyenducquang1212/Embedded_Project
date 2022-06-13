@@ -1,12 +1,11 @@
 module top 
 #(
-	parameter WIDTH_TIK       = 16                ,
-	parameter WIDTH_MS        = 9                 ,
-	parameter WIDTH_SPEED     = 14                ,
-	parameter DATA_SIZE       = 8                 ,
+  parameter WIDTH_TIK       = 16                ,
+  parameter WIDTH_MS        = 9                 ,
+  parameter WIDTH_SPEED     = 14                ,
+  parameter DATA_SIZE       = 8                 ,
   parameter SIZE_FIFO       = 8                 ,
-  // parameter SYS_FREQ        = 50000000          ,
-  parameter SYS_FREQ        = 500000          ,
+  parameter SYS_FREQ        = 50000000          ,
   parameter BAUD_RATE       = 11500             ,
   parameter CLOCK           = SYS_FREQ/BAUD_RATE,
   parameter SAMPLE          = 16                ,
@@ -20,6 +19,7 @@ module top
 	input                     sensor3        ,
 	input                     valid_Epass    ,
 	input                     enable         ,
+	output                    barrier        ,
 	output                    serial_data_out
 );
 
@@ -28,7 +28,6 @@ module top
 // -------------------------------------------------------------
 wire  [WIDTH_SPEED-1:0] speed  ;
 wire                    done   ;
-wire                    barrier;
 
 non_stop_ETC #(
 	.WIDTH_TIK  (WIDTH_TIK  ),
