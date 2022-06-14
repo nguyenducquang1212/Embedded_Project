@@ -1,7 +1,7 @@
 module datapath 
 #(
 	parameter WIDTH_TIK   = 16      ,
-	parameter WIDTH_MS    = 10      ,
+	parameter WIDTH_MS    = 14      ,
 	parameter WIDTH_SPEED = 14      ,
 	parameter SYS_FREQ    = 50000000
 )
@@ -73,7 +73,7 @@ div
 	.clk     (clk                ),
 	.reset_n (reset_n            ),
 	.dividend(14'b11100001000000 ),	// 14400
-	.divisor ({5'b0, time_ms}    ),
+	.divisor (time_ms            ),
 	.sen1    (init               ),
 	.sen2    (cal                ),
 	.Q       (speed              ),

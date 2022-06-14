@@ -1,7 +1,7 @@
 module top 
 #(
   parameter WIDTH_TIK       = 16                ,
-  parameter WIDTH_MS        = 9                 ,
+  parameter WIDTH_MS        = 14                ,
   parameter WIDTH_SPEED     = 14                ,
   parameter DATA_SIZE       = 8                 ,
   parameter SIZE_FIFO       = 8                 ,
