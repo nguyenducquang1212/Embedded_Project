@@ -61,6 +61,9 @@ module design_1_top_0_0 (
   sensor3,
   valid_Epass,
   enable,
+  led1,
+  led2,
+  led3,
   barrier,
   serial_data_out
 );
@@ -74,8 +77,11 @@ input wire reset_n;
 input wire sensor1;
 input wire sensor2;
 input wire sensor3;
-input wire valid_Epass;
+input wire [1 : 0] valid_Epass;
 input wire enable;
+output wire led1;
+output wire led2;
+output wire led3;
 output wire barrier;
 output wire serial_data_out;
 
@@ -98,6 +104,9 @@ output wire serial_data_out;
     .sensor3(sensor3),
     .valid_Epass(valid_Epass),
     .enable(enable),
+    .led1(led1),
+    .led2(led2),
+    .led3(led3),
     .barrier(barrier),
     .serial_data_out(serial_data_out)
   );

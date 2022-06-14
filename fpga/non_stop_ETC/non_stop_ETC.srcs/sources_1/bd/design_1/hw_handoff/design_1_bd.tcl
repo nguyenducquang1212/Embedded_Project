@@ -166,30 +166,27 @@ proc create_root_design { parentCell } {
 
   # Create ports
   set barrier [ create_bd_port -dir O barrier ]
+  set clk [ create_bd_port -dir I -type clk clk ]
   set enable [ create_bd_port -dir I enable ]
+  set led1 [ create_bd_port -dir O led1 ]
+  set led2 [ create_bd_port -dir O led2 ]
+  set led3 [ create_bd_port -dir O led3 ]
   set reset_n [ create_bd_port -dir I -type rst reset_n ]
   set sensor1 [ create_bd_port -dir I sensor1 ]
   set sensor2 [ create_bd_port -dir I sensor2 ]
   set sensor3 [ create_bd_port -dir I sensor3 ]
   set serial_data_out [ create_bd_port -dir O serial_data_out ]
-  set sys_clock [ create_bd_port -dir I -type clk sys_clock ]
-  set_property -dict [ list \
-   CONFIG.FREQ_HZ {100000000} \
-   CONFIG.PHASE {0.000} \
- ] $sys_clock
-  set valid_Epass [ create_bd_port -dir I valid_Epass ]
+  set valid_Epass [ create_bd_port -dir I -from 1 -to 0 valid_Epass ]
 
   # Create instance: clk_wiz_0, and set properties
   set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0 ]
   set_property -dict [ list \
    CONFIG.CLKOUT1_JITTER {151.636} \
    CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {50.000} \
-   CONFIG.CLK_IN1_BOARD_INTERFACE {sys_clock} \
    CONFIG.MMCM_CLKOUT0_DIVIDE_F {20.000} \
    CONFIG.MMCM_DIVCLK_DIVIDE {1} \
    CONFIG.RESET_PORT {resetn} \
    CONFIG.RESET_TYPE {ACTIVE_LOW} \
-   CONFIG.USE_BOARD_FLOW {true} \
  ] $clk_wiz_0
 
   # Create instance: top_0, and set properties
@@ -204,14 +201,17 @@ proc create_root_design { parentCell } {
    }
   
   # Create port connections
+  connect_bd_net -net clk_in1_0_1 [get_bd_ports clk] [get_bd_pins clk_wiz_0/clk_in1]
   connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins top_0/clk]
   connect_bd_net -net enable_1 [get_bd_ports enable] [get_bd_pins top_0/enable]
   connect_bd_net -net reset_n_1 [get_bd_ports reset_n] [get_bd_pins clk_wiz_0/resetn] [get_bd_pins top_0/reset_n]
   connect_bd_net -net sensor1_1 [get_bd_ports sensor1] [get_bd_pins top_0/sensor1]
   connect_bd_net -net sensor2_1 [get_bd_ports sensor2] [get_bd_pins top_0/sensor2]
   connect_bd_net -net sensor3_1 [get_bd_ports sensor3] [get_bd_pins top_0/sensor3]
-  connect_bd_net -net sys_clock_1 [get_bd_ports sys_clock] [get_bd_pins clk_wiz_0/clk_in1]
   connect_bd_net -net top_0_barrier [get_bd_ports barrier] [get_bd_pins top_0/barrier]
+  connect_bd_net -net top_0_led1 [get_bd_ports led1] [get_bd_pins top_0/led1]
+  connect_bd_net -net top_0_led2 [get_bd_ports led2] [get_bd_pins top_0/led2]
+  connect_bd_net -net top_0_led3 [get_bd_ports led3] [get_bd_pins top_0/led3]
   connect_bd_net -net top_0_serial_data_out [get_bd_ports serial_data_out] [get_bd_pins top_0/serial_data_out]
   connect_bd_net -net valid_Epass_1 [get_bd_ports valid_Epass] [get_bd_pins top_0/valid_Epass]
 

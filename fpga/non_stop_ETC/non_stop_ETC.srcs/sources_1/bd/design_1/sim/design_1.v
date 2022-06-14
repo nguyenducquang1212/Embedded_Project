@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
-//Date        : Mon Jun 13 15:06:39 2022
+//Date        : Tue Jun 14 09:43:23 2022
 //Host        : dt25-linux running 64-bit CentOS Linux release 7.9.2009 (Core)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -14,6 +14,9 @@ module design_1
    (barrier,
     clk,
     enable,
+    led1,
+    led2,
+    led3,
     reset_n,
     sensor1,
     sensor2,
@@ -23,12 +26,15 @@ module design_1
   output barrier;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK, CLK_DOMAIN design_1_clk_in1_0, FREQ_HZ 100000000, PHASE 0.000" *) input clk;
   input enable;
+  output led1;
+  output led2;
+  output led3;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RESET_N RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RESET_N, POLARITY ACTIVE_LOW" *) input reset_n;
   input sensor1;
   input sensor2;
   input sensor3;
   output serial_data_out;
-  input valid_Epass;
+  input [1:0]valid_Epass;
 
   wire clk_in1_0_1;
   wire clk_wiz_0_clk_out1;
@@ -38,18 +44,24 @@ module design_1
   wire sensor2_1;
   wire sensor3_1;
   wire top_0_barrier;
+  wire top_0_led1;
+  wire top_0_led2;
+  wire top_0_led3;
   wire top_0_serial_data_out;
-  wire valid_Epass_1;
+  wire [1:0]valid_Epass_1;
 
   assign barrier = top_0_barrier;
   assign clk_in1_0_1 = clk;
   assign enable_1 = enable;
+  assign led1 = top_0_led1;
+  assign led2 = top_0_led2;
+  assign led3 = top_0_led3;
   assign reset_n_1 = reset_n;
   assign sensor1_1 = sensor1;
   assign sensor2_1 = sensor2;
   assign sensor3_1 = sensor3;
   assign serial_data_out = top_0_serial_data_out;
-  assign valid_Epass_1 = valid_Epass;
+  assign valid_Epass_1 = valid_Epass[1:0];
   design_1_clk_wiz_0_0 clk_wiz_0
        (.clk_in1(clk_in1_0_1),
         .clk_out1(clk_wiz_0_clk_out1),
@@ -58,6 +70,9 @@ module design_1
        (.barrier(top_0_barrier),
         .clk(clk_wiz_0_clk_out1),
         .enable(enable_1),
+        .led1(top_0_led1),
+        .led2(top_0_led2),
+        .led3(top_0_led3),
         .reset_n(reset_n_1),
         .sensor1(sensor1_1),
         .sensor2(sensor2_1),

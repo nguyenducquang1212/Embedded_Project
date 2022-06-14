@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jun 13 00:02:21 2022" VIVADOVERSION="2018.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jun 14 09:43:25 2022" VIVADOVERSION="2018.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="em.avnet.com:zed:part0:1.4" DEVICE="7z020" NAME="design_1" PACKAGE="clg484" SPEEDGRADE="-1"/>
 
@@ -8,11 +8,6 @@
       <CONNECTIONS>
         <CONNECTION INSTANCE="clk_wiz_0" PORT="resetn"/>
         <CONNECTION INSTANCE="top_0" PORT="reset_n"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="sys_clock" SIGIS="clk" SIGNAME="External_Ports_sys_clock">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_in1"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="sensor1" SIGIS="undef" SIGNAME="External_Ports_sensor1">
@@ -30,11 +25,6 @@
         <CONNECTION INSTANCE="top_0" PORT="sensor3"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="valid_Epass" SIGIS="undef" SIGNAME="External_Ports_valid_Epass">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="top_0" PORT="valid_Epass"/>
-      </CONNECTIONS>
-    </PORT>
     <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="External_Ports_enable">
       <CONNECTIONS>
         <CONNECTION INSTANCE="top_0" PORT="enable"/>
@@ -48,6 +38,31 @@
     <PORT DIR="O" NAME="serial_data_out" SIGIS="undef" SIGNAME="top_0_serial_data_out">
       <CONNECTIONS>
         <CONNECTION INSTANCE="top_0" PORT="serial_data_out"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_in1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="1" NAME="valid_Epass" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_valid_Epass">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="top_0" PORT="valid_Epass"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="led1" SIGIS="undef" SIGNAME="top_0_led1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="top_0" PORT="led1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="led2" SIGIS="undef" SIGNAME="top_0_led2">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="top_0" PORT="led2"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="led3" SIGIS="undef" SIGNAME="top_0_led3">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="top_0" PORT="led3"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -592,8 +607,8 @@
         <PARAMETER NAME="CLKOUT5_SEQUENCE_NUMBER" VALUE="1"/>
         <PARAMETER NAME="CLKOUT6_SEQUENCE_NUMBER" VALUE="1"/>
         <PARAMETER NAME="CLKOUT7_SEQUENCE_NUMBER" VALUE="1"/>
-        <PARAMETER NAME="USE_BOARD_FLOW" VALUE="true"/>
-        <PARAMETER NAME="CLK_IN1_BOARD_INTERFACE" VALUE="sys_clock"/>
+        <PARAMETER NAME="USE_BOARD_FLOW" VALUE="false"/>
+        <PARAMETER NAME="CLK_IN1_BOARD_INTERFACE" VALUE="Custom"/>
         <PARAMETER NAME="CLK_IN2_BOARD_INTERFACE" VALUE="Custom"/>
         <PARAMETER NAME="DIFF_CLK_IN1_BOARD_INTERFACE" VALUE="Custom"/>
         <PARAMETER NAME="DIFF_CLK_IN2_BOARD_INTERFACE" VALUE="Custom"/>
@@ -630,9 +645,9 @@
             <CONNECTION INSTANCE="External_Ports" PORT="reset_n"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk_in1" SIGIS="clk" SIGNAME="External_Ports_sys_clock">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk_in1" SIGIS="clk" SIGNAME="External_Ports_clk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="sys_clock"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="50000000" DIR="O" NAME="clk_out1" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
@@ -686,7 +701,7 @@
             <CONNECTION INSTANCE="External_Ports" PORT="sensor3"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="valid_Epass" SIGIS="undef" SIGNAME="External_Ports_valid_Epass">
+        <PORT DIR="I" LEFT="1" NAME="valid_Epass" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_valid_Epass">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="valid_Epass"/>
           </CONNECTIONS>
@@ -694,6 +709,21 @@
         <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="External_Ports_enable">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="led1" SIGIS="undef" SIGNAME="top_0_led1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="led1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="led2" SIGIS="undef" SIGNAME="top_0_led2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="led2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="led3" SIGIS="undef" SIGNAME="top_0_led3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="led3"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="barrier" SIGIS="undef" SIGNAME="top_0_barrier">

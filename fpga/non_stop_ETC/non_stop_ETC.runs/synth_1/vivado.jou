@@ -2,8 +2,8 @@
 # Vivado v2018.1 (64-bit)
 # SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
 # IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
-# Start of session at: Mon Jun 13 15:07:31 2022
-# Process ID: 42128
+# Start of session at: Tue Jun 14 10:19:19 2022
+# Process ID: 17266
 # Current directory: /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.runs/synth_1
 # Command line: vivado -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
 # Log file: /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.runs/synth_1/top.vds
