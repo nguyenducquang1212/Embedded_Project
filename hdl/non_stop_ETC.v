@@ -1,7 +1,7 @@
 module non_stop_ETC 
 #(
 	parameter WIDTH_TIK   = 16      ,
-	parameter WIDTH_MS    =  9      ,
+	parameter WIDTH_MS    = 14      ,
 	parameter WIDTH_SPEED = 14      ,
 	parameter SYS_FREQ    = 50000000
 )
@@ -11,7 +11,7 @@ module non_stop_ETC
 	input                     sensor1    ,
 	input                     sensor2    ,
 	input                     sensor3    ,
-	input                     valid_Epass,
+	input        [1:0]        valid_Epass,
 	input                     enable     ,
 	output  [WIDTH_SPEED-1:0] speed      ,
 	output                    done       ,
