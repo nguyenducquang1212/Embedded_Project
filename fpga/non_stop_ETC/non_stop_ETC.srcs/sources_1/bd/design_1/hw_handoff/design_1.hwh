@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jun 14 09:43:25 2022" VIVADOVERSION="2018.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Jun 15 22:06:03 2022" VIVADOVERSION="2018.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="em.avnet.com:zed:part0:1.4" DEVICE="7z020" NAME="design_1" PACKAGE="clg484" SPEEDGRADE="-1"/>
 
@@ -63,6 +63,21 @@
     <PORT DIR="O" NAME="led3" SIGIS="undef" SIGNAME="top_0_led3">
       <CONNECTIONS>
         <CONNECTION INSTANCE="top_0" PORT="led3"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="led4" SIGIS="undef" SIGNAME="top_0_led4">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="top_0" PORT="led4"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="led5" SIGIS="undef" SIGNAME="top_0_led5">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="top_0" PORT="led5"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="led6" SIGIS="undef" SIGNAME="top_0_led6">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="top_0" PORT="led6"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -663,15 +678,14 @@
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="WIDTH_TIK" VALUE="16"/>
-        <PARAMETER NAME="WIDTH_MS" VALUE="9"/>
+        <PARAMETER NAME="WIDTH_MS" VALUE="14"/>
         <PARAMETER NAME="WIDTH_SPEED" VALUE="14"/>
         <PARAMETER NAME="DATA_SIZE" VALUE="8"/>
         <PARAMETER NAME="SIZE_FIFO" VALUE="8"/>
         <PARAMETER NAME="SYS_FREQ" VALUE="50000000"/>
-        <PARAMETER NAME="BAUD_RATE" VALUE="11500"/>
-        <PARAMETER NAME="CLOCK" VALUE="4347"/>
+        <PARAMETER NAME="BAUD_RATE" VALUE="9600"/>
         <PARAMETER NAME="SAMPLE" VALUE="16"/>
-        <PARAMETER NAME="BAUD_DVSR" VALUE="271"/>
+        <PARAMETER NAME="BAUD_DVSR" VALUE="325"/>
         <PARAMETER NAME="Component_Name" VALUE="design_1_top_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -724,6 +738,21 @@
         <PORT DIR="O" NAME="led3" SIGIS="undef" SIGNAME="top_0_led3">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="led3"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="led4" SIGIS="undef" SIGNAME="top_0_led4">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="led4"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="led5" SIGIS="undef" SIGNAME="top_0_led5">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="led5"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="led6" SIGIS="undef" SIGNAME="top_0_led6">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="led6"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="barrier" SIGIS="undef" SIGNAME="top_0_barrier">

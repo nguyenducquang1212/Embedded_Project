@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0x69B772EAC14771BF" bd:device="xc7z020clg484-1" bd:isValidated="true" bd:synthFlowMode="None" bd:tool_version="2018.1" bd:top="design_1" bd:version="1.00.a">
+<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0xF6F22AD05FEC6084" bd:device="xc7z020clg484-1" bd:isValidated="true" bd:synthFlowMode="None" bd:tool_version="2018.1" bd:top="design_1" bd:version="1.00.a">
 
   <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
     <spirit:vendor>xilinx.com</spirit:vendor>
@@ -175,6 +175,24 @@
             <spirit:direction>out</spirit:direction>
           </spirit:wire>
         </spirit:port>
+        <spirit:port>
+          <spirit:name>led4</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>led5</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>led6</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
       </spirit:ports>
     </spirit:model>
   </spirit:component>
@@ -276,6 +294,21 @@
         <spirit:name>top_0_led3</spirit:name>
         <spirit:internalPortReference spirit:componentRef="top_0" spirit:portRef="led3"/>
         <spirit:externalPortReference spirit:portRef="led3"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>top_0_led4</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="top_0" spirit:portRef="led4"/>
+        <spirit:externalPortReference spirit:portRef="led4"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>top_0_led5</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="top_0" spirit:portRef="led5"/>
+        <spirit:externalPortReference spirit:portRef="led5"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>top_0_led6</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="top_0" spirit:portRef="led6"/>
+        <spirit:externalPortReference spirit:portRef="led6"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
   </spirit:design>

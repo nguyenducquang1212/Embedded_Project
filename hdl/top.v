@@ -1,14 +1,13 @@
 module top 
 #(
-  parameter WIDTH_TIK       = 16                ,
-  parameter WIDTH_MS        = 14                ,
-  parameter WIDTH_SPEED     = 14                ,
-  parameter DATA_SIZE       = 8                 ,
-  parameter SIZE_FIFO       = 8                 ,
-  parameter SYS_FREQ        = 50000000          ,
-  parameter BAUD_RATE       = 11500             ,
-  parameter CLOCK           = SYS_FREQ/BAUD_RATE,
-  parameter SAMPLE          = 16                ,
+  parameter WIDTH_TIK       = 16                    ,
+  parameter WIDTH_MS        = 14                    ,
+  parameter WIDTH_SPEED     = 14                    ,
+  parameter DATA_SIZE       = 8                     ,
+  parameter SIZE_FIFO       = 8                     ,
+  parameter SYS_FREQ        = 50000000              ,
+  parameter BAUD_RATE       = 9600                  ,
+  parameter SAMPLE          = 16                    ,
   parameter BAUD_DVSR       = SYS_FREQ/(SAMPLE*BAUD_RATE)
 )
 (
@@ -19,9 +18,12 @@ module top
 	input                     sensor3        ,
 	input        [1:0]        valid_Epass    ,
 	input                     enable         ,
-	output                    led1           ,
-	output                    led2           ,
-	output                    led3           ,
+	output                    led1           ,	// sensor1
+	output                    led2           ,	// sensor2
+	output                    led3           ,	// sensor3
+	output                    led4           ,	// valid_Epass[1]
+	output                    led5           ,	// valid_Epass[0]
+	output                    led6           ,	// enable
 	output                    barrier        ,
 	output                    serial_data_out
 );
@@ -29,6 +31,10 @@ module top
 assign led1 = sensor1;
 assign led2 = sensor2;
 assign led3 = sensor3;
+assign led4 = valid_Epass[1];
+assign led5 = valid_Epass[0];
+assign led6 = enable;
+
 
 // -------------------------------------------------------------
 //                non_stop_ETC
@@ -85,7 +91,12 @@ wire                     tx_empty;
 // -------------------------------------------------------------
 // Generator Clock
 // -------------------------------------------------------------
-uart_generator_clock #(SYS_FREQ,BAUD_RATE,CLOCK,SAMPLE,BAUD_DVSR)
+uart_generator_clock #(
+	.SYS_FREQ(SYS_FREQ),
+	.BAUD_RATE(BAUD_RATE),
+	// .CLOCK(CLOCK),
+	.SAMPLE(SAMPLE),
+	.BAUD_DVSR(BAUD_DVSR))
 uart_generator_clock (
   .clk       (clk       ),
   .reset_n   (reset_n   ),

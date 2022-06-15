@@ -110,7 +110,12 @@ always @(posedge clk or negedge reset_n) begin
 				num_veh <= num_veh + 1;
 			end
 			2'b01: begin 
-				num_veh <= num_veh - 1 ;
+				if (num_veh == 0) begin
+					num_veh <= 0;
+				end
+				else begin
+					num_veh <= num_veh - 1 ;
+				end
 			end
 			default : num_veh <= num_veh;
 		endcase
