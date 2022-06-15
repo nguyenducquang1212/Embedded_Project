@@ -13,6 +13,7 @@ module cotroller (
 	output reg       cal        ,
 	output reg       up         ,
 	output reg       down       ,
+	output reg       down2      ,
 	output reg       en         ,
 	output reg       dis        
 );
@@ -20,9 +21,12 @@ module cotroller (
 localparam START      = 2'b00,
 		   COUNT_TIME = 2'b01,
 		   CALC       = 2'b10;
+localparam IDLE       = 1'b0 ,
+           WAIT_EN    = 1'b1 ;
 
 reg       reg_sensor3;		// reg_sensor3 is a register stores the value of sensor3
 reg [1:0] next_state, current_state;
+reg       next_state_f, current_state_f;
 
 
 /**============================================
@@ -36,6 +40,7 @@ always @(posedge clk or negedge reset_n) begin
 	end
 end
 
+
 /**============================================
  * 	          Update value for reg_sensor3
  *=============================================*/
@@ -48,6 +53,9 @@ always @(posedge clk or negedge reset_n) begin
 end
 
 
+/**============================================
+ * 	          Update value for Controll Variables
+ *=============================================*/
 always @(*) begin
 	init = 0;
 	count = 0;
@@ -55,6 +63,7 @@ always @(*) begin
 	up = 0;
 	en = 0;
 	dis = 0;
+	next_state = current_state;
 
 	case (current_state)
 		START: begin 
@@ -92,7 +101,7 @@ always @(*) begin
 				next_state = START;
 			end
 		end
-		default : next_state = current_state;
+		// default : next_state = current_state;
 	endcase
 	
 	if (num_veh == 0) begin
@@ -117,6 +126,35 @@ always @(*) begin
 	end
 end
 
+
+/**============================================
+ * 	          Update value for current_state_f
+ *=============================================*/
+always @(posedge clk or negedge reset_n) begin
+	if(~reset_n) begin
+		current_state_f <= IDLE;
+	end else begin
+		current_state_f <= next_state_f;
+	end
+end
+
+always @(*) begin
+	down2 = 1'b0;
+	next_state_f = current_state_f;
+	case (current_state)
+		IDLE: begin
+			if (valid_Epass == 2'b01) begin
+				next_state_f = WAIT_EN;
+			end
+		end
+		WAIT_EN: begin
+			if (enable) begin
+				down2 = 1'b1;
+				next_state_f = IDLE;
+			end
+		end
+	endcase
+end
 
 
 endmodule
