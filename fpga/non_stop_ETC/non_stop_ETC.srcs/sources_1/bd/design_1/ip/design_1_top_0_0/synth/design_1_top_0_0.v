@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "top,Vivado 2018.1" *)
 (* CHECK_LICENSE_TYPE = "design_1_top_0_0,top,{}" *)
-(* CORE_GENERATION_INFO = "design_1_top_0_0,top,{x_ipProduct=Vivado 2018.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=top,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,WIDTH_TIK=16,WIDTH_MS=9,WIDTH_SPEED=14,DATA_SIZE=8,SIZE_FIFO=8,SYS_FREQ=50000000,BAUD_RATE=11500,CLOCK=4347,SAMPLE=16,BAUD_DVSR=271}" *)
+(* CORE_GENERATION_INFO = "design_1_top_0_0,top,{x_ipProduct=Vivado 2018.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=top,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,WIDTH_TIK=16,WIDTH_MS=14,WIDTH_SPEED=14,DATA_SIZE=8,SIZE_FIFO=8,SYS_FREQ=50000000,BAUD_RATE=9600,SAMPLE=16,BAUD_DVSR=325}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_top_0_0 (
   clk,
@@ -65,6 +65,9 @@ module design_1_top_0_0 (
   led1,
   led2,
   led3,
+  led4,
+  led5,
+  led6,
   barrier,
   serial_data_out
 );
@@ -83,20 +86,22 @@ input wire enable;
 output wire led1;
 output wire led2;
 output wire led3;
+output wire led4;
+output wire led5;
+output wire led6;
 output wire barrier;
 output wire serial_data_out;
 
   top #(
     .WIDTH_TIK(16),
-    .WIDTH_MS(9),
+    .WIDTH_MS(14),
     .WIDTH_SPEED(14),
     .DATA_SIZE(8),
     .SIZE_FIFO(8),
     .SYS_FREQ(50000000),
-    .BAUD_RATE(11500),
-    .CLOCK(4347),
+    .BAUD_RATE(9600),
     .SAMPLE(16),
-    .BAUD_DVSR(271)
+    .BAUD_DVSR(325)
   ) inst (
     .clk(clk),
     .reset_n(reset_n),
@@ -108,6 +113,9 @@ output wire serial_data_out;
     .led1(led1),
     .led2(led2),
     .led3(led3),
+    .led4(led4),
+    .led5(led5),
+    .led6(led6),
     .barrier(barrier),
     .serial_data_out(serial_data_out)
   );

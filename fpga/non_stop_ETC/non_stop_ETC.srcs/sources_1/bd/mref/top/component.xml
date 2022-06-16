@@ -49,7 +49,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>d5b7e7cd</spirit:value>
+            <spirit:value>17ea03ac</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -62,7 +62,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>d5b7e7cd</spirit:value>
+            <spirit:value>17ea03ac</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -211,6 +211,45 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
+        <spirit:name>led4</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>led5</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>led6</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
         <spirit:name>barrier</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
@@ -246,7 +285,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>WIDTH_MS</spirit:name>
         <spirit:displayName>Width Ms</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.WIDTH_MS">9</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.WIDTH_MS">14</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>WIDTH_SPEED</spirit:name>
@@ -271,12 +310,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>BAUD_RATE</spirit:name>
         <spirit:displayName>Baud Rate</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.BAUD_RATE">11500</spirit:value>
-      </spirit:modelParameter>
-      <spirit:modelParameter spirit:dataType="integer">
-        <spirit:name>CLOCK</spirit:name>
-        <spirit:displayName>Clock</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.CLOCK" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.SYS_FREQ&apos;)) / spirit:decode(id(&apos;MODELPARAM_VALUE.BAUD_RATE&apos;)))">4347</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.BAUD_RATE">9600</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>SAMPLE</spirit:name>
@@ -286,7 +320,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>BAUD_DVSR</spirit:name>
         <spirit:displayName>Baud Dvsr</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.BAUD_DVSR" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.SYS_FREQ&apos;)) / (spirit:decode(id(&apos;MODELPARAM_VALUE.SAMPLE&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.BAUD_RATE&apos;))))">271</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.BAUD_DVSR" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.SYS_FREQ&apos;)) / (spirit:decode(id(&apos;MODELPARAM_VALUE.SAMPLE&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.BAUD_RATE&apos;))))">325</spirit:value>
       </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
@@ -296,7 +330,7 @@
       <spirit:file>
         <spirit:name>xgui/top_v1_0.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_3b5378bf</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_c934394d</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -311,7 +345,7 @@
     <spirit:parameter>
       <spirit:name>WIDTH_MS</spirit:name>
       <spirit:displayName>Width Ms</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.WIDTH_MS">9</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.WIDTH_MS">14</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>WIDTH_SPEED</spirit:name>
@@ -336,12 +370,7 @@
     <spirit:parameter>
       <spirit:name>BAUD_RATE</spirit:name>
       <spirit:displayName>Baud Rate</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.BAUD_RATE">11500</spirit:value>
-    </spirit:parameter>
-    <spirit:parameter>
-      <spirit:name>CLOCK</spirit:name>
-      <spirit:displayName>Clock</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.CLOCK">4347</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.BAUD_RATE">9600</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>SAMPLE</spirit:name>
@@ -351,7 +380,7 @@
     <spirit:parameter>
       <spirit:name>BAUD_DVSR</spirit:name>
       <spirit:displayName>Baud Dvsr</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.BAUD_DVSR">271</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.BAUD_DVSR">325</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>
@@ -373,7 +402,7 @@
         <xilinx:designToolContext>IPI</xilinx:designToolContext>
       </xilinx:designToolContexts>
       <xilinx:coreRevision>1</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2022-06-14T02:34:22Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2022-06-15T15:05:27Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2018.1</xilinx:xilinxVersion>

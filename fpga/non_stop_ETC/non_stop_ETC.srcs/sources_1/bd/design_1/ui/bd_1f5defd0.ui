@@ -6,13 +6,16 @@ preplace port enable -pg 1 -y 230 -defaultsOSRD
 preplace port sensor1 -pg 1 -y 150 -defaultsOSRD
 preplace port sensor2 -pg 1 -y 170 -defaultsOSRD
 preplace port sensor3 -pg 1 -y 190 -defaultsOSRD
-preplace port led1 -pg 1 -y 130 -defaultsOSRD
-preplace port serial_data_out -pg 1 -y 210 -defaultsOSRD
+preplace port led1 -pg 1 -y 100 -defaultsOSRD
+preplace port serial_data_out -pg 1 -y 240 -defaultsOSRD
 preplace port reset_n -pg 1 -y 20 -defaultsOSRD
-preplace port led2 -pg 1 -y 150 -defaultsOSRD
-preplace port led3 -pg 1 -y 170 -defaultsOSRD
+preplace port led2 -pg 1 -y 120 -defaultsOSRD
+preplace port led3 -pg 1 -y 140 -defaultsOSRD
+preplace port led4 -pg 1 -y 160 -defaultsOSRD
 preplace port clk -pg 1 -y 90 -defaultsOSRD
-preplace port barrier -pg 1 -y 190 -defaultsOSRD
+preplace port led5 -pg 1 -y 180 -defaultsOSRD
+preplace port barrier -pg 1 -y 220 -defaultsOSRD
+preplace port led6 -pg 1 -y 200 -defaultsOSRD
 preplace portBus valid_Epass -pg 1 -y 210 -defaultsOSRD
 preplace inst clk_wiz_0 -pg 1 -lvl 1 -y 80 -defaultsOSRD
 preplace inst top_0 -pg 1 -lvl 2 -y 170 -defaultsOSRD
@@ -26,10 +29,13 @@ preplace netloc clk_in1_0_1 1 0 1 NJ
 preplace netloc clk_wiz_0_clk_out1 1 1 1 220
 preplace netloc top_0_serial_data_out 1 2 1 NJ
 preplace netloc top_0_led3 1 2 1 NJ
+preplace netloc top_0_led4 1 2 1 NJ
+preplace netloc top_0_led5 1 2 1 NJ
+preplace netloc top_0_led6 1 2 1 NJ
 preplace netloc valid_Epass_1 1 0 2 NJ 210 NJ
 preplace netloc enable_1 1 0 2 NJ 230 NJ
 preplace netloc reset_n_1 1 0 2 20 10 230J
-levelinfo -pg 1 0 120 390 570 -top 0 -bot 290
+levelinfo -pg 1 0 120 390 570 -top 0 -bot 300
 ",
 }
 {

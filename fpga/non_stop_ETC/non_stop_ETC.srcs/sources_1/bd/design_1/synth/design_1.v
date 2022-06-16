@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
-//Date        : Tue Jun 14 09:43:23 2022
+//Date        : Wed Jun 15 22:06:01 2022
 //Host        : dt25-linux running 64-bit CentOS Linux release 7.9.2009 (Core)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -17,6 +17,9 @@ module design_1
     led1,
     led2,
     led3,
+    led4,
+    led5,
+    led6,
     reset_n,
     sensor1,
     sensor2,
@@ -29,6 +32,9 @@ module design_1
   output led1;
   output led2;
   output led3;
+  output led4;
+  output led5;
+  output led6;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RESET_N RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RESET_N, POLARITY ACTIVE_LOW" *) input reset_n;
   input sensor1;
   input sensor2;
@@ -47,6 +53,9 @@ module design_1
   wire top_0_led1;
   wire top_0_led2;
   wire top_0_led3;
+  wire top_0_led4;
+  wire top_0_led5;
+  wire top_0_led6;
   wire top_0_serial_data_out;
   wire [1:0]valid_Epass_1;
 
@@ -56,6 +65,9 @@ module design_1
   assign led1 = top_0_led1;
   assign led2 = top_0_led2;
   assign led3 = top_0_led3;
+  assign led4 = top_0_led4;
+  assign led5 = top_0_led5;
+  assign led6 = top_0_led6;
   assign reset_n_1 = reset_n;
   assign sensor1_1 = sensor1;
   assign sensor2_1 = sensor2;
@@ -73,6 +85,9 @@ module design_1
         .led1(top_0_led1),
         .led2(top_0_led2),
         .led3(top_0_led3),
+        .led4(top_0_led4),
+        .led5(top_0_led5),
+        .led6(top_0_led6),
         .reset_n(reset_n_1),
         .sensor1(sensor1_1),
         .sensor2(sensor2_1),

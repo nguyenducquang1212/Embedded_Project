@@ -13,6 +13,7 @@ module datapath
 	input                        cal        ,
 	input                        up         ,
 	input                        down       ,
+	input                        down2      ,
 	input                        en         ,
 	input                        dis        ,
 	output reg [1:0]             num_veh    ,
@@ -105,12 +106,17 @@ always @(posedge clk or negedge reset_n) begin
 	if(~reset_n) begin
 		num_veh <= 0;
 	end else begin
-		case ({up, down})
+		case ({up, down|down2})
 			2'b10: begin 
 				num_veh <= num_veh + 1;
 			end
 			2'b01: begin 
-				num_veh <= num_veh - 1 ;
+				if (num_veh == 0) begin
+					num_veh <= 0;
+				end
+				else begin
+					num_veh <= num_veh - 1 ;
+				end
 			end
 			default : num_veh <= num_veh;
 		endcase

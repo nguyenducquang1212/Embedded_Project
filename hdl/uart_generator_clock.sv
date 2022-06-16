@@ -2,7 +2,6 @@ module uart_generator_clock
 #(
   parameter SYS_FREQ  = 100000000,
   parameter BAUD_RATE = 9600,
-  parameter CLOCK     = SYS_FREQ/BAUD_RATE,
   parameter SAMPLE    = 16,
   parameter BAUD_DVSR = SYS_FREQ/(SAMPLE*BAUD_RATE)
   ) (
@@ -11,7 +10,8 @@ module uart_generator_clock
   output logic  clock     , // clk
   output logic  sample_clk  // sample_clk
 );
-
+  parameter CLOCK     = SYS_FREQ/(BAUD_RATE*2);
+  
   logic [$clog2(CLOCK    ) - 1 : 0] count_clk;
   logic [$clog2(BAUD_DVSR) - 1 : 0] count_sample_clk;
 
