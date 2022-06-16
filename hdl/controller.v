@@ -21,12 +21,26 @@ module cotroller (
 localparam START      = 2'b00,
 		   COUNT_TIME = 2'b01,
 		   CALC       = 2'b10;
-localparam IDLE       = 1'b0 ,
-           WAIT_EN    = 1'b1 ;
+localparam IDLE       = 2'b00,
+           WAIT_EN    = 2'b01,
+           WAIT_DIS   = 2'b10;
 
-reg       reg_sensor3;		// reg_sensor3 is a register stores the value of sensor3
-reg [1:0] next_state, current_state;
-reg       next_state_f, current_state_f;
+reg       reg_sensor3                  ;		// reg_sensor3 is a register stores the value of sensor3
+reg [1:0] next_state, current_state    ;
+reg [1:0] next_state_f, current_state_f;
+
+wire [1:0] car1, car2, car3;
+
+count_car count_car_DUT(
+	.clk    (clk    ),
+	.reset_n(reset_n),
+	.sensor1(sensor1),
+	.sensor2(sensor2),
+	.sensor3(sensor3),
+	.car1   (car1   ),
+	.car2   (car2   ),
+	.car3   (car3   )
+);
 
 
 /**============================================
@@ -68,12 +82,13 @@ always @(*) begin
 	case (current_state)
 		START: begin 
 			init = 1;
-			if (sensor1) begin
+			// if (sensor1) begin
+			if ( sensor1 & (car1 != car3)) begin
 				next_state = COUNT_TIME;
 			end
-			else begin 
-				next_state = current_state;
-			end
+			// else begin 
+			// 	next_state = current_state;
+			// end
 		end
 
 		COUNT_TIME: begin 
@@ -81,9 +96,9 @@ always @(*) begin
 			if (sensor2) begin
 				next_state = CALC;
 			end
-			else begin 
-				next_state = current_state;
-			end
+			// else begin 
+			// 	next_state = current_state;
+			// end
 		end
 
 		CALC: begin 
@@ -94,13 +109,19 @@ always @(*) begin
 			else begin
 				if (valid_Epass == 2'b10) begin
 					up = 1;
+					next_state = START;
 				end
 				else if (valid_Epass == 2'b01) begin 
 					dis = 1;
 				end
-				next_state = START;
+				// if (car1 == car3) begin
+				if (sensor3) begin
+					next_state = START;
+				end
+				// next_state = START;
 			end
 		end
+
 		// default : next_state = current_state;
 	endcase
 	
@@ -138,21 +159,39 @@ always @(posedge clk or negedge reset_n) begin
 	end
 end
 
+
+/**============================================
+ * 	          Update value for down2
+ *=============================================*/
 always @(*) begin
 	down2 = 1'b0;
-	next_state_f = current_state_f;
 	case (current_state)
 		IDLE: begin
-			if (valid_Epass == 2'b01) begin
+			if ((valid_Epass == 2'b01) & (car1 == car2)) begin
 				next_state_f = WAIT_EN;
+			end
+			else begin 
+				next_state_f = current_state_f;
 			end
 		end
 		WAIT_EN: begin
 			if (enable) begin
 				down2 = 1'b1;
-				next_state_f = IDLE;
+				next_state_f = WAIT_DIS;
+			end
+			else begin 
+				next_state_f = current_state_f;
 			end
 		end
+		WAIT_DIS: begin 
+			if (!enable) begin
+				next_state_f = IDLE;
+			end
+			else begin 
+				next_state_f = current_state_f;
+			end
+		end
+		default: next_state_f = current_state_f;
 	endcase
 end
 

@@ -43,7 +43,7 @@ module uart_generator_clock
     end
   end
 
-    always_ff @(posedge clk or negedge reset_n) begin : proc_sample_clk
+  always_ff @(posedge clk or negedge reset_n) begin : proc_sample_clk
     if(~reset_n) begin
       sample_clk <= 0;
     end 
