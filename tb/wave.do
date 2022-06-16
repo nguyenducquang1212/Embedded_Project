@@ -12,6 +12,9 @@ add wave -noupdate -radix unsigned /top_tb/DUT/enable
 add wave -noupdate -radix binary -childformat {{{/top_tb/DUT/speed[13]} -radix unsigned} {{/top_tb/DUT/speed[12]} -radix unsigned} {{/top_tb/DUT/speed[11]} -radix unsigned} {{/top_tb/DUT/speed[10]} -radix unsigned} {{/top_tb/DUT/speed[9]} -radix unsigned} {{/top_tb/DUT/speed[8]} -radix unsigned} {{/top_tb/DUT/speed[7]} -radix unsigned} {{/top_tb/DUT/speed[6]} -radix unsigned} {{/top_tb/DUT/speed[5]} -radix unsigned} {{/top_tb/DUT/speed[4]} -radix unsigned} {{/top_tb/DUT/speed[3]} -radix unsigned} {{/top_tb/DUT/speed[2]} -radix unsigned} {{/top_tb/DUT/speed[1]} -radix unsigned} {{/top_tb/DUT/speed[0]} -radix unsigned}} -subitemconfig {{/top_tb/DUT/speed[13]} {-height 17 -radix unsigned} {/top_tb/DUT/speed[12]} {-height 17 -radix unsigned} {/top_tb/DUT/speed[11]} {-height 17 -radix unsigned} {/top_tb/DUT/speed[10]} {-height 17 -radix unsigned} {/top_tb/DUT/speed[9]} {-height 17 -radix unsigned} {/top_tb/DUT/speed[8]} {-height 17 -radix unsigned} {/top_tb/DUT/speed[7]} {-height 17 -radix unsigned} {/top_tb/DUT/speed[6]} {-height 17 -radix unsigned} {/top_tb/DUT/speed[5]} {-height 17 -radix unsigned} {/top_tb/DUT/speed[4]} {-height 17 -radix unsigned} {/top_tb/DUT/speed[3]} {-height 17 -radix unsigned} {/top_tb/DUT/speed[2]} {-height 17 -radix unsigned} {/top_tb/DUT/speed[1]} {-height 17 -radix unsigned} {/top_tb/DUT/speed[0]} {-height 17 -radix unsigned}} /top_tb/DUT/speed
 add wave -noupdate -radix unsigned /top_tb/DUT/clock
 add wave -noupdate -color Yellow -radix unsigned /top_tb/DUT/serial_data_out
+add wave -noupdate /top_tb/DUT/uart_transmitter/tx_done
+add wave -noupdate /top_tb/DUT/uart_fifo_transmitter/write
+add wave -noupdate /top_tb/DUT/uart_fifo_transmitter/fifo
 add wave -noupdate -radix unsigned /top_tb/DUT/speed_int
 add wave -noupdate -radix binary /top_tb/DUT/speed_real
 add wave -noupdate -radix unsigned /top_tb/DUT/done
@@ -60,8 +63,8 @@ add wave -noupdate -expand -group Controller /top_tb/DUT/non_stop_ETC/cotroller_
 add wave -noupdate -expand -group Controller /top_tb/DUT/non_stop_ETC/cotroller_DUT/next_state
 add wave -noupdate -expand -group Controller /top_tb/DUT/non_stop_ETC/cotroller_DUT/current_state
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {362990112 ns} 0}
-quietly wave cursor active 1
+WaveRestoreCursors {{Cursor 1} {430958557 ns} 1} {{Cursor 2} {430298044 ns} 0}
+quietly wave cursor active 2
 configure wave -namecolwidth 343
 configure wave -valuecolwidth 100
 configure wave -justifyvalue left
@@ -76,4 +79,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {0 ns} {2030190929 ns}
+WaveRestoreZoom {429379699 ns} {432604045 ns}
