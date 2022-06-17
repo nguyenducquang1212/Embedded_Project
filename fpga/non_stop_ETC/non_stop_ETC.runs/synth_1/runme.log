@@ -14,11 +14,11 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 21825 
+INFO: Helper process launched with PID 29853 
 WARNING: [Synth 8-2507] parameter declaration becomes local in uart_generator_clock with formal parameter declaration list [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/uart_generator_clock.sv:13]
 WARNING: [Synth 8-2507] parameter declaration becomes local in div with formal parameter declaration list [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/div.v:16]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1416.758 ; gain = 96.270 ; free physical = 3545 ; free virtual = 68229
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1416.766 ; gain = 96.270 ; free physical = 22746 ; free virtual = 102428
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top' [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/top.v:1]
 	Parameter WIDTH_TIK bound to: 16 - type: integer 
@@ -49,8 +49,8 @@ INFO: [Synth 8-155] case statement is not full and has no default [/data5/worksp
 INFO: [Synth 8-155] case statement is not full and has no default [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/count_car.v:60]
 INFO: [Synth 8-155] case statement is not full and has no default [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/count_car.v:87]
 INFO: [Synth 8-6155] done synthesizing module 'count_car' (1#1) [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/count_car.v:1]
-INFO: [Synth 8-155] case statement is not full and has no default [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/controller.v:82]
-WARNING: [Synth 8-3848] Net down2 in module/entity cotroller does not have driver. [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/controller.v:16]
+INFO: [Synth 8-155] case statement is not full and has no default [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/controller.v:81]
+WARNING: [Synth 8-3848] Net down in module/entity cotroller does not have driver. [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/controller.v:15]
 INFO: [Synth 8-6155] done synthesizing module 'cotroller' (2#1) [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/controller.v:1]
 INFO: [Synth 8-6157] synthesizing module 'datapath' [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/datapath.v:1]
 	Parameter WIDTH_TIK bound to: 16 - type: integer 
@@ -101,10 +101,11 @@ INFO: [Synth 8-6157] synthesizing module 'uart_transmitter' [/data5/workspace/qu
 	Parameter BIT_COUNT_SIZE bound to: 4 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'uart_transmitter' (9#1) [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/uart_transmitter.sv:13]
 INFO: [Synth 8-6155] done synthesizing module 'top' (10#1) [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/top.v:1]
-WARNING: [Synth 8-3331] design cotroller has unconnected port down2
+WARNING: [Synth 8-3331] design datapath has unconnected port down
+WARNING: [Synth 8-3331] design cotroller has unconnected port down
 WARNING: [Synth 8-3331] design cotroller has unconnected port done
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1448.898 ; gain = 128.410 ; free physical = 3555 ; free virtual = 68240
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1447.906 ; gain = 127.410 ; free physical = 22761 ; free virtual = 102443
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -117,10 +118,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1448.898 ; gain = 128.410 ; free physical = 3550 ; free virtual = 68235
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1447.906 ; gain = 127.410 ; free physical = 22760 ; free virtual = 102443
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1448.898 ; gain = 128.410 ; free physical = 3550 ; free virtual = 68235
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1447.906 ; gain = 127.410 ; free physical = 22760 ; free virtual = 102443
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -136,29 +137,28 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1854.801 ; gain = 0.000 ; free physical = 3200 ; free virtual = 67925
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1854.355 ; gain = 0.000 ; free physical = 22174 ; free virtual = 101854
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:26 ; elapsed = 00:04:33 . Memory (MB): peak = 1854.801 ; gain = 534.312 ; free physical = 3262 ; free virtual = 67989
+Finished Constraint Validation : Time (s): cpu = 00:00:27 ; elapsed = 00:04:36 . Memory (MB): peak = 1854.355 ; gain = 533.859 ; free physical = 22227 ; free virtual = 101908
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:26 ; elapsed = 00:04:33 . Memory (MB): peak = 1854.801 ; gain = 534.312 ; free physical = 3262 ; free virtual = 67989
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:27 ; elapsed = 00:04:36 . Memory (MB): peak = 1854.355 ; gain = 533.859 ; free physical = 22227 ; free virtual = 101908
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:04:33 . Memory (MB): peak = 1854.801 ; gain = 534.312 ; free physical = 3263 ; free virtual = 67990
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:04:36 . Memory (MB): peak = 1854.355 ; gain = 533.859 ; free physical = 22230 ; free virtual = 101911
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_c1_reg' in module 'count_car'
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_c2_reg' in module 'count_car'
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_c3_reg' in module 'count_car'
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'cotroller'
 INFO: [Synth 8-5544] ROM "up" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "en" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "cal" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "count" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "init" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
@@ -252,14 +252,14 @@ INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using e
 INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'push_data'
 WARNING: [Synth 8-327] inferring latch for variable 'data_reg' [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/push_data.v:44]
 WARNING: [Synth 8-327] inferring latch for variable 'read_fifo_transmitter_reg' [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/uart_fifo.sv:38]
-INFO: [Synth 8-3898] No Re-encoding of one hot register 'tx_state_reg' in module 'fsm170920501'
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'tx_state_reg' in module 'fsm1354DB801'
 WARNING: [Synth 8-327] inferring latch for variable 'tx_next_state_reg' [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/uart_fifo.sv:99]
 WARNING: [Synth 8-327] inferring latch for variable 'write_fifo_receiver_reg' [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/uart_fifo.sv:37]
-INFO: [Synth 8-3898] No Re-encoding of one hot register 'rx_state_reg' in module 'fsm170920500'
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'rx_state_reg' in module 'fsm1354DB800'
 WARNING: [Synth 8-327] inferring latch for variable 'rx_next_state_reg' [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/uart_fifo.sv:70]
-INFO: [Synth 8-3898] No Re-encoding of one hot register 'state_reg' in module 'fsm14A241000'
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'state_reg' in module 'fsm15FCBD900'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:27 ; elapsed = 00:04:34 . Memory (MB): peak = 1854.801 ; gain = 534.312 ; free physical = 3255 ; free virtual = 67982
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:27 ; elapsed = 00:04:37 . Memory (MB): peak = 1854.355 ; gain = 533.859 ; free physical = 22222 ; free virtual = 101904
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -279,7 +279,7 @@ Detailed RTL Component Info :
 	   2 Input      5 Bit       Adders := 1     
 	   2 Input      4 Bit       Adders := 1     
 	   2 Input      3 Bit       Adders := 2     
-	   2 Input      2 Bit       Adders := 5     
+	   2 Input      2 Bit       Adders := 3     
 +---Registers : 
 	               16 Bit    Registers := 1     
 	               14 Bit    Registers := 5     
@@ -289,7 +289,7 @@ Detailed RTL Component Info :
 	                5 Bit    Registers := 1     
 	                4 Bit    Registers := 1     
 	                3 Bit    Registers := 2     
-	                2 Bit    Registers := 4     
+	                2 Bit    Registers := 3     
 	                1 Bit    Registers := 7     
 +---Muxes : 
 	   2 Input     16 Bit        Muxes := 2     
@@ -303,11 +303,11 @@ Detailed RTL Component Info :
 	   2 Input      4 Bit        Muxes := 1     
 	   3 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 1     
-	   3 Input      2 Bit        Muxes := 8     
-	   2 Input      2 Bit        Muxes := 14    
+	   3 Input      2 Bit        Muxes := 7     
+	   2 Input      2 Bit        Muxes := 13    
 	   4 Input      2 Bit        Muxes := 1     
-	   3 Input      1 Bit        Muxes := 29    
-	   2 Input      1 Bit        Muxes := 30    
+	   3 Input      1 Bit        Muxes := 28    
+	   2 Input      1 Bit        Muxes := 29    
 	   4 Input      1 Bit        Muxes := 7     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -333,7 +333,7 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   3 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 4     
 	   3 Input      1 Bit        Muxes := 4     
 Module div 
 Detailed RTL Component Info : 
@@ -357,17 +357,13 @@ Module datapath
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     16 Bit       Adders := 1     
-	   2 Input      2 Bit       Adders := 2     
 +---Registers : 
 	               16 Bit    Registers := 1     
-	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input     16 Bit        Muxes := 2     
-	   3 Input      2 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   3 Input      1 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 3     
+	   3 Input      1 Bit        Muxes := 1     
 Module non_stop_ETC 
 Detailed RTL Component Info : 
 +---Muxes : 
@@ -438,7 +434,6 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-WARNING: [Synth 8-6014] Unused sequential element non_stop_ETC/cotroller_DUT/count_car_DUT/car3_reg was removed.  [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/count_car.v:120]
 WARNING: [Synth 8-6014] Unused sequential element uart_generator_clock/count_sample_clk_reg was removed.  [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/uart_generator_clock.sv:28]
 WARNING: [Synth 8-6014] Unused sequential element uart_generator_clock/sample_clk_reg was removed.  [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/uart_generator_clock.sv:48]
 INFO: [Synth 8-5546] ROM "uart_generator_clock/clock" won't be mapped to RAM because it is too sparse
@@ -450,7 +445,7 @@ WARNING: [Synth 8-3332] Sequential element (non_stop_ETC/datapath_DUT/div_DUT/X_
 WARNING: [Synth 8-3332] Sequential element (non_stop_ETC/datapath_DUT/div_DUT/X_reg[1]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (non_stop_ETC/datapath_DUT/div_DUT/X_reg[0]) is unused and will be removed from module top.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:04:35 . Memory (MB): peak = 1854.801 ; gain = 534.312 ; free physical = 3235 ; free virtual = 67967
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:04:38 . Memory (MB): peak = 1854.355 ; gain = 533.859 ; free physical = 22196 ; free virtual = 101880
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -462,13 +457,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:04:49 . Memory (MB): peak = 1854.801 ; gain = 534.312 ; free physical = 3084 ; free virtual = 67826
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:04:51 . Memory (MB): peak = 1854.355 ; gain = 533.859 ; free physical = 22054 ; free virtual = 101746
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:04:49 . Memory (MB): peak = 1854.801 ; gain = 534.312 ; free physical = 3084 ; free virtual = 67826
+Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:04:52 . Memory (MB): peak = 1854.355 ; gain = 533.859 ; free physical = 22054 ; free virtual = 101746
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -480,7 +475,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:04:49 . Memory (MB): peak = 1854.801 ; gain = 534.312 ; free physical = 3083 ; free virtual = 67825
+Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:04:52 . Memory (MB): peak = 1854.355 ; gain = 533.859 ; free physical = 22053 ; free virtual = 101746
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -504,7 +499,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:04:49 . Memory (MB): peak = 1854.801 ; gain = 534.312 ; free physical = 3082 ; free virtual = 67824
+Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:04:52 . Memory (MB): peak = 1854.355 ; gain = 533.859 ; free physical = 22053 ; free virtual = 101746
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -517,7 +512,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:04:49 . Memory (MB): peak = 1854.801 ; gain = 534.312 ; free physical = 3082 ; free virtual = 67824
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:04:52 . Memory (MB): peak = 1854.355 ; gain = 533.859 ; free physical = 22053 ; free virtual = 101746
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -529,25 +524,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:04:49 . Memory (MB): peak = 1854.801 ; gain = 534.312 ; free physical = 3082 ; free virtual = 67824
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:04:52 . Memory (MB): peak = 1854.355 ; gain = 533.859 ; free physical = 22053 ; free virtual = 101746
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:04:49 . Memory (MB): peak = 1854.801 ; gain = 534.312 ; free physical = 3082 ; free virtual = 67824
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:04:52 . Memory (MB): peak = 1854.355 ; gain = 533.859 ; free physical = 22053 ; free virtual = 101746
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:04:49 . Memory (MB): peak = 1854.801 ; gain = 534.312 ; free physical = 3082 ; free virtual = 67824
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:04:52 . Memory (MB): peak = 1854.355 ; gain = 533.859 ; free physical = 22053 ; free virtual = 101746
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:04:49 . Memory (MB): peak = 1854.801 ; gain = 534.312 ; free physical = 3082 ; free virtual = 67824
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:04:52 . Memory (MB): peak = 1854.355 ; gain = 533.859 ; free physical = 22053 ; free virtual = 101746
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -567,10 +562,10 @@ Report Cell Usage:
 |2     |CARRY4 |    17|
 |3     |LUT1   |     6|
 |4     |LUT2   |    57|
-|5     |LUT3   |     9|
-|6     |LUT4   |    58|
-|7     |LUT5   |    31|
-|8     |LUT6   |    46|
+|5     |LUT3   |     8|
+|6     |LUT4   |    59|
+|7     |LUT5   |    30|
+|8     |LUT6   |    47|
 |9     |MUXF7  |     7|
 |10    |FDCE   |   197|
 |11    |FDPE   |    14|
@@ -586,9 +581,9 @@ Report Instance Areas:
 +------+------------------------+---------------------+------+
 |1     |top                     |                     |   487|
 |2     |  non_stop_ETC          |non_stop_ETC         |   240|
-|3     |    cotroller_DUT       |cotroller            |    32|
-|4     |      count_car_DUT     |count_car            |    25|
-|5     |    datapath_DUT        |datapath             |   208|
+|3     |    cotroller_DUT       |cotroller            |    37|
+|4     |      count_car_DUT     |count_car            |    31|
+|5     |    datapath_DUT        |datapath             |   203|
 |6     |      div_DUT           |div                  |   127|
 |7     |  push_data_DUT         |push_data            |    37|
 |8     |  uart_fifo_transmitter |uart_fifo            |   127|
@@ -596,11 +591,11 @@ Report Instance Areas:
 |10    |  uart_transmitter      |uart_transmitter     |    34|
 +------+------------------------+---------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:04:49 . Memory (MB): peak = 1854.801 ; gain = 534.312 ; free physical = 3082 ; free virtual = 67824
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:04:52 . Memory (MB): peak = 1854.355 ; gain = 533.859 ; free physical = 22053 ; free virtual = 101746
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 14 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:37 . Memory (MB): peak = 1854.801 ; gain = 128.410 ; free physical = 3138 ; free virtual = 67880
-Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:04:50 . Memory (MB): peak = 1854.801 ; gain = 534.312 ; free physical = 3142 ; free virtual = 67884
+Synthesis finished with 0 errors, 0 critical warnings and 13 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:36 . Memory (MB): peak = 1854.355 ; gain = 127.410 ; free physical = 22110 ; free virtual = 101803
+Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:04:52 . Memory (MB): peak = 1854.355 ; gain = 533.859 ; free physical = 22119 ; free virtual = 101812
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 46 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -611,10 +606,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   LD => LDCE: 14 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-96 Infos, 23 Warnings, 0 Critical Warnings and 0 Errors encountered.
+95 Infos, 23 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:04:52 . Memory (MB): peak = 1854.805 ; gain = 546.859 ; free physical = 3130 ; free virtual = 67873
+synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:04:55 . Memory (MB): peak = 1854.359 ; gain = 546.406 ; free physical = 22103 ; free virtual = 101795
 INFO: [Common 17-1381] The checkpoint '/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.15 . Memory (MB): peak = 1878.824 ; gain = 0.000 ; free physical = 3130 ; free virtual = 67873
-INFO: [Common 17-206] Exiting Vivado at Thu Jun 16 22:53:20 2022...
+report_utilization: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.15 . Memory (MB): peak = 1878.379 ; gain = 0.000 ; free physical = 22100 ; free virtual = 101793
+INFO: [Common 17-206] Exiting Vivado at Fri Jun 17 23:26:03 2022...

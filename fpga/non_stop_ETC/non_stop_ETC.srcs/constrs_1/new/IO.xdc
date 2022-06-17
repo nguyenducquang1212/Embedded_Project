@@ -41,4 +41,4 @@ set_property IOSTANDARD LVCMOS33  [get_ports  {led3}]; # LD5
 set_property IOSTANDARD LVCMOS33  [get_ports  {led4}]; # LD4
 set_property IOSTANDARD LVCMOS33  [get_ports  {led5}]; # LD3
 set_property IOSTANDARD LVCMOS33  [get_ports  {led6}]; # LD2
-#set_property DRIVE 8 [get_ports uart_txd];
+set_property DRIVE 8 [get_ports serial_data_out];
