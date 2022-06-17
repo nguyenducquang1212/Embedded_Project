@@ -27,7 +27,6 @@ localparam IDLE       = 2'b00,
 
 reg       reg_sensor3                  ;		// reg_sensor3 is a register stores the value of sensor3
 reg [1:0] next_state, current_state    ;
-reg [1:0] next_state_f, current_state_f;
 
 wire [1:0] car1, car2, car3;
 
@@ -83,7 +82,7 @@ always @(*) begin
 		START: begin 
 			init = 1;
 			// if (sensor1) begin
-			if ( sensor1 & (car1 != car3)) begin
+			if ( sensor1 & (car1 != car2)) begin
 				next_state = COUNT_TIME;
 			end
 			// else begin 
@@ -115,7 +114,7 @@ always @(*) begin
 					dis = 1;
 				end
 				// if (car1 == car3) begin
-				if (sensor3) begin
+				if (enable) begin
 					next_state = START;
 				end
 				// next_state = START;
@@ -147,53 +146,54 @@ always @(*) begin
 	end
 end
 
+// reg [1:0] next_state_f, current_state_f;
 
-/**============================================
- * 	          Update value for current_state_f
- *=============================================*/
-always @(posedge clk or negedge reset_n) begin
-	if(~reset_n) begin
-		current_state_f <= IDLE;
-	end else begin
-		current_state_f <= next_state_f;
-	end
-end
+// /**============================================
+//  * 	          Update value for current_state_f
+//  *=============================================*/
+// always @(posedge clk or negedge reset_n) begin
+// 	if(~reset_n) begin
+// 		current_state_f <= IDLE;
+// 	end else begin
+// 		current_state_f <= next_state_f;
+// 	end
+// end
 
 
-/**============================================
- * 	          Update value for down2
- *=============================================*/
-always @(*) begin
-	down2 = 1'b0;
-	case (current_state)
-		IDLE: begin
-			if ((valid_Epass == 2'b01) & (car1 == car2)) begin
-				next_state_f = WAIT_EN;
-			end
-			else begin 
-				next_state_f = current_state_f;
-			end
-		end
-		WAIT_EN: begin
-			if (enable) begin
-				down2 = 1'b1;
-				next_state_f = WAIT_DIS;
-			end
-			else begin 
-				next_state_f = current_state_f;
-			end
-		end
-		WAIT_DIS: begin 
-			if (!enable) begin
-				next_state_f = IDLE;
-			end
-			else begin 
-				next_state_f = current_state_f;
-			end
-		end
-		default: next_state_f = current_state_f;
-	endcase
-end
+// /**============================================
+//  * 	          Update value for down2
+//  *=============================================*/
+// always @(*) begin
+// 	down2 = 1'b0;
+// 	case (current_state)
+// 		IDLE: begin
+// 			if ((valid_Epass == 2'b01) & (car1 == car2)) begin
+// 				next_state_f = WAIT_EN;
+// 			end
+// 			else begin 
+// 				next_state_f = current_state_f;
+// 			end
+// 		end
+// 		WAIT_EN: begin
+// 			if (enable) begin
+// 				down2 = 1'b1;
+// 				next_state_f = WAIT_DIS;
+// 			end
+// 			else begin 
+// 				next_state_f = current_state_f;
+// 			end
+// 		end
+// 		WAIT_DIS: begin 
+// 			if (!enable) begin
+// 				next_state_f = IDLE;
+// 			end
+// 			else begin 
+// 				next_state_f = current_state_f;
+// 			end
+// 		end
+// 		default: next_state_f = current_state_f;
+// 	endcase
+// end
 
 
 endmodule
