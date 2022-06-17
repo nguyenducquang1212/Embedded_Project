@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
-| Date             : Wed Jun 15 22:28:22 2022
+| Date             : Thu Jun 16 23:09:26 2022
 | Host             : dt25-linux running 64-bit CentOS Linux release 7.9.2009 (Core)
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+---------------------------------+
-| Total On-Chip Power (W)  | 6.963 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 7.160 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                    |
 | Power Budget Margin (W)  | NA                              |
-| Dynamic (W)              | 6.385                           |
-| Device Static (W)        | 0.578                           |
+| Dynamic (W)              | 6.544                           |
+| Device Static (W)        | 0.616                           |
 | Effective TJA (C/W)      | 11.5                            |
-| Max Ambient (C)          | 4.7                             |
-| Junction Temperature (C) | 105.3                           |
+| Max Ambient (C)          | 2.4                             |
+| Junction Temperature (C) | 107.6                           |
 | Confidence Level         | Low                             |
 | Setting File             | ---                             |
 | Simulation Activity File | ---                             |
@@ -52,17 +52,17 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.496 |      471 |       --- |             --- |
-|   LUT as Logic |     0.435 |      177 |     53200 |            0.33 |
-|   CARRY4       |     0.032 |       17 |     13300 |            0.13 |
-|   Register     |     0.024 |      230 |    106400 |            0.22 |
+| Slice Logic    |     0.525 |      481 |       --- |             --- |
+|   LUT as Logic |     0.453 |      182 |     53200 |            0.34 |
+|   CARRY4       |     0.037 |       17 |     13300 |            0.13 |
+|   Register     |     0.029 |      237 |    106400 |            0.22 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
-|   F7/F8 Muxes  |    <0.001 |        8 |     53200 |            0.02 |
-|   Others       |     0.000 |       15 |       --- |             --- |
-| Signals        |     0.499 |      364 |       --- |             --- |
-| I/O            |     5.390 |       16 |       200 |            8.00 |
-| Static Power   |     0.578 |          |           |                 |
-| Total          |     6.963 |          |           |                 |
+|   F7/F8 Muxes  |    <0.001 |        7 |     53200 |            0.01 |
+|   Others       |     0.000 |       16 |       --- |             --- |
+| Signals        |     0.592 |      356 |       --- |             --- |
+| I/O            |     5.427 |       16 |       200 |            8.00 |
+| Static Power   |     0.616 |          |           |                 |
+| Total          |     7.160 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,20 +72,20 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     1.180 |       1.023 |      0.156 |
-| Vccaux    |       1.800 |     0.258 |       0.196 |      0.062 |
-| Vcco33    |       3.300 |     1.519 |       1.518 |      0.001 |
+| Vccint    |       1.000 |     1.314 |       1.145 |      0.169 |
+| Vccaux    |       1.800 |     0.263 |       0.198 |      0.065 |
+| Vcco33    |       3.300 |     1.529 |       1.528 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.012 |       0.000 |      0.012 |
+| Vccbram   |       1.000 |     0.013 |       0.000 |      0.013 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccpint   |       1.000 |     0.236 |       0.000 |      0.236 |
+| Vccpint   |       1.000 |     0.254 |       0.000 |      0.254 |
 | Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
 | Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
 | Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -146,15 +146,16 @@ Table of Contents
 +-------------------------+-----------+
 | Name                    | Power (W) |
 +-------------------------+-----------+
-| top                     |     6.385 |
-|   non_stop_ETC          |     0.359 |
-|     cotroller_DUT       |     0.021 |
-|     datapath_DUT        |     0.338 |
-|       div_DUT           |     0.175 |
-|   push_data_DUT         |     0.156 |
-|   uart_fifo_transmitter |     0.093 |
-|   uart_generator_clock  |     0.132 |
-|   uart_transmitter      |     0.177 |
+| top                     |     6.544 |
+|   non_stop_ETC          |     0.452 |
+|     cotroller_DUT       |     0.045 |
+|       count_car_DUT     |     0.034 |
+|     datapath_DUT        |     0.407 |
+|       div_DUT           |     0.245 |
+|   push_data_DUT         |     0.179 |
+|   uart_fifo_transmitter |     0.107 |
+|   uart_generator_clock  |     0.161 |
+|   uart_transmitter      |     0.129 |
 +-------------------------+-----------+
 
 

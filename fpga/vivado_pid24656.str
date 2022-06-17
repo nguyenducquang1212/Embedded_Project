@@ -1,0 +1,627 @@
+/*
+
+Xilinx Vivado v2018.1 (64-bit) [Major: 2018, Minor: 1]
+SW Build: 2188600 on Wed Apr  4 18:39:19 MDT 2018
+IP Build: 2185939 on Wed Apr  4 20:55:05 MDT 2018
+
+Process ID: 24656
+License: Customer
+
+Current time: 	Thu Jun 16 22:32:54 ICT 2022
+Time zone: 	Indochina Time (Asia/Ho_Chi_Minh)
+
+OS: CentOS Linux release 7.9.2009 (Core)
+OS Version: 3.10.0-1160.62.1.el7.x86_64
+OS Architecture: amd64
+Available processors (cores): 48
+
+Display: :75
+Screen size: 1600x797
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 637 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	/new_tools/tools/Xilinx/Vivado/2018.1/tps/lnx64/jre
+Java executable location: 	/new_tools/tools/Xilinx/Vivado/2018.1/tps/lnx64/jre/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	quangnd1
+User home directory: /home/quangnd1
+User working directory: /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /new_tools/tools/Xilinx/Vivado
+HDI_APPROOT: /tools/Xilinx/Vivado/2018.1
+RDI_DATADIR: /new_tools/tools/Xilinx/Vivado/2018.1/data
+RDI_BINDIR: /new_tools/tools/Xilinx/Vivado/2018.1/bin
+
+Vivado preferences file location: /home/quangnd1/.Xilinx/Vivado/2018.1/vivado.xml
+Vivado preferences directory: /home/quangnd1/.Xilinx/Vivado/2018.1/
+Vivado layouts directory: /home/quangnd1/.Xilinx/Vivado/2018.1/layouts
+PlanAhead jar file location: 	/new_tools/tools/Xilinx/Vivado/2018.1/lib/classes/planAhead.jar
+Vivado log file location: 	/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/vivado.log
+Vivado journal file location: 	/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-24656-dt25-linux
+
+GUI allocated memory:	185 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 5,086 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// [GUI Memory]: 63 MB (+63579kb) [00:00:10]
+// [Engine Memory]: 5,079 MB (+5174168kb) [00:00:10]
+// HMemoryUtils.trashcanNow. Engine heap size: 5,091 MB. GUI used memory: 33 MB. Current time: 6/16/22 10:32:56 PM ICT
+selectList(PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS, "/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.xpr", 0); // q (O, ch)
+// bv (ch):  Open Project : addNotify
+// Opening Vivado Project: /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.xpr. Version: Vivado v2018.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// HMemoryUtils.trashcanNow. Engine heap size: 5,149 MB. GUI used memory: 32 MB. Current time: 6/16/22 10:33:21 PM ICT
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2018.1/data/ip'. 
+// Project name: non_stop_ETC; location: /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC; part: xc7z020clg484-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:21 ; elapsed = 00:00:11 . Memory (MB): peak = 6410.449 ; gain = 176.355 ; free physical = 4891 ; free virtual = 69263 
+// Elapsed time: 11 seconds
+dismissDialog("Open Project"); // bv (ch)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 68 MB (+2249kb) [00:01:09]
+// Elapsed time: 25 seconds
+selectButton(PAResourceOtoP.PlanAheadTab_REFRESH_CHANGED_MODULES, "Refresh Changed Modules"); // h (cM, ch)
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: BDCELL_LOCK_CHANGE
+// bv (ch):  Refresh IP Catalog : addNotify
+// TclEventType: LOAD_FEATURE
+// Tcl Message: update_module_reference design_1_top_0_0 
+// Tcl Message: INFO: [IP_Flow 19-5107] Inferred bus interface 'reset_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository). INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository). INFO: [IP_Flow 19-818] Not transferring value dependency attribute "(spirit:decode(id('MODELPARAM_VALUE.SYS_FREQ')) / (spirit:decode(id('MODELPARAM_VALUE.SAMPLE')) * spirit:decode(id('MODELPARAM_VALUE.BAUD_RATE'))))" into user parameter "BAUD_DVSR". 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: LOAD_FEATURE
+// Tcl Message: Adding cell -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_0 
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_OPEN_DIAGRAM
+// [Engine Memory]: 5,335 MB (+2352kb) [00:01:18]
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: Adding cell -- xilinx.com:module_ref:top:1.0 - top_0 Successfully read diagram <design_1> from BD file </data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd> 
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_OPEN_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// [GUI Memory]: 78 MB (+6159kb) [00:01:18]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// CommandFailedException: ERROR: [BD 41-45] Cell path not found: /design_1 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: IP_UPGRADE_COMPLETE
+// Tcl Message: Upgrading '/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd' 
+// Tcl Message: INFO: [IP_Flow 19-1972] Upgraded design_1_top_0_0 from top_v1_0 1.0 to top_v1_0 1.0 
+// Tcl Message: Wrote  : </data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd>  
+// Tcl Message: upgrade_ip: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 6535.516 ; gain = 0.000 ; free physical = 4817 ; free virtual = 69238 update_module_reference: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 6535.516 ; gain = 0.000 ; free physical = 4817 ; free virtual = 69238 
+dismissDialog("Refresh IP Catalog"); // bv (ch)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 5,351 MB. GUI used memory: 42 MB. Current time: 6/16/22 10:34:06 PM ICT
+// Elapsed time: 11 seconds
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aE (Q, ch)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v)]", 2); // B (D, ch)
+// Elapsed time: 15 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.v)]", 1); // B (D, ch)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.v), non_stop_ETC : non_stop_ETC (non_stop_ETC.v)]", 2); // B (D, ch)
+// PAPropertyPanels.initPanels (controller.v) elapsed time: 0.2s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.v), non_stop_ETC : non_stop_ETC (non_stop_ETC.v), cotroller_DUT : cotroller (controller.v)]", 3, true); // B (D, ch) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.v), non_stop_ETC : non_stop_ETC (non_stop_ETC.v), cotroller_DUT : cotroller (controller.v)]", 3, true, false, false, false, false, true); // B (D, ch) - Double Click - Node
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// HMemoryUtils.trashcanNow. Engine heap size: 5,383 MB. GUI used memory: 44 MB. Current time: 6/16/22 10:35:41 PM ICT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [GUI Memory]: 82 MB (+938kb) [00:03:54]
+// Elapsed time: 191 seconds
+selectButton(PAResourceAtoD.AbstractFileView_RELOAD, "Reload"); // h (cM, ch)
+selectButton(PAResourceOtoP.PlanAheadTab_REFRESH_CHANGED_MODULES, "Refresh Changed Modules"); // h (cM, ch)
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: RSB_BITABEN_IPREPODATA_REFRESH
+// TclEventType: BDCELL_LOCK_CHANGE
+// TclEventType: RSB_OPEN_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// CommandFailedException: ERROR: [BD 41-45] Cell path not found: /design_1 
+// bv (ch):  Refresh IP Catalog : addNotify
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: IP_UPGRADE_COMPLETE
+// Tcl Message: update_module_reference design_1_top_0_0 
+// Tcl Message: INFO: [IP_Flow 19-5107] Inferred bus interface 'reset_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository). INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository). INFO: [IP_Flow 19-818] Not transferring value dependency attribute "(spirit:decode(id('MODELPARAM_VALUE.SYS_FREQ')) / (spirit:decode(id('MODELPARAM_VALUE.SAMPLE')) * spirit:decode(id('MODELPARAM_VALUE.BAUD_RATE'))))" into user parameter "BAUD_DVSR". 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// Tcl Message: Upgrading '/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd' 
+// Tcl Message: INFO: [IP_Flow 19-1972] Upgraded design_1_top_0_0 from top_v1_0 1.0 to top_v1_0 1.0 
+// Tcl Message: Wrote  : </data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd>  
+dismissDialog("Refresh IP Catalog"); // bv (ch)
+// HMemoryUtils.trashcanNow. Engine heap size: 5,440 MB. GUI used memory: 44 MB. Current time: 6/16/22 10:37:56 PM ICT
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "controller.v", 1); // k (j, ch)
+selectTab((HResource) null, "PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "controller.v", 1, false, true); // k (j, ch) - Double Click
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // R (Q, ch)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "controller.v", 1); // k (j, ch)
+selectTab((HResource) null, "PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "controller.v", 1, false, true); // k (j, ch) - Double Click
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // R (Q, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.v)]", 1, true); // B (D, ch) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.v)]", 1, true, false, false, false, true, false); // B (D, ch) - Popup Trigger - Node
+selectCodeEditor("controller.v", 78, 93); // cd (w, ch)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Add Sources]", 2, false); // u (O, ch)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (ch): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (C, c)
+// [GUI Memory]: 89 MB (+2238kb) [00:06:02]
+// Elapsed time: 27 seconds
+setFileChooser("/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/count_car.v");
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 35 seconds
+dismissDialog("Add Sources"); // c (ch)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/count_car.v 
+// [GUI Memory]: 98 MB (+4874kb) [00:06:08]
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 5,503 MB. GUI used memory: 46 MB. Current time: 6/16/22 10:38:56 PM ICT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 15 seconds
+selectButton(PAResourceOtoP.PlanAheadTab_REFRESH_CHANGED_MODULES, "Refresh Changed Modules"); // h (cM, ch)
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: RSB_BITABEN_IPREPODATA_REFRESH
+// TclEventType: BDCELL_LOCK_CHANGE
+// TclEventType: RSB_OPEN_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// CommandFailedException: ERROR: [BD 41-45] Cell path not found: /design_1 
+// bv (ch):  Refresh IP Catalog : addNotify
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: IP_UPGRADE_COMPLETE
+// Tcl Message: update_module_reference design_1_top_0_0 
+// Tcl Message: INFO: [IP_Flow 19-5107] Inferred bus interface 'reset_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository). INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository). INFO: [IP_Flow 19-818] Not transferring value dependency attribute "(spirit:decode(id('MODELPARAM_VALUE.SYS_FREQ')) / (spirit:decode(id('MODELPARAM_VALUE.SAMPLE')) * spirit:decode(id('MODELPARAM_VALUE.BAUD_RATE'))))" into user parameter "BAUD_DVSR". 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// Tcl Message: Upgrading '/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd' 
+// Tcl Message: INFO: [IP_Flow 19-1972] Upgraded design_1_top_0_0 from top_v1_0 1.0 to top_v1_0 1.0 
+// Tcl Message: Wrote  : </data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd>  
+dismissDialog("Refresh IP Catalog"); // bv (ch)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /sensor2_1 
+// Elapsed time: 50 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "controller.v", 1); // k (j, ch)
+// k (ch): Text Changed: addNotify
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B (k, ch)
+selectButton(RDIResource.ConfirmSaveTextEditsDialog_NO, "No"); // a (k)
+dismissDialog("Text Changed"); // k (ch)
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /valid_Epass_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /valid_Epass_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /valid_Epass_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /valid_Epass_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /valid_Epass_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /valid_Epass_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /valid_Epass_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /valid_Epass_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /valid_Epass_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /valid_Epass_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /valid_Epass_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /valid_Epass_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /sensor3_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /sensor3_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /sensor3_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /sensor3_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /sensor3_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /sensor3_1 
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.v)]", 1); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd)]", 3, true); // B (D, ch) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd)]", 3, true, false, false, false, true, false); // B (D, ch) - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_RESET_COMPOSITE_FILE, "Reset Output Products..."); // ac (ai, ch)
+// Run Command: PAResourceCommand.PACommandNames_RESET_COMPOSITE_FILE
+// aJ (ch): Reset Output Products: addNotify
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_RESET_OUTPUT_PRODUCTS, "Reset"); // a (aJ)
+// bv (ch):  Managing Output Products : addNotify
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJ_DESIGN_MODE_SET
+// Tcl Message: reset_target all [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd] 
+// TclEventType: PROJ_DESIGN_MODE_SET
+// Tcl Message: export_ip_user_files -of_objects  [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd] -sync -no_script -force -quiet 
+dismissDialog("Managing Output Products"); // bv (ch)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd)]", 3, true); // B (D, ch) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd)]", 3, true, false, false, false, true, false); // B (D, ch) - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_GENERATE_COMPOSITE_FILE, "Generate Output Products..."); // ac (ai, ch)
+// Run Command: PAResourceCommand.PACommandNames_GENERATE_COMPOSITE_FILE
+// aJ (ch): Generate Output Products: addNotify
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, "Generate"); // a (aJ)
+// bv (ch):  Managing Output Products : addNotify
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_SAVE_DIAGRAM
+// CommandFailedException: ERROR: [BD 41-45] Cell path not found: /design_1 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: generate_target all [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd] 
+// Tcl Message: Wrote  : </data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd>  
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// CommandFailedException: ERROR: [BD 41-45] Cell path not found: /design_1 
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: VHDL Output written to : /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/synth/design_1.v VHDL Output written to : /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/sim/design_1.v VHDL Output written to : /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block top_0 . 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 . 
+// Tcl Message: Exporting to file /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh Generated Block Design Tcl file /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl Generated Hardware Definition File /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/synth/design_1.hwdef 
+// Tcl Message: export_ip_user_files -of_objects [get_files /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// HMemoryUtils.trashcanNow. Engine heap size: 5,638 MB. GUI used memory: 48 MB. Current time: 6/16/22 10:40:26 PM ICT
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// 'bn' command handler elapsed time: 21 seconds
+// Elapsed time: 19 seconds
+selectButton("PAResourceQtoS.SimpleOutputProductDialog_GENERATION_OF_OUTPUT_PRODUCTS_COMPLETED_OK", "OK"); // JButton (A, G)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd)]", 3, true); // B (D, ch) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd)]", 3, true, false, false, false, true, false); // B (D, ch) - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_CREATE_TOP_HDL, "Create HDL Wrapper..."); // ac (ai, ch)
+// Run Command: PAResourceCommand.PACommandNames_CREATE_TOP_HDL
+// a (ch): Create HDL Wrapper: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (a)
+dismissDialog("Create HDL Wrapper"); // a (ch)
+// Tcl Message: make_wrapper -files [get_files /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd] -top 
+selectCheckBox(PAResourceItoN.MsgView_WARNING_MESSAGES, (String) null, false); // g (aQ, ch): FALSE
+selectCheckBox(PAResourceItoN.MsgView_INFORMATION_MESSAGES, (String) null, false); // g (aQ, ch): FALSE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12, true, false, false, false, true, false); // u (O, ch) - Popup Trigger - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12, true); // u (O, ch) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_RTL_DESIGN
+// A (ch): Elaborate Design: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// bv (ch):  Open Elaborated Design : addNotify
+dismissDialog("Elaborate Design"); // A (ch)
+// TclEventType: ELABORATE_START
+// Tcl Message: synth_design -rtl -name rtl_1 
+// Tcl Message: Command: synth_design -rtl -name rtl_1 Starting synth_design Using part: xc7z020clg484-1 Top: top 
+// [Engine Memory]: 5,606 MB (+4561kb) [00:08:25]
+// HMemoryUtils.trashcanNow. Engine heap size: 5,681 MB. GUI used memory: 48 MB. Current time: 6/16/22 10:41:11 PM ICT
+// Elapsed time: 54 seconds
+selectButton(RDIResource.ProgressDialog_BACKGROUND, "Background"); // a (bv)
+// 'dO' command handler elapsed time: 56 seconds
+// TclEventType: ELABORATE_FINISH
+// HMemoryUtils.trashcanNow. Engine heap size: 5,725 MB. GUI used memory: 48 MB. Current time: 6/16/22 10:44:56 PM ICT
+// HMemoryUtils.trashcanNow. Engine heap size: 5,780 MB. GUI used memory: 48 MB. Current time: 6/16/22 10:45:26 PM ICT
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 5,996 MB. GUI used memory: 48 MB. Current time: 6/16/22 10:45:28 PM ICT
+// [Engine Memory]: 5,998 MB (+117122kb) [00:12:47]
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Schematic: addNotify
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 6797.676 ; gain = 5.008 ; free physical = 5008 ; free virtual = 69381 
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'top' [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/top.v:1] 
+// Tcl Message: 	Parameter WIDTH_TIK bound to: 16 - type: integer  	Parameter WIDTH_MS bound to: 14 - type: integer  	Parameter WIDTH_SPEED bound to: 14 - type: integer  	Parameter DATA_SIZE bound to: 8 - type: integer  	Parameter SIZE_FIFO bound to: 8 - type: integer  	Parameter SYS_FREQ bound to: 50000000 - type: integer  	Parameter BAUD_RATE bound to: 9600 - type: integer  	Parameter SAMPLE bound to: 16 - type: integer  	Parameter BAUD_DVSR bound to: 325 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'non_stop_ETC' [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/non_stop_ETC.v:1] 
+// Tcl Message: 	Parameter WIDTH_TIK bound to: 16 - type: integer  	Parameter WIDTH_MS bound to: 14 - type: integer  	Parameter WIDTH_SPEED bound to: 14 - type: integer  	Parameter SYS_FREQ bound to: 50000000 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'cotroller' [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/controller.v:1] 
+// Tcl Message: 	Parameter START bound to: 2'b00  	Parameter COUNT_TIME bound to: 2'b01  	Parameter CALC bound to: 2'b10  	Parameter IDLE bound to: 2'b00  	Parameter WAIT_EN bound to: 2'b01  	Parameter WAIT_DIS bound to: 2'b10  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'count_car' [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/count_car.v:1] 
+// Tcl Message: 	Parameter HOLD bound to: 2'b00  	Parameter INC bound to: 2'b01  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'cotroller' (2#1) [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/controller.v:1] INFO: [Synth 8-6157] synthesizing module 'datapath' [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/datapath.v:1] 
+// Tcl Message: 	Parameter WIDTH_TIK bound to: 16 - type: integer  	Parameter WIDTH_MS bound to: 14 - type: integer  	Parameter WIDTH_SPEED bound to: 14 - type: integer  	Parameter SYS_FREQ bound to: 50000000 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'div' [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/div.v:1] 
+// Tcl Message: 	Parameter N bound to: 14 - type: integer  	Parameter DEC bound to: 4 - type: integer  	Parameter COUNT_WIDTH bound to: 4 - type: integer  	Parameter IDLE bound to: 3'b000  	Parameter ENA bound to: 3'b001  	Parameter SHIFT bound to: 3'b010  	Parameter CALC bound to: 3'b011  
+// Tcl Message: INFO: [Synth 8-155] case statement is not full and has no default [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/div.v:83] INFO: [Synth 8-6155] done synthesizing module 'div' (3#1) [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/div.v:1] INFO: [Synth 8-6155] done synthesizing module 'datapath' (4#1) [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/datapath.v:1] INFO: [Synth 8-6155] done synthesizing module 'non_stop_ETC' (5#1) [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/non_stop_ETC.v:1] INFO: [Synth 8-6157] synthesizing module 'push_data' [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/push_data.v:1] 
+// Tcl Message: 	Parameter WIDTH_SPEED bound to: 14 - type: integer  	Parameter DATA_SIZE bound to: 8 - type: integer  	Parameter STATE0 bound to: 2'b00  	Parameter STATE1 bound to: 2'b01  	Parameter STATE2 bound to: 2'b10  	Parameter STATE3 bound to: 2'b11  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'push_data' (6#1) [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/push_data.v:1] INFO: [Synth 8-6157] synthesizing module 'uart_generator_clock' [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/uart_generator_clock.sv:1] 
+// Tcl Message: 	Parameter SYS_FREQ bound to: 50000000 - type: integer  	Parameter BAUD_RATE bound to: 9600 - type: integer  	Parameter SAMPLE bound to: 16 - type: integer  	Parameter BAUD_DVSR bound to: 325 - type: integer  	Parameter CLOCK bound to: 2604 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'uart_generator_clock' (7#1) [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/uart_generator_clock.sv:1] INFO: [Synth 8-6157] synthesizing module 'uart_fifo' [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/uart_fifo.sv:1] 
+// Tcl Message: 	Parameter DATA_SIZE bound to: 8 - type: integer  	Parameter SIZE_FIFO bound to: 8 - type: integer  	Parameter ADDR_WIDTH bound to: 3 - type: integer  
+// Tcl Message: INFO: [Synth 8-155] case statement is not full and has no default [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/uart_fifo.sv:66] INFO: [Synth 8-155] case statement is not full and has no default [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/uart_fifo.sv:95] INFO: [Synth 8-155] case statement is not full and has no default [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/uart_fifo.sv:141] 
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'uart_fifo' (8#1) [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/uart_fifo.sv:1] INFO: [Synth 8-6157] synthesizing module 'uart_transmitter' [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/uart_transmitter.sv:13] 
+// Tcl Message: 	Parameter DATA_SIZE bound to: 8 - type: integer  	Parameter BIT_COUNT_SIZE bound to: 4 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'uart_transmitter' (9#1) [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/uart_transmitter.sv:13] INFO: [Synth 8-6155] done synthesizing module 'top' (10#1) [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/top.v:1] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 6834.941 ; gain = 42.273 ; free physical = 4995 ; free virtual = 69370 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message:  Report Check Netlist:  +------+------------------+-------+---------+-------+------------------+ |      |Item              |Errors |Warnings |Status |Description       | +------+------------------+-------+---------+-------+------------------+ |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets | +------+------------------+-------+---------+-------+------------------+ --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 6834.941 ; gain = 42.273 ; free physical = 4995 ; free virtual = 69372 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 6834.941 ; gain = 42.273 ; free physical = 4995 ; free virtual = 69372 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Device 21-403] Loading part xc7z020clg484-1 INFO: [Project 1-570] Preparing netlist for logic optimization INFO: [Opt 31-140] Inserted 5 IBUFs to IO ports without IO buffers. INFO: [Opt 31-141] Inserted 6 OBUFs to IO ports without IO buffers. 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Parsing XDC File [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/constrs_1/new/IO.xdc] 
+// Tcl Message: Finished Parsing XDC File [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/constrs_1/new/IO.xdc] Completed Processing XDC Constraints  
+// Tcl Message: INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers. INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// OpenDesignTask elapsed time: 270.9s
+// Tcl Message: RTL Elaboration Complete:  : Time (s): cpu = 00:00:53 ; elapsed = 00:04:31 . Memory (MB): peak = 7286.316 ; gain = 493.648 ; free physical = 4605 ; free virtual = 69076 
+// Tcl Message: 35 Infos, 9 Warnings, 1 Critical Warnings and 0 Errors encountered. synth_design completed successfully 
+// Tcl Message: synth_design: Time (s): cpu = 00:00:53 ; elapsed = 00:04:31 . Memory (MB): peak = 7286.316 ; gain = 493.648 ; free physical = 4605 ; free virtual = 69076 
+// M (ch): Critical Messages: addNotify
+// Elapsed time: 216 seconds
+dismissDialog("Open Elaborated Design"); // bv (ch)
+// Elapsed time: 111 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (M)
+dismissDialog("Critical Messages"); // M (ch)
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aE (Q, ch)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 5); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, IO.xdc]", 7, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, IO.xdc]", 7, false, false, false, false, false, true); // B (D, ch) - Double Click
+// [GUI Memory]: 103 MB (+710kb) [00:14:50]
+selectCodeEditor("IO.xdc", 229, 94); // cd (w, ch)
+selectCodeEditor("IO.xdc", 129, 92); // cd (w, ch)
+selectCodeEditor("IO.xdc", 156, 98); // cd (w, ch)
+selectCodeEditor("IO.xdc", 156, 98, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("IO.xdc", 156, 98); // cd (w, ch)
+selectCodeEditor("IO.xdc", 4, 72); // cd (w, ch)
+selectCodeEditor("IO.xdc", 1, 70); // cd (w, ch)
+typeControlKey(null, null, 'z');
+typeControlKey((HResource) null, "IO.xdc", 'v'); // cd (w, ch)
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceOtoP.ProjectTab_RELOAD, "Reload"); // h (cM, ch)
+// bv (ch):  Reloading : addNotify
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 6,086 MB. GUI used memory: 76 MB. Current time: 6/16/22 10:47:50 PM ICT
+// Engine heap size: 6,086 MB. GUI used memory: 77 MB. Current time: 6/16/22 10:47:51 PM ICT
+// Tcl Message: refresh_design 
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 6,093 MB. GUI used memory: 52 MB. Current time: 6/16/22 10:47:52 PM ICT
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Schematic: addNotify
+// [GUI Memory]: 116 MB (+7945kb) [00:15:11]
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Parsing XDC File [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/constrs_1/new/IO.xdc] Finished Parsing XDC File [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/constrs_1/new/IO.xdc] Completed Processing XDC Constraints  
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+dismissDialog("Reloading"); // bv (ch)
+selectCodeEditor("IO.xdc", 294, 104); // cd (w, ch)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12, true, false, false, false, true, false); // u (O, ch) - Popup Trigger - Node
+selectCodeEditor("IO.xdc", 81, 72); // cd (w, ch)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12, true, false, false, false, true, false); // u (O, ch) - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_RELOAD_RTL_DESIGN, "Reload Design"); // ac (ai, ch)
+// [GUI Memory]: 122 MB (+86kb) [00:15:23]
+// Run Command: PAResourceCommand.PACommandNames_RELOAD_RTL_DESIGN
+// 'e' command handler elapsed time: 3 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 24, false); // u (O, ch)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ch): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bv (ch):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // A (ch)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (ch): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cv' command handler elapsed time: 5 seconds
+dismissDialog("Launch Runs"); // f (ch)
+// TclEventType: RUN_LAUNCH
+// bv (ch):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 48 
+// [GUI Memory]: 128 MB (+272kb) [00:15:59]
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 611 seconds
+selectButton(RDIResource.ProgressDialog_BACKGROUND, "Background"); // a (bv)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // k (j, ch)
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Thu Jun 16 22:58:34 2022] Launched impl_1... Run output will be captured here: /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.runs/impl_1/runme.log 
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:19 ; elapsed = 00:10:19 . Memory (MB): peak = 7324.090 ; gain = 0.000 ; free physical = 2571 ; free virtual = 67412 
+dismissDialog("Generate Bitstream"); // bv (ch)
+// [GUI Memory]: 136 MB (+1254kb) [00:30:39]
+// HMemoryUtils.trashcanNow. Engine heap size: 6,104 MB. GUI used memory: 81 MB. Current time: 6/16/22 11:17:56 PM ICT
+// TclEventType: RUN_COMPLETED
+// ah (ch): Bitstream Generation Completed: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 6,106 MB. GUI used memory: 79 MB. Current time: 6/16/22 11:47:56 PM ICT
+// HMemoryUtils.trashcanNow. Engine heap size: 6,106 MB. GUI used memory: 77 MB. Current time: 6/17/22 12:17:56 AM ICT
+// HMemoryUtils.trashcanNow. Engine heap size: 6,106 MB. GUI used memory: 77 MB. Current time: 6/17/22 12:47:56 AM ICT
+// HMemoryUtils.trashcanNow. Engine heap size: 6,106 MB. GUI used memory: 76 MB. Current time: 6/17/22 1:17:56 AM ICT
+// HMemoryUtils.trashcanNow. Engine heap size: 6,106 MB. GUI used memory: 77 MB. Current time: 6/17/22 1:47:56 AM ICT
+// HMemoryUtils.trashcanNow. Engine heap size: 6,106 MB. GUI used memory: 76 MB. Current time: 6/17/22 2:17:56 AM ICT
+// HMemoryUtils.trashcanNow. Engine heap size: 6,106 MB. GUI used memory: 76 MB. Current time: 6/17/22 2:47:56 AM ICT
+// HMemoryUtils.trashcanNow. Engine heap size: 6,106 MB. GUI used memory: 76 MB. Current time: 6/17/22 3:17:56 AM ICT
+// HMemoryUtils.trashcanNow. Engine heap size: 6,106 MB. GUI used memory: 76 MB. Current time: 6/17/22 3:47:56 AM ICT
+// HMemoryUtils.trashcanNow. Engine heap size: 6,106 MB. GUI used memory: 77 MB. Current time: 6/17/22 4:17:56 AM ICT
+// HMemoryUtils.trashcanNow. Engine heap size: 6,106 MB. GUI used memory: 76 MB. Current time: 6/17/22 4:47:56 AM ICT
+// HMemoryUtils.trashcanNow. Engine heap size: 6,106 MB. GUI used memory: 76 MB. Current time: 6/17/22 5:17:56 AM ICT
+// HMemoryUtils.trashcanNow. Engine heap size: 6,106 MB. GUI used memory: 77 MB. Current time: 6/17/22 5:47:56 AM ICT
+// HMemoryUtils.trashcanNow. Engine heap size: 6,106 MB. GUI used memory: 77 MB. Current time: 6/17/22 6:17:57 AM ICT
+// HMemoryUtils.trashcanNow. Engine heap size: 6,106 MB. GUI used memory: 77 MB. Current time: 6/17/22 6:47:57 AM ICT
+// HMemoryUtils.trashcanNow. Engine heap size: 6,106 MB. GUI used memory: 76 MB. Current time: 6/17/22 7:17:57 AM ICT
+// HMemoryUtils.trashcanNow. Engine heap size: 6,106 MB. GUI used memory: 77 MB. Current time: 6/17/22 7:47:57 AM ICT
+// HMemoryUtils.trashcanNow. Engine heap size: 6,106 MB. GUI used memory: 76 MB. Current time: 6/17/22 8:17:57 AM ICT
+// WARNING: HTimer (ExpRunMonitor Open Timer) is taking too long to process. Increasing delay to 6000 ms.
+// Elapsed time: 34462 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// e (ch): Close Design: addNotify
+selectButton(PAResourceAtoD.ClosePlanner_YES, "Yes"); // a (e)
+// TclEventType: DESIGN_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 6,106 MB. GUI used memory: 74 MB. Current time: 6/17/22 8:33:06 AM ICT
+// Engine heap size: 6,106 MB. GUI used memory: 75 MB. Current time: 6/17/22 8:33:06 AM ICT
+// TclEventType: CURR_DESIGN_SET
+// TclEventType: DESIGN_CLOSE
+// bv (ch):  Open Implemented Design : addNotify
+// Tcl Message: close_design 
+dismissDialog("Close Design"); // e (ch)
+// Tcl Message: open_run impl_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 6,339 MB. GUI used memory: 51 MB. Current time: 6/17/22 8:33:52 AM ICT
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 6,344 MB. GUI used memory: 50 MB. Current time: 6/17/22 8:33:52 AM ICT
+// [Engine Memory]: 6,344 MB (+47788kb) [10:01:10]
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Device: addNotify
+// DeviceView Instantiated
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 32 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2018.1 INFO: [Project 1-570] Preparing netlist for logic optimization INFO: [Timing 38-478] Restoring timing data from binary archive. INFO: [Timing 38-479] Binary timing data restore complete. INFO: [Project 1-856] Restoring constraints from binary archive. INFO: [Project 1-853] Binary constraint restore complete. 
+// Tcl Message: Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF File: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.11 . Memory (MB): peak = 7514.180 ; gain = 0.000 ; free physical = 43228 ; free virtual = 80442 
+// Tcl Message: Restored from archive | CPU: 1.730000 secs | Memory: -0.531837 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.11 . Memory (MB): peak = 7514.180 ; gain = 0.000 ; free physical = 43228 ; free virtual = 80442 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// ExpRunCommands.openImplResults elapsed time: 48s
+// Device view-level: 0.0
+// TclEventType: DRC_ADDED
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// Tcl Message: open_run: Time (s): cpu = 00:00:27 ; elapsed = 00:00:47 . Memory (MB): peak = 7655.422 ; gain = 331.332 ; free physical = 43155 ; free virtual = 80377 
+// TclEventType: DRC_ADDED
+// TclEventType: METHODOLOGY_ADDED
+// TclEventType: POWER_UPDATED
+// TclEventType: TIMING_SUMMARY_UPDATED
+// 'dO' command handler elapsed time: 60 seconds
+// Elapsed time: 51 seconds
+dismissDialog("Open Implemented Design"); // bv (ch)
+// Elapsed time: 22 seconds
+selectTab((HResource) null, (HResource) null, "Power", 5); // aE (Q, ch)

@@ -16,8 +16,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param synth.incrementalSynthesisCache ./.Xil/Vivado-14022-dt25-linux/incrSyn
-set_msg_config -id {Common 17-41} -limit 10000000
+set_param synth.incrementalSynthesisCache ./.Xil/Vivado-24656-dt25-linux/incrSyn
 set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
@@ -40,6 +39,7 @@ read_verilog -library xil_defaultlib -sv {
 }
 read_verilog -library xil_defaultlib {
   /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/controller.v
+  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/count_car.v
   /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/datapath.v
   /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/div.v
   /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/non_stop_ETC.v

@@ -11,9 +11,9 @@ set_property IOSTANDARD LVCMOS33  [get_ports reset_n];
 set_property PACKAGE_PIN N15  [get_ports sensor1]; # BTNL
 set_property PACKAGE_PIN P16  [get_ports sensor2]; # BTNC
 set_property PACKAGE_PIN R18  [get_ports sensor3]; # BTNR
+set_property PACKAGE_PIN F21 [ get_ports enable]; # BTNU
 set_property PACKAGE_PIN H22  [get_ports valid_Epass[1]]; # SW2
 set_property PACKAGE_PIN G22  [get_ports valid_Epass[0]]; # SW1
-set_property PACKAGE_PIN F21 [ get_ports enable]; # BTNU
 
 
 set_property IOSTANDARD LVCMOS33  [get_ports sensor1]; # BTNL

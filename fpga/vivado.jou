@@ -2,8 +2,8 @@
 # Vivado v2018.1 (64-bit)
 # SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
 # IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
-# Start of session at: Tue Jun 14 09:33:34 2022
-# Process ID: 14022
+# Start of session at: Thu Jun 16 22:32:23 2022
+# Process ID: 24656
 # Current directory: /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga
 # Command line: vivado
 # Log file: /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/vivado.log
@@ -13,39 +13,10 @@ start_gui
 open_project /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.xpr
 update_compile_order -fileset sources_1
 update_module_reference design_1_top_0_0
-delete_bd_objs [get_bd_nets valid_Epass_1] [get_bd_ports valid_Epass]
-startgroup
-create_bd_port -dir I -from 1 -to 0 valid_Epass
-connect_bd_net [get_bd_pins /top_0/valid_Epass] [get_bd_ports valid_Epass]
-endgroup
-save_bd_design
-reset_target all [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd]
-export_ip_user_files -of_objects  [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd] -sync -no_script -force -quiet
-make_wrapper -files [get_files /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd] -top
-regenerate_bd_layout
-save_bd_design
-validate_bd_design -force
-reset_target all [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd]
-export_ip_user_files -of_objects  [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd] -sync -no_script -force -quiet
-generate_target all [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd]
-export_ip_user_files -of_objects [get_files /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
-export_simulation -of_objects [get_files /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd] -directory /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.ip_user_files/sim_scripts -ip_user_files_dir /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.ip_user_files -ipstatic_source_dir /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.ip_user_files/ipstatic -lib_map_path [list {modelsim=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/modelsim} {questa=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/questa} {ies=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/ies} {xcelium=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/xcelium} {vcs=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/vcs} {riviera=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
-startgroup
-create_bd_port -dir O led1
-connect_bd_net [get_bd_pins /top_0/led1] [get_bd_ports led1]
-endgroup
-startgroup
-create_bd_port -dir O led2
-connect_bd_net [get_bd_pins /top_0/led2] [get_bd_ports led2]
-endgroup
-startgroup
-create_bd_port -dir O led3
-connect_bd_net [get_bd_pins /top_0/led3] [get_bd_ports led3]
-endgroup
-regenerate_bd_layout
-save_bd_design
-validate_bd_design
-make_wrapper -files [get_files /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd] -top
+update_module_reference design_1_top_0_0
+add_files -norecurse /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/count_car.v
+update_compile_order -fileset sources_1
+update_module_reference design_1_top_0_0
 reset_target all [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd]
 export_ip_user_files -of_objects  [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd] -sync -no_script -force -quiet
 generate_target all [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd]
@@ -53,150 +24,9 @@ export_ip_user_files -of_objects [get_files /data5/workspace/quangnd1/sip_traini
 export_simulation -of_objects [get_files /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd] -directory /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.ip_user_files/sim_scripts -ip_user_files_dir /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.ip_user_files -ipstatic_source_dir /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.ip_user_files/ipstatic -lib_map_path [list {modelsim=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/modelsim} {questa=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/questa} {ies=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/ies} {xcelium=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/xcelium} {vcs=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/vcs} {riviera=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
 make_wrapper -files [get_files /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd] -top
 synth_design -rtl -name rtl_1
-open_bd_design {/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd}
-validate_bd_design -force
 refresh_design
-save_bd_design
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 48
 wait_on_run impl_1
 close_design
 open_run impl_1
-reset_run impl_1 -prev_step 
-launch_runs impl_1 -to_step write_bitstream -jobs 48
-wait_on_run impl_1
-synth_design -rtl -name rtl_1
-refresh_design
-open_bd_design {/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd}
-update_module_reference design_1_top_0_0
-update_module_reference design_1_top_0_0
-update_module_reference design_1_top_0_0
-reset_target all [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd]
-export_ip_user_files -of_objects  [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd] -sync -no_script -force -quiet
-generate_target all [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd]
-export_ip_user_files -of_objects [get_files /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
-export_simulation -of_objects [get_files /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd] -directory /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.ip_user_files/sim_scripts -ip_user_files_dir /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.ip_user_files -ipstatic_source_dir /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.ip_user_files/ipstatic -lib_map_path [list {modelsim=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/modelsim} {questa=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/questa} {ies=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/ies} {xcelium=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/xcelium} {vcs=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/vcs} {riviera=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
-make_wrapper -files [get_files /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd] -top
-refresh_design
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 48
-wait_on_run impl_1
-refresh_design
-open_bd_design {/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd}
-update_module_reference design_1_top_0_0
-open_bd_design {/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd}
-reset_target all [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd]
-export_ip_user_files -of_objects  [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd] -sync -no_script -force -quiet
-generate_target all [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd]
-export_ip_user_files -of_objects [get_files /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
-export_simulation -of_objects [get_files /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd] -directory /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.ip_user_files/sim_scripts -ip_user_files_dir /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.ip_user_files -ipstatic_source_dir /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.ip_user_files/ipstatic -lib_map_path [list {modelsim=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/modelsim} {questa=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/questa} {ies=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/ies} {xcelium=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/xcelium} {vcs=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/vcs} {riviera=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
-refresh_design
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 48
-wait_on_run impl_1
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-refresh_design
-open_bd_design {/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd}
-update_module_reference design_1_top_0_0
-reset_target all [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd]
-export_ip_user_files -of_objects  [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd] -sync -no_script -force -quiet
-generate_target all [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd]
-export_ip_user_files -of_objects [get_files /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
-export_simulation -of_objects [get_files /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd] -directory /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.ip_user_files/sim_scripts -ip_user_files_dir /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.ip_user_files -ipstatic_source_dir /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.ip_user_files/ipstatic -lib_map_path [list {modelsim=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/modelsim} {questa=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/questa} {ies=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/ies} {xcelium=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/xcelium} {vcs=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/vcs} {riviera=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
-update_module_reference design_1_top_0_0
-reset_target all [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd]
-export_ip_user_files -of_objects  [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd] -sync -no_script -force -quiet
-refresh_design
-refresh_design
-reset_target all [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd]
-export_ip_user_files -of_objects  [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd] -sync -no_script -force -quiet
-refresh_design
-open_bd_design {/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd}
-update_module_reference design_1_top_0_0
-reset_target all [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd]
-export_ip_user_files -of_objects  [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd] -sync -no_script -force -quiet
-refresh_design
-refresh_design
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 48
-wait_on_run impl_1
-close_design
-open_run synth_1 -name synth_1
-current_design impl_1
-refresh_design
-open_bd_design {/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd}
-update_module_reference design_1_top_0_0
-regenerate_bd_layout
-startgroup
-create_bd_port -dir O led4
-connect_bd_net [get_bd_pins /top_0/led4] [get_bd_ports led4]
-endgroup
-startgroup
-create_bd_port -dir O led5
-connect_bd_net [get_bd_pins /top_0/led5] [get_bd_ports led5]
-endgroup
-startgroup
-create_bd_port -dir O led6
-connect_bd_net [get_bd_pins /top_0/led6] [get_bd_ports led6]
-endgroup
-regenerate_bd_layout
-save_bd_design
-validate_bd_design
-reset_target all [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd]
-export_ip_user_files -of_objects  [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd] -sync -no_script -force -quiet
-generate_target all [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd]
-export_ip_user_files -of_objects [get_files /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
-export_simulation -of_objects [get_files /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd] -directory /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.ip_user_files/sim_scripts -ip_user_files_dir /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.ip_user_files -ipstatic_source_dir /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.ip_user_files/ipstatic -lib_map_path [list {modelsim=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/modelsim} {questa=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/questa} {ies=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/ies} {xcelium=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/xcelium} {vcs=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/vcs} {riviera=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
-reset_target all [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd]
-export_ip_user_files -of_objects  [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd] -sync -no_script -force -quiet
-generate_target all [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd]
-export_ip_user_files -of_objects [get_files /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
-export_simulation -of_objects [get_files /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd] -directory /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.ip_user_files/sim_scripts -ip_user_files_dir /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.ip_user_files -ipstatic_source_dir /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.ip_user_files/ipstatic -lib_map_path [list {modelsim=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/modelsim} {questa=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/questa} {ies=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/ies} {xcelium=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/xcelium} {vcs=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/vcs} {riviera=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
-make_wrapper -files [get_files /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd] -top
-synth_design -rtl -name rtl_1
-refresh_design
-refresh_design
-refresh_design
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 48
-wait_on_run impl_1
-refresh_design
-refresh_design
-refresh_design
-reset_target all [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd]
-export_ip_user_files -of_objects  [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd] -sync -no_script -force -quiet
-generate_target all [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd]
-export_ip_user_files -of_objects [get_files /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
-export_simulation -of_objects [get_files /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd] -directory /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.ip_user_files/sim_scripts -ip_user_files_dir /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.ip_user_files -ipstatic_source_dir /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.ip_user_files/ipstatic -lib_map_path [list {modelsim=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/modelsim} {questa=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/questa} {ies=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/ies} {xcelium=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/xcelium} {vcs=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/vcs} {riviera=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
-refresh_design
-refresh_design
-reset_target all [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd]
-export_ip_user_files -of_objects  [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd] -sync -no_script -force -quiet
-generate_target all [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd]
-export_ip_user_files -of_objects [get_files /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
-export_simulation -of_objects [get_files /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd] -directory /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.ip_user_files/sim_scripts -ip_user_files_dir /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.ip_user_files -ipstatic_source_dir /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.ip_user_files/ipstatic -lib_map_path [list {modelsim=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/modelsim} {questa=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/questa} {ies=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/ies} {xcelium=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/xcelium} {vcs=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/vcs} {riviera=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
-refresh_design
-refresh_design
-refresh_design
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 48
-wait_on_run impl_1
-current_design synth_1
-check_timing -verbose -name timing_1
-refresh_design
-current_design impl_1
-current_design synth_1
-open_bd_design {/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd}
-update_module_reference design_1_top_0_0
-reset_target all [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd]
-export_ip_user_files -of_objects  [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd] -sync -no_script -force -quiet
-generate_target all [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd]
-export_ip_user_files -of_objects [get_files /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
-export_simulation -of_objects [get_files /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd] -directory /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.ip_user_files/sim_scripts -ip_user_files_dir /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.ip_user_files -ipstatic_source_dir /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.ip_user_files/ipstatic -lib_map_path [list {modelsim=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/modelsim} {questa=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/questa} {ies=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/ies} {xcelium=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/xcelium} {vcs=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/vcs} {riviera=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
-current_design rtl_1
-refresh_design
-refresh_design
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 48
-wait_on_run impl_1
