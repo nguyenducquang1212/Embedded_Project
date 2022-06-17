@@ -6,7 +6,7 @@ module cotroller (
 	input            sensor3    ,
 	input      [1:0] valid_Epass,
 	input            enable     ,
-	input      [1:0] num_veh    ,
+	// input      [1:0] num_veh    ,
 	input            done       ,
 	output reg       init       ,
 	output reg       count      ,

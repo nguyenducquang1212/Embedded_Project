@@ -19,7 +19,7 @@ module non_stop_ETC
 );
 
 
-wire [1:0] num_veh    ;
+// wire [1:0] num_veh    ;
 wire       init       ;
 wire       count      ;
 wire       cal        ;
@@ -38,7 +38,7 @@ cotroller cotroller_DUT (
 	.sensor3    (sensor3    ),
 	.valid_Epass(valid_Epass),
 	.enable     (enable     ),
-	.num_veh    (num_veh    ),
+	// .num_veh    (num_veh    ),
 	.done       (done       ),
 	.init       (init       ),
 	.count      (count      ),
@@ -64,7 +64,7 @@ datapath
 	.down       (down       ),
 	.en         (en         ),
 	.dis        (dis        ),
-	.num_veh    (num_veh    ),
+	// .num_veh    (num_veh    ),
 	.speed      (speed      ),
 	.done       (done       ),
 	.en_barrier (en_barrier )
