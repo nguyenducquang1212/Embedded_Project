@@ -25,7 +25,6 @@ wire       count      ;
 wire       cal        ;
 wire       up         ;
 wire       down       ;
-wire       down2      ;
 wire       en         ;
 wire       dis        ;
 wire       en_barrier ;
@@ -46,7 +45,6 @@ cotroller cotroller_DUT (
 	.cal        (cal        ),
 	.up         (up         ),
 	.down       (down       ),
-	.down2      (down2      ),
 	.en         (en         ),
 	.dis        (dis        )
 );
@@ -64,7 +62,6 @@ datapath
 	.cal        (cal        ),
 	.up         (up         ),
 	.down       (down       ),
-	.down2      (down2      ),
 	.en         (en         ),
 	.dis        (dis        ),
 	.num_veh    (num_veh    ),

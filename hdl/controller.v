@@ -13,7 +13,6 @@ module cotroller (
 	output reg       cal        ,
 	output reg       up         ,
 	output reg       down       ,
-	output reg       down2      ,
 	output reg       en         ,
 	output reg       dis        
 );
@@ -83,7 +82,7 @@ always @(*) begin
 		START: begin 
 			init = 1;
 			// if (sensor1) begin
-			if ( sensor1 & (car1 != car3)) begin
+			if ( sensor1 & (car1 != car2)) begin
 				next_state = COUNT_TIME;
 			end
 			// else begin 
@@ -115,7 +114,7 @@ always @(*) begin
 					dis = 1;
 				end
 				// if (car1 == car3) begin
-				if (sensor3) begin
+				if (enable) begin
 					next_state = START;
 				end
 				// next_state = START;
@@ -125,11 +124,14 @@ always @(*) begin
 		// default : next_state = current_state;
 	endcase
 	
-	if (num_veh == 0) begin
+	// if (num_veh == 0) begin
+	// 	dis = 1;
+	// end
+	// else begin 
+	// 	en = 1;
+	// end
+	if ((reg_sensor3 & !sensor3) & (car1==car3)) begin
 		dis = 1;
-	end
-	else begin 
-		en = 1;
 	end
 
 end
@@ -138,62 +140,64 @@ end
 /**============================================
  * 	          Update value for down
  *=============================================*/
-always @(*) begin
-	if (reg_sensor3 & !sensor3) begin
-		down = 1;
-	end
-	else begin 
-		down = 0;
-	end
-end
+// always @(*) begin
+// 	if (reg_sensor3 & !sensor3) begin
+// 		down = 1;
+// 	end
+// 	else begin 
+// 		down = 0;
+// 	end
+// end
 
 
-/**============================================
- * 	          Update value for current_state_f
- *=============================================*/
-always @(posedge clk or negedge reset_n) begin
-	if(~reset_n) begin
-		current_state_f <= IDLE;
-	end else begin
-		current_state_f <= next_state_f;
-	end
-end
 
 
-/**============================================
- * 	          Update value for down2
- *=============================================*/
-always @(*) begin
-	down2 = 1'b0;
-	case (current_state)
-		IDLE: begin
-			if ((valid_Epass == 2'b01) & (car1 == car2)) begin
-				next_state_f = WAIT_EN;
-			end
-			else begin 
-				next_state_f = current_state_f;
-			end
-		end
-		WAIT_EN: begin
-			if (enable) begin
-				down2 = 1'b1;
-				next_state_f = WAIT_DIS;
-			end
-			else begin 
-				next_state_f = current_state_f;
-			end
-		end
-		WAIT_DIS: begin 
-			if (!enable) begin
-				next_state_f = IDLE;
-			end
-			else begin 
-				next_state_f = current_state_f;
-			end
-		end
-		default: next_state_f = current_state_f;
-	endcase
-end
+// /**============================================
+//  * 	          Update value for current_state_f
+//  *=============================================*/
+// always @(posedge clk or negedge reset_n) begin
+// 	if(~reset_n) begin
+// 		current_state_f <= IDLE;
+// 	end else begin
+// 		current_state_f <= next_state_f;
+// 	end
+// end
+
+
+// /**============================================
+//  * 	          Update value for down2
+//  *=============================================*/
+// always @(*) begin
+// 	down2 = 1'b0;
+// 	case (current_state)
+// 		IDLE: begin
+// 			if ((valid_Epass == 2'b01) & (car1 == car2)) begin
+// 				next_state_f = WAIT_EN;
+// 			end
+// 			else begin 
+// 				next_state_f = current_state_f;
+// 			end
+// 		end
+// 		WAIT_EN: begin
+// 			if (enable) begin
+// 				down2 = 1'b1;
+// 				next_state_f = WAIT_DIS;
+// 			end
+// 			else begin 
+// 				next_state_f = current_state_f;
+// 			end
+// 		end
+// 		WAIT_DIS: begin 
+// 			if (!enable) begin
+// 				next_state_f = IDLE;
+// 			end
+// 			else begin 
+// 				next_state_f = current_state_f;
+// 			end
+// 		end
+// 		default: next_state_f = current_state_f;
+// 	endcase
+// end
 
 
 endmodule
