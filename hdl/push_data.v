@@ -23,7 +23,7 @@ reg [1:0] current_state, next_state;
 always @(posedge clk or negedge reset_n) begin
 	if(~reset_n) begin
 		data_cp <= {(WIDTH_SPEED){1'b0}};
-	end begin
+	end if (done) begin
 		data_cp <= speed;
 	end
 end
