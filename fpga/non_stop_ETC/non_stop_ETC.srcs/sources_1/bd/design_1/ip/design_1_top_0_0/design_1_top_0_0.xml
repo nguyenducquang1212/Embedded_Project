@@ -169,7 +169,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:4ac28e9f</spirit:value>
+            <spirit:value>8:c93611ef</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -185,11 +185,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Jun 18 07:41:50 UTC 2022</spirit:value>
+            <spirit:value>Sat Jun 18 12:05:31 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:4ac28e9f</spirit:value>
+            <spirit:value>8:c93611ef</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -201,7 +201,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:17a71922</spirit:value>
+            <spirit:value>8:0b557685</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -217,11 +217,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Jun 18 07:41:50 UTC 2022</spirit:value>
+            <spirit:value>Sat Jun 18 12:05:31 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:17a71922</spirit:value>
+            <spirit:value>8:0b557685</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -469,7 +469,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>SYS_FREQ</spirit:name>
         <spirit:displayName>Sys Freq</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.SYS_FREQ">50000000</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.SYS_FREQ">10000000</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>BAUD_RATE</spirit:name>
@@ -484,7 +484,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>BAUD_DVSR</spirit:name>
         <spirit:displayName>Baud Dvsr</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.BAUD_DVSR" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.SYS_FREQ&apos;)) / (spirit:decode(id(&apos;MODELPARAM_VALUE.SAMPLE&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.BAUD_RATE&apos;))))">325</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.BAUD_DVSR" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.SYS_FREQ&apos;)) / (spirit:decode(id(&apos;MODELPARAM_VALUE.SAMPLE&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.BAUD_RATE&apos;))))">65</spirit:value>
       </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
@@ -536,7 +536,7 @@
     <spirit:parameter>
       <spirit:name>SYS_FREQ</spirit:name>
       <spirit:displayName>Sys Freq</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.SYS_FREQ">50000000</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.SYS_FREQ">10000000</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>BAUD_RATE</spirit:name>
@@ -551,7 +551,7 @@
     <spirit:parameter>
       <spirit:name>BAUD_DVSR</spirit:name>
       <spirit:displayName>Baud Dvsr</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.BAUD_DVSR">325</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.BAUD_DVSR">65</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>

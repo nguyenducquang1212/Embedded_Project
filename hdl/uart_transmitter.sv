@@ -1,15 +1,4 @@
-//-----------------------------------------------------------------------------------------------------------
-//    Copyright (C) 2021 by Dolphin Technology
-//    All right reserved.
-//
-//    Copyright Notification
-//    No part may be reproduced except as authorized by written permission.
-//
-//    Module: uart_protocol.uart_transmitter.sv
-//    Company: Dolphin Technology
-//    Author: lampn0
-//    Date: 08:26:49 08/01/22
-//-----------------------------------------------------------------------------------------------------------
+
 module uart_transmitter #(
   parameter DATA_SIZE       = 8,
             BIT_COUNT_SIZE  = $clog2(DATA_SIZE+1)

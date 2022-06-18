@@ -5,7 +5,7 @@ module top
   parameter WIDTH_SPEED     = 14                    ,
   parameter DATA_SIZE       = 8                     ,
   parameter SIZE_FIFO       = 8                     ,
-  parameter SYS_FREQ        = 50000000              ,
+  parameter SYS_FREQ        = 10000000              ,
   parameter BAUD_RATE       = 9600                  ,
   parameter SAMPLE          = 16                    ,
   parameter BAUD_DVSR       = SYS_FREQ/(SAMPLE*BAUD_RATE)
@@ -46,7 +46,8 @@ wire                    done   ;
 non_stop_ETC #(
 	.WIDTH_TIK  (WIDTH_TIK  ),
 	.WIDTH_MS   (WIDTH_MS   ),
-	.WIDTH_SPEED(WIDTH_SPEED)
+	.WIDTH_SPEED(WIDTH_SPEED),
+	.SYS_FREQ   (SYS_FREQ)
 ) non_stop_ETC (
 	.clk        (clk        ),
 	.reset_n    (reset_n    ),
@@ -66,7 +67,10 @@ non_stop_ETC #(
 // -------------------------------------------------------------
 wire [DATA_SIZE-1:0]   data ;
 wire                   write;
-push_data push_data_DUT(
+push_data #(
+	.WIDTH_SPEED (WIDTH_SPEED),
+	.DATA_SIZE   (DATA_SIZE  )
+) push_data_DUT (
 	.clk    (clk     ), 
 	.reset_n(reset_n ), 
 	.done   (done    ), 
@@ -96,8 +100,9 @@ uart_generator_clock #(
 	.SYS_FREQ(SYS_FREQ),
 	.BAUD_RATE(BAUD_RATE),
 	// .CLOCK(CLOCK),
-	.SAMPLE(SAMPLE),
-	.BAUD_DVSR(BAUD_DVSR))
+	.SAMPLE(SAMPLE)
+	// .BAUD_DVSR(BAUD_DVSR)
+)
 uart_generator_clock (
   .clk       (clk       ),
   .reset_n   (reset_n   ),

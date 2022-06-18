@@ -101,10 +101,10 @@ output wire clock;
     .WIDTH_SPEED(14),
     .DATA_SIZE(8),
     .SIZE_FIFO(8),
-    .SYS_FREQ(50000000),
+    .SYS_FREQ(10000000),
     .BAUD_RATE(9600),
     .SAMPLE(16),
-    .BAUD_DVSR(325)
+    .BAUD_DVSR(65)
   ) inst (
     .clk(clk),
     .reset_n(reset_n),

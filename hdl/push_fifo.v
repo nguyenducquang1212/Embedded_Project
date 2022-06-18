@@ -5,7 +5,7 @@ module push_fifo
   parameter WIDTH_SPEED     = 14                    ,
   parameter DATA_SIZE       = 8                     ,
   parameter SIZE_FIFO       = 8                     ,
-  parameter SYS_FREQ        = 50000000              ,
+  parameter SYS_FREQ        = 10000000              ,
   parameter BAUD_RATE       = 9600                  ,
   parameter SAMPLE          = 16                    ,
   parameter BAUD_DVSR       = SYS_FREQ/(SAMPLE*BAUD_RATE)

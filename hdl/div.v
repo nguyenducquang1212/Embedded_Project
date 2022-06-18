@@ -1,7 +1,7 @@
 module div
 #(
-	parameter N   = 4,
-	parameter DEC = 4
+	parameter N   = 14,
+	parameter DEC =  4
 )
 (
 	input              clk     ,    

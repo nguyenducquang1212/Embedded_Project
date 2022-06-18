@@ -3,7 +3,7 @@ module non_stop_ETC
 	parameter WIDTH_TIK   = 16      ,
 	parameter WIDTH_MS    = 14      ,
 	parameter WIDTH_SPEED = 14      ,
-	parameter SYS_FREQ    = 50000000
+	parameter SYS_FREQ    = 10000000
 )
 (
 	input                     clk        ,
@@ -49,11 +49,11 @@ cotroller cotroller_DUT (
 	.dis        (dis        )
 );
 
-datapath 
-#(
+datapath #(
 	.WIDTH_TIK   (WIDTH_TIK   ),
 	.WIDTH_MS    (WIDTH_MS    ),
-	.WIDTH_SPEED (WIDTH_SPEED )
+	.WIDTH_SPEED (WIDTH_SPEED ),
+	.SYS_FREQ    (SYS_FREQ    )
 ) datapath_DUT (
 	.clk        (clk        ),
 	.reset_n    (reset_n    ),

@@ -65,7 +65,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>c4e3f1e0</spirit:value>
+            <spirit:value>e7aa6288</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -78,7 +78,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>c4e3f1e0</spirit:value>
+            <spirit:value>e7aa6288</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -334,7 +334,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>SYS_FREQ</spirit:name>
         <spirit:displayName>Sys Freq</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.SYS_FREQ">50000000</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.SYS_FREQ">10000000</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>BAUD_RATE</spirit:name>
@@ -349,7 +349,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>BAUD_DVSR</spirit:name>
         <spirit:displayName>Baud Dvsr</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.BAUD_DVSR" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.SYS_FREQ&apos;)) / (spirit:decode(id(&apos;MODELPARAM_VALUE.SAMPLE&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.BAUD_RATE&apos;))))">325</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.BAUD_DVSR" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.SYS_FREQ&apos;)) / (spirit:decode(id(&apos;MODELPARAM_VALUE.SAMPLE&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.BAUD_RATE&apos;))))">65</spirit:value>
       </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
@@ -394,7 +394,7 @@
     <spirit:parameter>
       <spirit:name>SYS_FREQ</spirit:name>
       <spirit:displayName>Sys Freq</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.SYS_FREQ">50000000</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.SYS_FREQ">10000000</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>BAUD_RATE</spirit:name>
@@ -409,7 +409,7 @@
     <spirit:parameter>
       <spirit:name>BAUD_DVSR</spirit:name>
       <spirit:displayName>Baud Dvsr</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.BAUD_DVSR">325</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.BAUD_DVSR">65</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>
@@ -431,7 +431,7 @@
         <xilinx:designToolContext>IPI</xilinx:designToolContext>
       </xilinx:designToolContexts>
       <xilinx:coreRevision>1</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2022-06-18T07:40:07Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2022-06-18T12:03:40Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2018.1</xilinx:xilinxVersion>

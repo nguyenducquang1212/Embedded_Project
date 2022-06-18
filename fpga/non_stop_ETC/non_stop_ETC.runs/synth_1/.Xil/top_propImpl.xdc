@@ -12,7 +12,7 @@ set_property PACKAGE_PIN P16  [get_ports sensor2]; # BTNC
 set_property src_info {type:XDC file:1 line:16 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN R18  [get_ports sensor3]; # BTNR
 set_property src_info {type:XDC file:1 line:17 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN F21 [ get_ports enable]; # BTNU
+set_property PACKAGE_PIN R16 [ get_ports enable]; # BTNU
 set_property src_info {type:XDC file:1 line:18 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN H22  [get_ports valid_Epass[1]]; # SW2
 set_property src_info {type:XDC file:1 line:19 export:INPUT save:INPUT read:READ} [current_design]

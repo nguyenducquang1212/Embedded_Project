@@ -3,7 +3,7 @@ module datapath
 	parameter WIDTH_TIK   = 16      ,
 	parameter WIDTH_MS    = 14      ,
 	parameter WIDTH_SPEED = 14      ,
-	parameter SYS_FREQ    = 50000000
+	parameter SYS_FREQ    = 10000000
 )
 (
 	input                        clk        ,    

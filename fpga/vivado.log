@@ -2,8 +2,8 @@
 # Vivado v2018.1 (64-bit)
 # SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
 # IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
-# Start of session at: Sat Jun 18 11:44:47 2022
-# Process ID: 13008
+# Start of session at: Sat Jun 18 19:02:03 2022
+# Process ID: 27675
 # Current directory: /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga
 # Command line: vivado
 # Log file: /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/vivado.log
@@ -16,7 +16,7 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2018.1/data/ip'.
-open_project: Time (s): cpu = 00:00:23 ; elapsed = 00:00:09 . Memory (MB): peak = 6436.258 ; gain = 182.617 ; free physical = 55291 ; free virtual = 91545
+open_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:08 . Memory (MB): peak = 6410.785 ; gain = 160.016 ; free physical = 56184 ; free virtual = 89021
 update_compile_order -fileset sources_1
 update_module_reference design_1_top_0_0
 INFO: [IP_Flow 19-5107] Inferred bus interface 'reset_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
@@ -33,132 +33,9 @@ Adding cell -- xilinx.com:module_ref:top:1.0 - top_0
 Successfully read diagram <design_1> from BD file </data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd>
 Upgrading '/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd'
 INFO: [IP_Flow 19-1972] Upgraded design_1_top_0_0 from top_v1_0 1.0 to top_v1_0 1.0
-WARNING: [IP_Flow 19-4697] Upgrade has added interface 'clock' (xilinx.com:signal:clock:1.0)
-WARNING: [IP_Flow 19-3670] Detected external interface differences while upgrading 'design_1_top_0_0'.
-WARNING: [IP_Flow 19-4698] Upgrade has added port 'clock'
-WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'design_1_top_0_0'. These changes may impact your design.
-CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'design_1_top_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
 Wrote  : </data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd> 
-Wrote  : </data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
-upgrade_ip: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 6597.965 ; gain = 0.000 ; free physical = 60410 ; free virtual = 89285
-update_module_reference: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 6597.965 ; gain = 0.000 ; free physical = 60410 ; free virtual = 89285
-startgroup
-create_bd_port -dir O -type clk clock
-connect_bd_net [get_bd_pins /top_0/clock] [get_bd_ports clock]
-endgroup
-regenerate_bd_layout
-save_bd_design
-Wrote  : </data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd> 
-Wrote  : </data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
-reset_target all [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd]
-export_ip_user_files -of_objects  [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd] -sync -no_script -force -quiet
-reset_target all [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd]
-export_ip_user_files -of_objects  [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd] -sync -no_script -force -quiet
-generate_target all [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd]
-WARNING: [BD 41-927] Following properties on pin /top_0/clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
-	CLK_DOMAIN=design_1_top_0_0_clock 
-Wrote  : </data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd> 
-VHDL Output written to : /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/synth/design_1.v
-VHDL Output written to : /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/sim/design_1.v
-VHDL Output written to : /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
-INFO: [BD 41-1029] Generation completed for the IP Integrator block top_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
-Exporting to file /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
-Generated Block Design Tcl file /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
-Generated Hardware Definition File /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/synth/design_1.hwdef
-export_ip_user_files -of_objects [get_files /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
-export_simulation -of_objects [get_files /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd] -directory /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.ip_user_files/sim_scripts -ip_user_files_dir /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.ip_user_files -ipstatic_source_dir /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.ip_user_files/ipstatic -lib_map_path [list {modelsim=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/modelsim} {questa=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/questa} {ies=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/ies} {xcelium=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/xcelium} {vcs=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/vcs} {riviera=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
-synth_design -rtl -name rtl_1
-Command: synth_design -rtl -name rtl_1
-Starting synth_design
-Using part: xc7z020clg484-1
-Top: top
-WARNING: [Synth 8-2507] parameter declaration becomes local in uart_generator_clock with formal parameter declaration list [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/uart_generator_clock.sv:13]
-WARNING: [Synth 8-2507] parameter declaration becomes local in div with formal parameter declaration list [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/div.v:16]
----------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:18 ; elapsed = 00:00:10 . Memory (MB): peak = 6741.238 ; gain = 28.969 ; free physical = 59486 ; free virtual = 88639
----------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'top' [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/top.v:1]
-	Parameter WIDTH_TIK bound to: 16 - type: integer 
-	Parameter WIDTH_MS bound to: 14 - type: integer 
-	Parameter WIDTH_SPEED bound to: 14 - type: integer 
-	Parameter DATA_SIZE bound to: 8 - type: integer 
-	Parameter SIZE_FIFO bound to: 8 - type: integer 
-	Parameter SYS_FREQ bound to: 50000000 - type: integer 
-	Parameter BAUD_RATE bound to: 9600 - type: integer 
-	Parameter SAMPLE bound to: 16 - type: integer 
-	Parameter BAUD_DVSR bound to: 325 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'non_stop_ETC' [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/non_stop_ETC.v:1]
-	Parameter WIDTH_TIK bound to: 16 - type: integer 
-	Parameter WIDTH_MS bound to: 14 - type: integer 
-	Parameter WIDTH_SPEED bound to: 14 - type: integer 
-	Parameter SYS_FREQ bound to: 50000000 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'cotroller' [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/controller.v:1]
-	Parameter START bound to: 2'b00 
-	Parameter COUNT_TIME bound to: 2'b01 
-	Parameter CALC bound to: 2'b10 
-	Parameter IDLE bound to: 2'b00 
-	Parameter WAIT_EN bound to: 2'b01 
-	Parameter WAIT_DIS bound to: 2'b10 
-INFO: [Synth 8-6157] synthesizing module 'count_car' [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/count_car.v:1]
-	Parameter HOLD bound to: 2'b00 
-	Parameter INC bound to: 2'b01 
-INFO: [Synth 8-155] case statement is not full and has no default [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/count_car.v:34]
-INFO: [Synth 8-155] case statement is not full and has no default [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/count_car.v:60]
-INFO: [Synth 8-155] case statement is not full and has no default [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/count_car.v:87]
-INFO: [Synth 8-6155] done synthesizing module 'count_car' (1#1) [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/count_car.v:1]
-INFO: [Synth 8-155] case statement is not full and has no default [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/controller.v:81]
-WARNING: [Synth 8-3848] Net down in module/entity cotroller does not have driver. [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/controller.v:15]
-INFO: [Synth 8-6155] done synthesizing module 'cotroller' (2#1) [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/controller.v:1]
-INFO: [Synth 8-6157] synthesizing module 'datapath' [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/datapath.v:1]
-	Parameter WIDTH_TIK bound to: 16 - type: integer 
-	Parameter WIDTH_MS bound to: 14 - type: integer 
-	Parameter WIDTH_SPEED bound to: 14 - type: integer 
-	Parameter SYS_FREQ bound to: 50000000 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'div' [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/div.v:1]
-	Parameter N bound to: 14 - type: integer 
-	Parameter DEC bound to: 4 - type: integer 
-	Parameter COUNT_WIDTH bound to: 4 - type: integer 
-	Parameter IDLE bound to: 3'b000 
-	Parameter ENA bound to: 3'b001 
-	Parameter SHIFT bound to: 3'b010 
-	Parameter CALC bound to: 3'b011 
-INFO: [Synth 8-155] case statement is not full and has no default [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/div.v:83]
-INFO: [Synth 8-6155] done synthesizing module 'div' (3#1) [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/div.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'datapath' (4#1) [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/datapath.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'non_stop_ETC' (5#1) [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/non_stop_ETC.v:1]
-INFO: [Synth 8-6157] synthesizing module 'push_data' [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/push_data.v:1]
-	Parameter WIDTH_SPEED bound to: 14 - type: integer 
-	Parameter DATA_SIZE bound to: 8 - type: integer 
-	Parameter STATE0 bound to: 2'b00 
-	Parameter STATE1 bound to: 2'b01 
-	Parameter STATE2 bound to: 2'b10 
-	Parameter STATE3 bound to: 2'b11 
-ERROR: [Synth 8-91] ambiguous clock in event control [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/push_data.v:23]
-ERROR: [Synth 8-6156] failed synthesizing module 'push_data' [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/push_data.v:1]
-ERROR: [Synth 8-6156] failed synthesizing module 'top' [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/top.v:1]
----------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:19 ; elapsed = 00:00:11 . Memory (MB): peak = 6779.488 ; gain = 67.219 ; free physical = 59491 ; free virtual = 88652
----------------------------------------------------------------------------------
-RTL Elaboration failed
-17 Infos, 3 Warnings, 0 Critical Warnings and 4 Errors encountered.
-synth_design failed
-ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
-update_module_reference design_1_top_0_0
-INFO: [IP_Flow 19-5107] Inferred bus interface 'reset_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-5107] Inferred bus interface 'clock' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-818] Not transferring value dependency attribute "(spirit:decode(id('MODELPARAM_VALUE.SYS_FREQ')) / (spirit:decode(id('MODELPARAM_VALUE.SAMPLE')) * spirit:decode(id('MODELPARAM_VALUE.BAUD_RATE'))))" into user parameter "BAUD_DVSR".
-WARNING: [IP_Flow 19-3153] Bus Interface 'clk': ASSOCIATED_BUSIF bus parameter is missing.
-WARNING: [IP_Flow 19-3153] Bus Interface 'clock': ASSOCIATED_BUSIF bus parameter is missing.
-CRITICAL WARNING: [IP_Flow 19-4751] Bus Interface 'clock': FREQ_HZ bus parameter is missing for output clock interface.
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-Upgrading '/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd'
-INFO: [IP_Flow 19-1972] Upgraded design_1_top_0_0 from top_v1_0 1.0 to top_v1_0 1.0
-Wrote  : </data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd> 
-reset_target all [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd]
-export_ip_user_files -of_objects  [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd] -sync -no_script -force -quiet
+upgrade_ip: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 6541.215 ; gain = 0.000 ; free physical = 56116 ; free virtual = 89004
+update_module_reference: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 6541.215 ; gain = 0.000 ; free physical = 56116 ; free virtual = 89004
 reset_target all [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd]
 export_ip_user_files -of_objects  [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd] -sync -no_script -force -quiet
 generate_target all [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/sources_1/bd/design_1/design_1.bd]
@@ -181,10 +58,11 @@ Command: synth_design -rtl -name rtl_1
 Starting synth_design
 Using part: xc7z020clg484-1
 Top: top
-WARNING: [Synth 8-2507] parameter declaration becomes local in uart_generator_clock with formal parameter declaration list [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/uart_generator_clock.sv:13]
+WARNING: [Synth 8-2507] parameter declaration becomes local in uart_generator_clock with formal parameter declaration list [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/uart_generator_clock.sv:12]
+WARNING: [Synth 8-2507] parameter declaration becomes local in uart_generator_clock with formal parameter declaration list [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/uart_generator_clock.sv:14]
 WARNING: [Synth 8-2507] parameter declaration becomes local in div with formal parameter declaration list [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/div.v:16]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 6921.684 ; gain = 0.000 ; free physical = 59080 ; free virtual = 88651
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 6681.617 ; gain = 0.000 ; free physical = 55773 ; free virtual = 88805
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top' [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/top.v:1]
 	Parameter WIDTH_TIK bound to: 16 - type: integer 
@@ -192,15 +70,15 @@ INFO: [Synth 8-6157] synthesizing module 'top' [/data5/workspace/quangnd1/sip_tr
 	Parameter WIDTH_SPEED bound to: 14 - type: integer 
 	Parameter DATA_SIZE bound to: 8 - type: integer 
 	Parameter SIZE_FIFO bound to: 8 - type: integer 
-	Parameter SYS_FREQ bound to: 50000000 - type: integer 
+	Parameter SYS_FREQ bound to: 10000000 - type: integer 
 	Parameter BAUD_RATE bound to: 9600 - type: integer 
 	Parameter SAMPLE bound to: 16 - type: integer 
-	Parameter BAUD_DVSR bound to: 325 - type: integer 
+	Parameter BAUD_DVSR bound to: 65 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'non_stop_ETC' [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/non_stop_ETC.v:1]
 	Parameter WIDTH_TIK bound to: 16 - type: integer 
 	Parameter WIDTH_MS bound to: 14 - type: integer 
 	Parameter WIDTH_SPEED bound to: 14 - type: integer 
-	Parameter SYS_FREQ bound to: 50000000 - type: integer 
+	Parameter SYS_FREQ bound to: 10000000 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'cotroller' [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/controller.v:1]
 	Parameter START bound to: 2'b00 
 	Parameter COUNT_TIME bound to: 2'b01 
@@ -222,7 +100,7 @@ INFO: [Synth 8-6157] synthesizing module 'datapath' [/data5/workspace/quangnd1/s
 	Parameter WIDTH_TIK bound to: 16 - type: integer 
 	Parameter WIDTH_MS bound to: 14 - type: integer 
 	Parameter WIDTH_SPEED bound to: 14 - type: integer 
-	Parameter SYS_FREQ bound to: 50000000 - type: integer 
+	Parameter SYS_FREQ bound to: 10000000 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'div' [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/div.v:1]
 	Parameter N bound to: 14 - type: integer 
 	Parameter DEC bound to: 4 - type: integer 
@@ -244,11 +122,11 @@ INFO: [Synth 8-6157] synthesizing module 'push_data' [/data5/workspace/quangnd1/
 	Parameter STATE3 bound to: 2'b11 
 INFO: [Synth 8-6155] done synthesizing module 'push_data' (6#1) [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/push_data.v:1]
 INFO: [Synth 8-6157] synthesizing module 'uart_generator_clock' [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/uart_generator_clock.sv:1]
-	Parameter SYS_FREQ bound to: 50000000 - type: integer 
+	Parameter SYS_FREQ bound to: 10000000 - type: integer 
 	Parameter BAUD_RATE bound to: 9600 - type: integer 
 	Parameter SAMPLE bound to: 16 - type: integer 
-	Parameter BAUD_DVSR bound to: 325 - type: integer 
-	Parameter CLOCK bound to: 2604 - type: integer 
+	Parameter CLOCK bound to: 520 - type: integer 
+	Parameter BAUD_DVSR bound to: 65 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'uart_generator_clock' (7#1) [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/uart_generator_clock.sv:1]
 INFO: [Synth 8-6157] synthesizing module 'uart_fifo' [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/uart_fifo.sv:1]
 	Parameter DATA_SIZE bound to: 8 - type: integer 
@@ -262,16 +140,16 @@ WARNING: [Synth 8-87] always_comb on 'rx_next_state_reg' did not result in combi
 WARNING: [Synth 8-87] always_comb on 'read_fifo_transmitter_reg' did not result in combinational logic [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/uart_fifo.sv:38]
 WARNING: [Synth 8-87] always_comb on 'tx_next_state_reg' did not result in combinational logic [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/uart_fifo.sv:99]
 INFO: [Synth 8-6155] done synthesizing module 'uart_fifo' (8#1) [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/uart_fifo.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'uart_transmitter' [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/uart_transmitter.sv:13]
+INFO: [Synth 8-6157] synthesizing module 'uart_transmitter' [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/uart_transmitter.sv:2]
 	Parameter DATA_SIZE bound to: 8 - type: integer 
 	Parameter BIT_COUNT_SIZE bound to: 4 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'uart_transmitter' (9#1) [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/uart_transmitter.sv:13]
+INFO: [Synth 8-6155] done synthesizing module 'uart_transmitter' (9#1) [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/uart_transmitter.sv:2]
 INFO: [Synth 8-6155] done synthesizing module 'top' (10#1) [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl/top.v:1]
 WARNING: [Synth 8-3331] design datapath has unconnected port down
 WARNING: [Synth 8-3331] design cotroller has unconnected port down
 WARNING: [Synth 8-3331] design cotroller has unconnected port done
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 6921.684 ; gain = 0.000 ; free physical = 59093 ; free virtual = 88666
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 6713.539 ; gain = 31.922 ; free physical = 55786 ; free virtual = 88819
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -284,10 +162,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 6921.684 ; gain = 0.000 ; free physical = 59089 ; free virtual = 88662
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 6713.539 ; gain = 31.922 ; free physical = 55786 ; free virtual = 88819
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 6921.684 ; gain = 0.000 ; free physical = 59089 ; free virtual = 88662
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 6713.539 ; gain = 31.922 ; free physical = 55786 ; free virtual = 88819
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -297,7 +175,7 @@ INFO: [Opt 31-141] Inserted 6 OBUFs to IO ports without IO buffers.
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/constrs_1/new/IO.xdc]
-CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Terminal enable cannot be placed on F21 (IOB_X1Y104) because the pad is already occupied by terminal led6 possibly due to user constraint [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/constrs_1/new/IO.xdc:17]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Terminal enable cannot be placed on R16 (IOB_X1Y51) because the pad is already occupied by terminal led6 possibly due to user constraint [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/constrs_1/new/IO.xdc:17]
 Finished Parsing XDC File [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.srcs/constrs_1/new/IO.xdc]
 Completed Processing XDC Constraints
 
@@ -306,10 +184,10 @@ INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-RTL Elaboration Complete:  : Time (s): cpu = 00:00:47 ; elapsed = 00:04:33 . Memory (MB): peak = 7333.281 ; gain = 411.598 ; free physical = 58430 ; free virtual = 88215
-35 Infos, 10 Warnings, 1 Critical Warnings and 0 Errors encountered.
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:46 ; elapsed = 00:04:26 . Memory (MB): peak = 7161.629 ; gain = 480.012 ; free physical = 55729 ; free virtual = 88834
+35 Infos, 11 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:47 ; elapsed = 00:04:33 . Memory (MB): peak = 7333.281 ; gain = 411.598 ; free physical = 58430 ; free virtual = 88215
+synth_design: Time (s): cpu = 00:00:46 ; elapsed = 00:04:26 . Memory (MB): peak = 7161.629 ; gain = 480.012 ; free physical = 55729 ; free virtual = 88833
 refresh_design
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -322,12 +200,12 @@ Completed Processing XDC Constraints
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 48
-[Sat Jun 18 15:00:46 2022] Launched impl_1...
+[Sat Jun 18 19:22:19 2022] Launched impl_1...
 Run output will be captured here: /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga/non_stop_ETC/non_stop_ETC.runs/impl_1/runme.log
-launch_runs: Time (s): cpu = 00:00:30 ; elapsed = 00:10:19 . Memory (MB): peak = 7370.297 ; gain = 0.000 ; free physical = 57730 ; free virtual = 87650
+launch_runs: Time (s): cpu = 00:00:14 ; elapsed = 00:10:18 . Memory (MB): peak = 7202.645 ; gain = 0.000 ; free physical = 54475 ; free virtual = 87707
 close_design
 open_run impl_1
-INFO: [Netlist 29-17] Analyzing 32 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 29 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2018.1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -338,11 +216,11 @@ INFO: [Project 1-853] Binary constraint restore complete.
 Reading XDEF placement.
 Reading placer database...
 Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:03 ; elapsed = 00:00:00.10 . Memory (MB): peak = 7559.617 ; gain = 0.000 ; free physical = 58439 ; free virtual = 88243
-Restored from archive | CPU: 2.750000 secs | Memory: 0.444008 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:03 ; elapsed = 00:00:00.10 . Memory (MB): peak = 7559.617 ; gain = 0.000 ; free physical = 58439 ; free virtual = 88243
+Read XDEF File: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 7398.246 ; gain = 0.000 ; free physical = 54738 ; free virtual = 88637
+Restored from archive | CPU: 0.060000 secs | Memory: 0.435104 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 7398.246 ; gain = 0.000 ; free physical = 54738 ; free virtual = 88637
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-open_run: Time (s): cpu = 00:00:23 ; elapsed = 00:00:44 . Memory (MB): peak = 7707.859 ; gain = 337.562 ; free physical = 58299 ; free virtual = 88114
+open_run: Time (s): cpu = 00:00:23 ; elapsed = 00:00:43 . Memory (MB): peak = 7538.484 ; gain = 335.840 ; free physical = 54681 ; free virtual = 88580
 WARNING: [Timing 38-313] There are no user specified timing constraints. Timing constraints are needed for proper timing analysis.

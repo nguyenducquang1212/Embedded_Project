@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "top,Vivado 2018.1" *)
 (* CHECK_LICENSE_TYPE = "design_1_top_0_0,top,{}" *)
-(* CORE_GENERATION_INFO = "design_1_top_0_0,top,{x_ipProduct=Vivado 2018.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=top,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,WIDTH_TIK=16,WIDTH_MS=14,WIDTH_SPEED=14,DATA_SIZE=8,SIZE_FIFO=8,SYS_FREQ=50000000,BAUD_RATE=9600,SAMPLE=16,BAUD_DVSR=325}" *)
+(* CORE_GENERATION_INFO = "design_1_top_0_0,top,{x_ipProduct=Vivado 2018.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=top,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,WIDTH_TIK=16,WIDTH_MS=14,WIDTH_SPEED=14,DATA_SIZE=8,SIZE_FIFO=8,SYS_FREQ=10000000,BAUD_RATE=9600,SAMPLE=16,BAUD_DVSR=65}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_top_0_0 (
   clk,
@@ -102,10 +102,10 @@ output wire clock;
     .WIDTH_SPEED(14),
     .DATA_SIZE(8),
     .SIZE_FIFO(8),
-    .SYS_FREQ(50000000),
+    .SYS_FREQ(10000000),
     .BAUD_RATE(9600),
     .SAMPLE(16),
-    .BAUD_DVSR(325)
+    .BAUD_DVSR(65)
   ) inst (
     .clk(clk),
     .reset_n(reset_n),
