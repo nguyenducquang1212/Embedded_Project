@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
-//Date        : Fri Jun 17 23:12:56 2022
+//Date        : Sat Jun 18 14:41:49 2022
 //Host        : dt25-linux running 64-bit CentOS Linux release 7.9.2009 (Core)
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -12,6 +12,7 @@
 module design_1_wrapper
    (barrier,
     clk,
+    clock,
     enable,
     led1,
     led2,
@@ -27,6 +28,7 @@ module design_1_wrapper
     valid_Epass);
   output barrier;
   input clk;
+  output clock;
   input enable;
   output led1;
   output led2;
@@ -43,6 +45,7 @@ module design_1_wrapper
 
   wire barrier;
   wire clk;
+  wire clock;
   wire enable;
   wire led1;
   wire led2;
@@ -60,6 +63,7 @@ module design_1_wrapper
   design_1 design_1_i
        (.barrier(barrier),
         .clk(clk),
+        .clock(clock),
         .enable(enable),
         .led1(led1),
         .led2(led2),

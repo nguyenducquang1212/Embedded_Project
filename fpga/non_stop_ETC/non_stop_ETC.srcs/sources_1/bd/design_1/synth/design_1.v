@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
-//Date        : Fri Jun 17 23:12:56 2022
+//Date        : Sat Jun 18 14:41:49 2022
 //Host        : dt25-linux running 64-bit CentOS Linux release 7.9.2009 (Core)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -13,6 +13,7 @@
 module design_1
    (barrier,
     clk,
+    clock,
     enable,
     led1,
     led2,
@@ -28,6 +29,7 @@ module design_1
     valid_Epass);
   output barrier;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK, CLK_DOMAIN design_1_clk, FREQ_HZ 100000000, PHASE 0.000" *) input clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLOCK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLOCK, CLK_DOMAIN design_1_top_0_0_clock, FREQ_HZ 100000000, PHASE 0.000" *) output clock;
   input enable;
   output led1;
   output led2;
@@ -50,6 +52,7 @@ module design_1
   wire sensor2_1;
   wire sensor3_1;
   wire top_0_barrier;
+  wire top_0_clock;
   wire top_0_led1;
   wire top_0_led2;
   wire top_0_led3;
@@ -61,6 +64,7 @@ module design_1
 
   assign barrier = top_0_barrier;
   assign clk_in1_0_1 = clk;
+  assign clock = top_0_clock;
   assign enable_1 = enable;
   assign led1 = top_0_led1;
   assign led2 = top_0_led2;
@@ -81,6 +85,7 @@ module design_1
   design_1_top_0_0 top_0
        (.barrier(top_0_barrier),
         .clk(clk_wiz_0_clk_out1),
+        .clock(top_0_clock),
         .enable(enable_1),
         .led1(top_0_led1),
         .led2(top_0_led2),

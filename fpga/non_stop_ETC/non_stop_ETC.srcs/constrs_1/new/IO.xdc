@@ -4,6 +4,9 @@
 set_property PACKAGE_PIN Y9  [get_ports clk]
 set_property IOSTANDARD LVCMOS33  [get_ports clk]
 
+set_property PACKAGE_PIN Y10  [get_ports clock]
+set_property IOSTANDARD LVCMOS33  [get_ports clock]
+
 set_property PACKAGE_PIN F22  [get_ports reset_n]; # SW0
 set_property IOSTANDARD LVCMOS33  [get_ports reset_n];
 

@@ -68,10 +68,11 @@ module design_1_top_0_0 (
   led5,
   led6,
   barrier,
-  serial_data_out
+  serial_data_out,
+  clock
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, FREQ_HZ 50000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, FREQ_HZ 20000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME reset_n, POLARITY ACTIVE_LOW" *)
@@ -90,6 +91,9 @@ output wire led5;
 output wire led6;
 output wire barrier;
 output wire serial_data_out;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clock, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN design_1_top_0_0_clock" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clock CLK" *)
+output wire clock;
 
   top #(
     .WIDTH_TIK(16),
@@ -116,6 +120,7 @@ output wire serial_data_out;
     .led5(led5),
     .led6(led6),
     .barrier(barrier),
-    .serial_data_out(serial_data_out)
+    .serial_data_out(serial_data_out),
+    .clock(clock)
   );
 endmodule

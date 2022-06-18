@@ -25,7 +25,8 @@ module top
 	output                    led5           ,	// valid_Epass[0]
 	output                    led6           ,	// enable
 	output                    barrier        ,
-	output                    serial_data_out
+	output                    serial_data_out,
+	output                    clock          
 );
 
 assign led1 = sensor1;
@@ -80,7 +81,7 @@ push_data push_data_DUT(
 // -------------------------------------------------------------
 
 
-wire                     clock     ;
+// wire                     clock     ;
 wire                     sample_clk;
 wire [DATA_SIZE - 1 : 0] tx_data_in;
 wire                     tx_done;

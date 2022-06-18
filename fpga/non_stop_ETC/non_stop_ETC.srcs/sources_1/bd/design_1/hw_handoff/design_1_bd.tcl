@@ -167,6 +167,7 @@ proc create_root_design { parentCell } {
   # Create ports
   set barrier [ create_bd_port -dir O barrier ]
   set clk [ create_bd_port -dir I -type clk clk ]
+  set clock [ create_bd_port -dir O -type clk clock ]
   set enable [ create_bd_port -dir I enable ]
   set led1 [ create_bd_port -dir O led1 ]
   set led2 [ create_bd_port -dir O led2 ]
@@ -184,9 +185,11 @@ proc create_root_design { parentCell } {
   # Create instance: clk_wiz_0, and set properties
   set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0 ]
   set_property -dict [ list \
-   CONFIG.CLKOUT1_JITTER {151.636} \
-   CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {50.000} \
-   CONFIG.MMCM_CLKOUT0_DIVIDE_F {20.000} \
+   CONFIG.CLKOUT1_JITTER {193.154} \
+   CONFIG.CLKOUT1_PHASE_ERROR {109.126} \
+   CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {20.000} \
+   CONFIG.MMCM_CLKFBOUT_MULT_F {8.500} \
+   CONFIG.MMCM_CLKOUT0_DIVIDE_F {42.500} \
    CONFIG.MMCM_DIVCLK_DIVIDE {1} \
    CONFIG.RESET_PORT {resetn} \
    CONFIG.RESET_TYPE {ACTIVE_LOW} \
@@ -212,6 +215,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net sensor2_1 [get_bd_ports sensor2] [get_bd_pins top_0/sensor2]
   connect_bd_net -net sensor3_1 [get_bd_ports sensor3] [get_bd_pins top_0/sensor3]
   connect_bd_net -net top_0_barrier [get_bd_ports barrier] [get_bd_pins top_0/barrier]
+  connect_bd_net -net top_0_clock [get_bd_ports clock] [get_bd_pins top_0/clock]
   connect_bd_net -net top_0_led1 [get_bd_ports led1] [get_bd_pins top_0/led1]
   connect_bd_net -net top_0_led2 [get_bd_ports led2] [get_bd_pins top_0/led2]
   connect_bd_net -net top_0_led3 [get_bd_ports led3] [get_bd_pins top_0/led3]
