@@ -1,0 +1,33 @@
+#ifndef SRC_HEADER_ETC_H
+#define SRC_HEADER_ETC_H
+
+#include "xil_io.h"
+#include "define.h"
+
+typedef struct FieldETC {
+  u8 offset;  // address
+  u32 mask;
+  volatile u32 value;
+} FieldETC;
+
+typedef struct ETC {
+  u32 data;
+  FieldETC speed;
+  FieldETC done;
+} etc;
+
+extern etc reg_etc;
+void initEtcFieldOffset();
+void initEtcFieldMask();
+void initPCM2PDMRegister();
+
+
+void read_reg_etc (u32 addr, u32 *data);
+void get_field_etc(FieldETC *field, u32 data);
+void get_reg_etc(FieldETC *field);
+void read_etc();
+void write_reg_t(u32 addr, u32 data);
+void write_reg();
+void write_etc(u32 addr, u32 length);
+
+#endif

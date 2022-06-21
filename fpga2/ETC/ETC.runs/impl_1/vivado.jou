@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Tue Jun 21 11:18:40 2022
+# Process ID: 15092
+# Current directory: /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.runs/impl_1
+# Command line: vivado -log design_1_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
+# Log file: /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.runs/impl_1/design_1_wrapper.vdi
+# Journal file: /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source design_1_wrapper.tcl -notrace

@@ -1,0 +1,19 @@
+#ifndef SRC_HEADER_ETC_H
+#define SRC_HEADER_ETC_H
+
+#include "xil_io.h"
+#include "define.h"
+
+typedef struct FieldETC {
+  u8 offset;  // address
+  u32 mask;
+  volatile u32 value;
+} FieldETC;
+
+typedef struct reg_pcm2pdm_t {
+  u32 data;
+  Fieldpcm2pdm data_pcm;
+  Fieldpcm2pdm full;
+} reg_pcm2pdm_t;
+
+#endif

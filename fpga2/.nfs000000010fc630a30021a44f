@@ -1,0 +1,278 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Mon Jun 20 14:34:26 2022
+# Process ID: 14178
+# Current directory: /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2
+# Command line: vivado
+# Log file: /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/vivado.log
+# Journal file: /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2018.1/data/ip'.
+open_project: Time (s): cpu = 00:00:25 ; elapsed = 00:00:09 . Memory (MB): peak = 6468.605 ; gain = 195.465 ; free physical = 53005 ; free virtual = 100024
+update_compile_order -fileset sources_1
+open_bd_design {/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/design_1.bd}
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_0
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_0
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding cell -- xilinx.com:ip:axi_uart16550:2.0 - axi_uart16550_0
+Adding cell -- xilinx.com:module_ref:non_stop_ETC:1.0 - non_stop_ETC_0
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Successfully read diagram <design_1> from BD file </data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/design_1.bd>
+open_bd_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 6823.773 ; gain = 0.000 ; free physical = 53011 ; free virtual = 100070
+delete_bd_objs [get_bd_nets non_stop_ETC_0_barrier]
+connect_bd_net [get_bd_ports barrier] [get_bd_pins non_stop_ETC_0/barrier]
+connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_i] [get_bd_pins non_stop_ETC_0/done_speed]
+WARNING: [BD 41-1306] The connection to interface pin /axi_gpio_0/gpio_io_i is being overridden by the user. This pin will not be connected as a part of interface connection GPIO
+save_bd_design
+Wrote  : </data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+regenerate_bd_layout
+validate_bd_design
+WARNING: [BD 41-927] Following properties on pin /non_stop_ETC_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_0_clk_out1 
+save_bd_design
+Wrote  : </data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+regenerate_bd_layout
+reset_target all [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects  [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/design_1.bd] -sync -no_script -force -quiet
+delete_ip_run [get_files -of_objects [get_fileset sources_1] /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/design_1.bd]
+save_bd_design
+Wrote  : </data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+set_property synth_checkpoint_mode None [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/design_1.bd]
+generate_target all [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/design_1.bd]
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [Common 17-365] Interrupt caught but 'generate_target' cannot be canceled. Please wait for command to finish.
+INFO: [IP_Flow 19-3499] Reset cancelled 'Synthesis' target for IP 'processing_system7_0'.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+INFO: [BD 41-1171] User-interrupt detected : Generation halted successfully for IPIntegrator design /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/design_1.bd
+INFO: [Common 17-681] Processing pending cancel.
+export_ip_user_files -of_objects [get_files /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/design_1.bd] -directory /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.ip_user_files/sim_scripts -ip_user_files_dir /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.ip_user_files -ipstatic_source_dir /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.ip_user_files/ipstatic -lib_map_path [list {modelsim=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.cache/compile_simlib/modelsim} {questa=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.cache/compile_simlib/questa} {ies=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.cache/compile_simlib/ies} {xcelium=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.cache/compile_simlib/xcelium} {vcs=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.cache/compile_simlib/vcs} {riviera=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+reset_target all [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects  [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/design_1.bd] -sync -no_script -force -quiet
+generate_target all [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/design_1.bd]
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : </data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+VHDL Output written to : /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+WARNING: [Board 49-26] cannot add Board Part em.avnet.com:ultrazed_7ev_cc_es2:part0:1.1 available at /new_tools/tools/Xilinx/Vivado/2018.1/data/boards/board_files/bdf-master/ultrazed_7ev_cc_es2/1.1/board.xml as part xczu7ev-fbvb900-1-i-es2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part em.avnet.com:ultrazed_eg_iocc:part0:1.0 available at /new_tools/tools/Xilinx/Vivado/2018.1/data/boards/board_files/bdf-master/ultrazed_3eg_iocc_es1/1.0/board.xml as part xczu3eg-sfva625-1-i-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part em.avnet.com:ultrazed_eg_pciecc:part0:1.0 available at /new_tools/tools/Xilinx/Vivado/2018.1/data/boards/board_files/bdf-master/ultrazed_3eg_pciecc_es1/1.0/board.xml as part xczu3eg-sfva625-1-i-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part em.avnet.com:ultrazed_eg_som:part0:1.0 available at /new_tools/tools/Xilinx/Vivado/2018.1/data/boards/board_files/bdf-master/ultrazed_3eg_som_es1/1.0/board.xml as part xczu3eg-sfva625-1-i-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part em.avnet.com:ultrazed_ev_som_es2:part0:1.1 available at /new_tools/tools/Xilinx/Vivado/2018.1/data/boards/board_files/bdf-master/ultrazed_7ev_som_es2/1.1/board.xml as part xczu7ev-fbvb900-1-i-es2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part em.avnet.com:ultrazed_7ev_cc_es2:part0:1.1 available at /new_tools/tools/Xilinx/Vivado/2018.1/data/boards/board_files/bdf-master/ultrazed_7ev_cc_es2/1.1/board.xml as part xczu7ev-fbvb900-1-i-es2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part em.avnet.com:ultrazed_eg_iocc:part0:1.0 available at /new_tools/tools/Xilinx/Vivado/2018.1/data/boards/board_files/bdf-master/ultrazed_3eg_iocc_es1/1.0/board.xml as part xczu3eg-sfva625-1-i-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part em.avnet.com:ultrazed_eg_pciecc:part0:1.0 available at /new_tools/tools/Xilinx/Vivado/2018.1/data/boards/board_files/bdf-master/ultrazed_3eg_pciecc_es1/1.0/board.xml as part xczu3eg-sfva625-1-i-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part em.avnet.com:ultrazed_eg_som:part0:1.0 available at /new_tools/tools/Xilinx/Vivado/2018.1/data/boards/board_files/bdf-master/ultrazed_3eg_som_es1/1.0/board.xml as part xczu3eg-sfva625-1-i-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part em.avnet.com:ultrazed_ev_som_es2:part0:1.1 available at /new_tools/tools/Xilinx/Vivado/2018.1/data/boards/board_files/bdf-master/ultrazed_7ev_som_es2/1.1/board.xml as part xczu7ev-fbvb900-1-i-es2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part em.avnet.com:ultrazed_7ev_cc_es2:part0:1.1 available at /new_tools/tools/Xilinx/Vivado/2018.1/data/boards/board_files/bdf-master/ultrazed_7ev_cc_es2/1.1/board.xml as part xczu7ev-fbvb900-1-i-es2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part em.avnet.com:ultrazed_eg_iocc:part0:1.0 available at /new_tools/tools/Xilinx/Vivado/2018.1/data/boards/board_files/bdf-master/ultrazed_3eg_iocc_es1/1.0/board.xml as part xczu3eg-sfva625-1-i-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part em.avnet.com:ultrazed_eg_pciecc:part0:1.0 available at /new_tools/tools/Xilinx/Vivado/2018.1/data/boards/board_files/bdf-master/ultrazed_3eg_pciecc_es1/1.0/board.xml as part xczu3eg-sfva625-1-i-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part em.avnet.com:ultrazed_eg_som:part0:1.0 available at /new_tools/tools/Xilinx/Vivado/2018.1/data/boards/board_files/bdf-master/ultrazed_3eg_som_es1/1.0/board.xml as part xczu3eg-sfva625-1-i-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part em.avnet.com:ultrazed_ev_som_es2:part0:1.1 available at /new_tools/tools/Xilinx/Vivado/2018.1/data/boards/board_files/bdf-master/ultrazed_7ev_som_es2/1.1/board.xml as part xczu7ev-fbvb900-1-i-es2 specified in board_part file is either invalid or not available
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block proc_sys_reset_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_uart16550_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block non_stop_ETC_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+generate_target: Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 6952.234 ; gain = 0.000 ; free physical = 54964 ; free virtual = 102091
+export_ip_user_files -of_objects [get_files /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/design_1.bd] -directory /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.ip_user_files/sim_scripts -ip_user_files_dir /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.ip_user_files -ipstatic_source_dir /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.ip_user_files/ipstatic -lib_map_path [list {modelsim=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.cache/compile_simlib/modelsim} {questa=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.cache/compile_simlib/questa} {ies=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.cache/compile_simlib/ies} {xcelium=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.cache/compile_simlib/xcelium} {vcs=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.cache/compile_simlib/vcs} {riviera=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+make_wrapper -files [get_files /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/design_1.bd] -top
+add_files -norecurse /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+update_compile_order -fileset sources_1
+file mkdir /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sim_1/new/top_tb.v w ]
+add_files -fileset sim_1 /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sim_1/new/top_tb.v
+update_compile_order -fileset sim_1
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+set_property target_simulator Questa [current_project]
+set_property target_simulator XSim [current_project]
+set_property top top_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+update_ip_catalog
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/hdl2/non_stop_ETC.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sim_1/new/top_tb.v:]
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+update_ip_catalog
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+update_compile_order -fileset sim_1
+validate_bd_design -force
+WARNING: [BD 41-927] Following properties on pin /non_stop_ETC_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_0_clk_out1 
+reset_target all [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects  [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/design_1.bd] -sync -no_script -force -quiet
+generate_target all [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/design_1.bd]
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : </data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/design_1.bd> 
+VHDL Output written to : /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+WARNING: [Board 49-26] cannot add Board Part em.avnet.com:ultrazed_7ev_cc_es2:part0:1.1 available at /new_tools/tools/Xilinx/Vivado/2018.1/data/boards/board_files/bdf-master/ultrazed_7ev_cc_es2/1.1/board.xml as part xczu7ev-fbvb900-1-i-es2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part em.avnet.com:ultrazed_eg_iocc:part0:1.0 available at /new_tools/tools/Xilinx/Vivado/2018.1/data/boards/board_files/bdf-master/ultrazed_3eg_iocc_es1/1.0/board.xml as part xczu3eg-sfva625-1-i-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part em.avnet.com:ultrazed_eg_pciecc:part0:1.0 available at /new_tools/tools/Xilinx/Vivado/2018.1/data/boards/board_files/bdf-master/ultrazed_3eg_pciecc_es1/1.0/board.xml as part xczu3eg-sfva625-1-i-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part em.avnet.com:ultrazed_eg_som:part0:1.0 available at /new_tools/tools/Xilinx/Vivado/2018.1/data/boards/board_files/bdf-master/ultrazed_3eg_som_es1/1.0/board.xml as part xczu3eg-sfva625-1-i-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part em.avnet.com:ultrazed_ev_som_es2:part0:1.1 available at /new_tools/tools/Xilinx/Vivado/2018.1/data/boards/board_files/bdf-master/ultrazed_7ev_som_es2/1.1/board.xml as part xczu7ev-fbvb900-1-i-es2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part em.avnet.com:ultrazed_7ev_cc_es2:part0:1.1 available at /new_tools/tools/Xilinx/Vivado/2018.1/data/boards/board_files/bdf-master/ultrazed_7ev_cc_es2/1.1/board.xml as part xczu7ev-fbvb900-1-i-es2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part em.avnet.com:ultrazed_eg_iocc:part0:1.0 available at /new_tools/tools/Xilinx/Vivado/2018.1/data/boards/board_files/bdf-master/ultrazed_3eg_iocc_es1/1.0/board.xml as part xczu3eg-sfva625-1-i-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part em.avnet.com:ultrazed_eg_pciecc:part0:1.0 available at /new_tools/tools/Xilinx/Vivado/2018.1/data/boards/board_files/bdf-master/ultrazed_3eg_pciecc_es1/1.0/board.xml as part xczu3eg-sfva625-1-i-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part em.avnet.com:ultrazed_eg_som:part0:1.0 available at /new_tools/tools/Xilinx/Vivado/2018.1/data/boards/board_files/bdf-master/ultrazed_3eg_som_es1/1.0/board.xml as part xczu3eg-sfva625-1-i-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part em.avnet.com:ultrazed_ev_som_es2:part0:1.1 available at /new_tools/tools/Xilinx/Vivado/2018.1/data/boards/board_files/bdf-master/ultrazed_7ev_som_es2/1.1/board.xml as part xczu7ev-fbvb900-1-i-es2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part em.avnet.com:ultrazed_7ev_cc_es2:part0:1.1 available at /new_tools/tools/Xilinx/Vivado/2018.1/data/boards/board_files/bdf-master/ultrazed_7ev_cc_es2/1.1/board.xml as part xczu7ev-fbvb900-1-i-es2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part em.avnet.com:ultrazed_eg_iocc:part0:1.0 available at /new_tools/tools/Xilinx/Vivado/2018.1/data/boards/board_files/bdf-master/ultrazed_3eg_iocc_es1/1.0/board.xml as part xczu3eg-sfva625-1-i-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part em.avnet.com:ultrazed_eg_pciecc:part0:1.0 available at /new_tools/tools/Xilinx/Vivado/2018.1/data/boards/board_files/bdf-master/ultrazed_3eg_pciecc_es1/1.0/board.xml as part xczu3eg-sfva625-1-i-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part em.avnet.com:ultrazed_eg_som:part0:1.0 available at /new_tools/tools/Xilinx/Vivado/2018.1/data/boards/board_files/bdf-master/ultrazed_3eg_som_es1/1.0/board.xml as part xczu3eg-sfva625-1-i-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part em.avnet.com:ultrazed_ev_som_es2:part0:1.1 available at /new_tools/tools/Xilinx/Vivado/2018.1/data/boards/board_files/bdf-master/ultrazed_7ev_som_es2/1.1/board.xml as part xczu7ev-fbvb900-1-i-es2 specified in board_part file is either invalid or not available
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block proc_sys_reset_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_uart16550_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block non_stop_ETC_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+generate_target: Time (s): cpu = 00:00:24 ; elapsed = 00:00:17 . Memory (MB): peak = 7387.695 ; gain = 0.000 ; free physical = 50573 ; free virtual = 100615
+export_ip_user_files -of_objects [get_files /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/design_1.bd] -directory /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.ip_user_files/sim_scripts -ip_user_files_dir /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.ip_user_files -ipstatic_source_dir /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.ip_user_files/ipstatic -lib_map_path [list {modelsim=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.cache/compile_simlib/modelsim} {questa=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.cache/compile_simlib/questa} {ies=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.cache/compile_simlib/ies} {xcelium=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.cache/compile_simlib/xcelium} {vcs=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.cache/compile_simlib/vcs} {riviera=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+make_wrapper -files [get_files /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/design_1.bd] -top
+delete_bd_objs [get_bd_intf_nets processing_system7_0_M_AXI_GP0] [get_bd_intf_nets ps7_0_axi_periph_M01_AXI] [get_bd_nets proc_sys_reset_0_interconnect_aresetn] [get_bd_intf_nets ps7_0_axi_periph_M00_AXI] [get_bd_cells ps7_0_axi_periph]
+delete_bd_objs [get_bd_nets clk_wiz_0_locked] [get_bd_cells proc_sys_reset_0]
+delete_bd_objs [get_bd_nets reset_rtl_0_1] [get_bd_nets sys_clock_1] [get_bd_nets clk_wiz_0_clk_out2] [get_bd_cells clk_wiz_0]
+delete_bd_objs [get_bd_ports sys_clock]
+delete_bd_objs [get_bd_ports reset_n]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_0/S_AXI} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins axi_gpio_0/S_AXI]
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_uart16550_0/S_AXI} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins axi_uart16550_0/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (100 MHz)" }  [get_bd_pins non_stop_ETC_0/clk]
+endgroup
+regenerate_bd_layout
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+startgroup
+set_property -dict [list CONFIG.PCW_FPGA1_PERIPHERAL_FREQMHZ {10.000000} CONFIG.PCW_EN_CLK1_PORT {1}] [get_bd_cells processing_system7_0]
+endgroup
+delete_bd_objs [get_bd_nets clk_wiz_0_clk_out1]
+connect_bd_net [get_bd_pins processing_system7_0/FCLK_CLK1] [get_bd_pins non_stop_ETC_0/clk]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (100 MHz)" }  [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (100 MHz)" }  [get_bd_pins axi_gpio_0/s_axi_aclk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (100 MHz)" }  [get_bd_pins axi_uart16550_0/s_axi_aclk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (100 MHz)" }  [get_bd_pins ps7_0_axi_periph/ACLK]
+INFO: [BD 5-455] Automation on '/ps7_0_axi_periph/S00_ACLK' will not be run, since it is obsolete due to previously run automations
+INFO: [BD 5-455] Automation on '/ps7_0_axi_periph/M00_ACLK' will not be run, since it is obsolete due to previously run automations
+INFO: [BD 5-455] Automation on '/ps7_0_axi_periph/M01_ACLK' will not be run, since it is obsolete due to previously run automations
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (100 MHz)" }  [get_bd_pins rst_ps7_0_100M/slowest_sync_clk]
+endgroup
+save_bd_design
+Wrote  : </data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_target all [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects  [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/design_1.bd] -sync -no_script -force -quiet
+generate_target all [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/design_1.bd]
+WARNING: [BD 41-927] Following properties on pin /non_stop_ETC_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_0_FCLK_CLK1 
+Wrote  : </data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/design_1.bd> 
+VHDL Output written to : /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_uart16550_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block non_stop_ETC_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+generate_target: Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 7556.699 ; gain = 0.000 ; free physical = 48285 ; free virtual = 99504
+export_ip_user_files -of_objects [get_files /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/design_1.bd] -directory /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.ip_user_files/sim_scripts -ip_user_files_dir /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.ip_user_files -ipstatic_source_dir /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.ip_user_files/ipstatic -lib_map_path [list {modelsim=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.cache/compile_simlib/modelsim} {questa=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.cache/compile_simlib/questa} {ies=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.cache/compile_simlib/ies} {xcelium=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.cache/compile_simlib/xcelium} {vcs=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.cache/compile_simlib/vcs} {riviera=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+make_wrapper -files [get_files /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/design_1.bd] -top
+set_property top design_1_wrapper [current_fileset]
+update_compile_order -fileset sources_1
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+reset_target all [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects  [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/design_1.bd] -sync -no_script -force -quiet
+generate_target all [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/design_1.bd]
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_uart16550_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block non_stop_ETC_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+generate_target: Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 7658.473 ; gain = 0.000 ; free physical = 45712 ; free virtual = 98170
+export_ip_user_files -of_objects [get_files /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/design_1.bd] -directory /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.ip_user_files/sim_scripts -ip_user_files_dir /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.ip_user_files -ipstatic_source_dir /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.ip_user_files/ipstatic -lib_map_path [list {modelsim=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.cache/compile_simlib/modelsim} {questa=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.cache/compile_simlib/questa} {ies=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.cache/compile_simlib/ies} {xcelium=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.cache/compile_simlib/xcelium} {vcs=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.cache/compile_simlib/vcs} {riviera=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+reset_target all [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects  [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/design_1.bd] -sync -no_script -force -quiet
+generate_target all [get_files  /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/design_1.bd]
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_uart16550_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block non_stop_ETC_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+generate_target: Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 7708.512 ; gain = 0.000 ; free physical = 44916 ; free virtual = 97596
+export_ip_user_files -of_objects [get_files /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/design_1.bd] -directory /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.ip_user_files/sim_scripts -ip_user_files_dir /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.ip_user_files -ipstatic_source_dir /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.ip_user_files/ipstatic -lib_map_path [list {modelsim=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.cache/compile_simlib/modelsim} {questa=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.cache/compile_simlib/questa} {ies=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.cache/compile_simlib/ies} {xcelium=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.cache/compile_simlib/xcelium} {vcs=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.cache/compile_simlib/vcs} {riviera=/data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+make_wrapper -files [get_files /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.srcs/sources_1/bd/design_1/design_1.bd] -top
+file mkdir /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.sdk
+write_hwdef -force  -file /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.sdk/design_1_wrapper.hdf
+launch_sdk -workspace /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.sdk -hwspec /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.sdk -hwspec /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Jun 20 18:18:39 2022...

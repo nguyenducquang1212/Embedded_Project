@@ -1,0 +1,15 @@
+#include "define.h"
+
+
+/************************** Variable Definitions *****************************/
+//XGpio gpioIns;
+int TOTAL_FAIL = 0;
+
+/*************************** Function Definitions *****************************/
+// Set the baud rate and number of stop bits
+void setupUart() {
+	XUartNs550_SetBaud(UART_BASEADDR, UART_CLOCK_HZ, UART_BAUDRATE);
+	XUartNs550_SetLineControlReg(UART_BASEADDR, XUN_LCR_8_DATA_BITS);
+}
+
+

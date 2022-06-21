@@ -1,0 +1,11 @@
+#include "etc.h"
+
+etc reg_etc;
+
+void initEtcFieldOffset() {
+	reg_etc.speed.offset = 0;
+	reg_etc.done.offset =
+};
+void initEtcFieldMask(){
+
+};

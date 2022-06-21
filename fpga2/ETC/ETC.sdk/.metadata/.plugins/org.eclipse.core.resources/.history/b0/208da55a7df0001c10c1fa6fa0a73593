@@ -1,0 +1,11 @@
+#include "etc.h"
+
+etc reg_etc;
+
+void initEtcFieldOffset() {
+	reg_etc.data.offset = 0;
+
+};
+void initEtcFieldMask(){
+
+};

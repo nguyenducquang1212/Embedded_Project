@@ -1,0 +1,30 @@
+#ifndef SRC_DEFINES_H_
+#define SRC_DEFINES_H_
+
+/***************************** Include Files *********************************/
+#include "xparameters.h"
+#include "xparameters.h"
+#include "xgpio.h"
+#include "xgpio_l.h"
+
+
+/************************** Constant Definitions *****************************/
+
+// UART
+#ifdef XPAR_UARTNS550_0_BASEADDR
+  #define UART_BASEADDR              XPAR_UARTNS550_0_BASEADDR
+  #define UART_DEVICE_ID             XPAR_UARTNS550_0_DEVICE_ID
+  #define UART_CLOCK_HZ              XPAR_XUARTNS550_CLOCK_HZ
+  #ifdef SIMULATION_MODE
+    #define UART_BAUDRATE            (UART_CLOCK_HZ /16)
+  #else
+    #define UART_BAUDRATE            9600
+  #endif
+#endif
+#ifdef XPAR_UARTLITE_0_BASEADDR
+  #define UART_BASEADDR              XPAR_UARTLITE_0_BASEADDR
+  #define UART_DEVICE_ID             XPAR_UARTLITE_0_DEVICE_ID
+  #define UART_BAUDRATE              XPAR_UARTLITE_0_BAUDRATE
+#endif
+
+#endif /* SRC_DEFINES_H_ */

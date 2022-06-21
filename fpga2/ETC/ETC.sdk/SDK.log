@@ -1,0 +1,40 @@
+15:23:47 INFO  : Registering command handlers for SDK TCF services
+15:23:50 INFO  : Launching XSCT server: xsct -n -interactive /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.sdk/temp_xsdb_launch_script.tcl
+15:23:52 INFO  : XSCT server has started successfully.
+15:23:52 INFO  : Successfully done setting XSCT server connection channel  
+15:23:56 INFO  : Successfully done setting SDK workspace  
+15:23:56 INFO  : Processing command line option -hwspec /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.sdk/design_1_wrapper.hdf.
+08:54:37 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1655776472000,  Project:1655713408000
+08:54:37 INFO  : Project design_1_wrapper_hw_platform_0's source hardware specification located at /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.sdk/design_1_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+08:54:41 INFO  : Copied contents of /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.sdk/design_1_wrapper.hdf into /design_1_wrapper_hw_platform_0/system.hdf.
+08:54:44 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+08:54:47 INFO  : 
+08:54:48 INFO  : Updating hardware inferred compiler options for ETC.
+08:54:48 INFO  : Clearing existing target manager status.
+08:54:48 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+08:54:48 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+09:30:52 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1655778648000,  Project:1655776472000
+09:30:52 INFO  : Project design_1_wrapper_hw_platform_0's source hardware specification located at /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.sdk/design_1_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+09:30:55 INFO  : Copied contents of /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.sdk/design_1_wrapper.hdf into /design_1_wrapper_hw_platform_0/system.hdf.
+09:30:59 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+09:31:09 INFO  : 
+09:31:10 INFO  : Updating hardware inferred compiler options for ETC.
+09:31:15 INFO  : Clearing existing target manager status.
+09:31:15 INFO  : Closing and re-opening the MSS file of ther project ETC_bsp
+09:31:15 INFO  : Closing and re-opening the MSS file of ther project ETC_bsp
+09:31:16 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+09:31:29 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+10:26:53 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1655782010000,  Project:1655778648000
+10:26:53 INFO  : Project design_1_wrapper_hw_platform_0's source hardware specification located at /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.sdk/design_1_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+10:26:55 INFO  : Copied contents of /data5/workspace/quangnd1/sip_training/quangnd1/Embedded_Project/fpga2/ETC/ETC.sdk/design_1_wrapper.hdf into /design_1_wrapper_hw_platform_0/system.hdf.
+10:26:58 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+10:27:01 INFO  : 
+10:27:02 INFO  : Updating hardware inferred compiler options for ETC.
+10:27:02 INFO  : Clearing existing target manager status.
+10:27:02 INFO  : Closing and re-opening the MSS file of ther project ETC_bsp
+10:27:02 INFO  : Closing and re-opening the MSS file of ther project ETC_bsp
+10:27:02 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+10:27:02 WARN  : Linker script will not be updated automatically. Users need to update it manually.
