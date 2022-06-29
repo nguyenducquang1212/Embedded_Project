@@ -19,16 +19,18 @@
 static const char *TAG = "embedded_project";
 
 #define GPIO_SERVO 13
+#define GPIO_INPUT 12
 #define UART_TX GPIO_NUM_17
 #define UART_RX GPIO_NUM_16
 
+#define GPIO_INPUT_PIN_SEL (1ULL << GPIO_INPUT)
 #define ESP_WIFI_SSID "Embedded"
 #define ESP_WIFI_PASS "12345678"
 
 const uint8_t index_html_start[] asm(" _binary_index_html_start");
 const uint8_t index_html_end[] asm(" _binary_index_html_end");
-volatile uint8_t speed_t;
-char speed_s[5];
+volatile uint16_t speed_t;
+char speed_s[6];
 
 void uart_config(void)
 {
@@ -50,11 +52,11 @@ void uart_config(void)
 void pwm_config(void)
 {
     ledc_timer_config_t ledc_timer = {
-        .duty_resolution = LEDC_TIMER_8_BIT, // resolution of PWM duty
-        .freq_hz = 50,                       // frequency of PWM signal
-        .speed_mode = LEDC_LOW_SPEED_MODE,   // timer mode
-        .timer_num = LEDC_TIMER_1,           // timer index
-        .clk_cfg = LEDC_AUTO_CLK,            // Auto select the source clock
+        .duty_resolution = LEDC_TIMER_10_BIT, // resolution of PWM duty
+        .freq_hz = 50,                        // frequency of PWM signal
+        .speed_mode = LEDC_LOW_SPEED_MODE,    // timer mode
+        .timer_num = LEDC_TIMER_1,            // timer index
+        .clk_cfg = LEDC_AUTO_CLK,             // Auto select the source clock
     };
     ledc_timer_config(&ledc_timer);
 
@@ -69,6 +71,17 @@ void pwm_config(void)
     ledc_channel_config(&ledc_channel);
 }
 
+void _gpio_config(void)
+{
+    gpio_config_t io_conf;
+    io_conf.intr_type = GPIO_PIN_INTR_ANYEDGE;
+    io_conf.mode = GPIO_MODE_INPUT;
+    io_conf.pin_bit_mask = GPIO_INPUT_PIN_SEL;
+    io_conf.pull_down_en = GPIO_PULLDOWN_DISABLE;
+    io_conf.pull_up_en = GPIO_PULLUP_ENABLE;
+    gpio_config(&io_conf);
+}
+
 static esp_err_t main_handler(httpd_req_t *req)
 {
     httpd_resp_set_type(req, "text/html");
@@ -78,7 +91,7 @@ static esp_err_t main_handler(httpd_req_t *req)
 
 static esp_err_t get_speed_handler(httpd_req_t *req)
 {
-    
+
     httpd_resp_send(req, speed_s, sizeof(speed_s));
     return ESP_OK;
 }
@@ -87,16 +100,14 @@ static const httpd_uri_t get_speed = {
     .uri = "/get_speed",
     .method = HTTP_GET,
     .handler = get_speed_handler,
-    .user_ctx = NULL
-};
+    .user_ctx = NULL};
 
-static const httpd_uri_t mainn = 
-{
-    .uri = "/",
-    .method = HTTP_GET,
-    .handler = main_handler,
-    .user_ctx = NULL
-};
+static const httpd_uri_t mainn =
+    {
+        .uri = "/",
+        .method = HTTP_GET,
+        .handler = main_handler,
+        .user_ctx = NULL};
 void start_web_server(void)
 {
     httpd_config_t config = HTTPD_DEFAULT_CONFIG();
@@ -163,16 +174,50 @@ void wifi_init_softap(void)
 static void uart_task(void *pvParameters)
 {
     uint8_t rx_buffer[128];
-  
+
     for (;;)
-    {   
-        speed_t++;
-        sprintf(speed_s, "%d", speed_t);
+    {
+        // speed_t++;
+        // sprintf(speed_s, "%d", speed_t);
+
         int rx_length = uart_read_bytes(UART_NUM_1, rx_buffer, sizeof(rx_buffer), 20 / portTICK_RATE_MS);
         if (rx_length > 0)
         {
-            printf(" %s\n", rx_buffer);
+            printf("%d bytes received\n", rx_length);
+            printf("%x\n", rx_buffer[1]);
+            printf("%x\n", rx_buffer[0]);
+            speed_t = rx_buffer[1];
+            speed_t <<= 4;
+            speed_t |= (rx_buffer[0] >> 4);
+            printf("speed %x\n", speed_t);
+            printf("speed %d\n", speed_t);
+            memset(speed_s, 0, 6);
+            sprintf(speed_s, "%d", speed_t);
         }
+        // for (size_t i = 0; i < rx_length; i++)
+        // {
+        //     printf("%x", rx_buffer[i]);
+        // }
+
+        vTaskDelay(10 / portTICK_RATE_MS);
+    }
+}
+
+static void gpio_task(void *pvParameters)
+{
+    for (;;)
+    {
+        if (gpio_get_level(GPIO_INPUT) == 0)
+        {
+            ledc_set_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0, 51);
+            printf("0\n");
+        }
+        else
+        {
+            ledc_set_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0, 102);
+            printf("1\n");
+        }
+        ledc_update_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0);
         vTaskDelay(100 / portTICK_RATE_MS);
     }
 }
@@ -182,6 +227,8 @@ void app_main(void)
 
     uart_config();
     pwm_config();
+    _gpio_config();
+
     esp_err_t ret = nvs_flash_init();
     if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND)
     {
@@ -194,4 +241,5 @@ void app_main(void)
     wifi_init_softap();
     start_web_server();
     xTaskCreate(uart_task, "uart_task", 2048, NULL, 5, NULL);
+    xTaskCreate(gpio_task, "gpio_task", 1024, NULL, 5, NULL);
 }
