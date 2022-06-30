@@ -1,8 +1,0 @@
-#ifndef SRC_DEFINES_H_
-#define SRC_DEFINES_H_
-
-/***************************** Include Files *********************************/
-#include "xparameters.h"
-
-
-#endif /* SRC_DEFINES_H_ */

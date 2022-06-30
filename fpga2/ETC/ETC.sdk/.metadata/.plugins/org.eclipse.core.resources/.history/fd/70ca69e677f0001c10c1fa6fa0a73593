@@ -1,8 +1,0 @@
-#include "define.h"
-
-
-/************************** Variable Definitions *****************************/
-//XGpio gpioIns;
-int TOTAL_FAIL = 0;
-
-
