@@ -1,3 +1,0 @@
-NumberHits:1
-Timestamp: Sun Jun 12 17:02:37 UTC 2022
-VLNV: xilinx.com:ip:clk_wiz:6.0
