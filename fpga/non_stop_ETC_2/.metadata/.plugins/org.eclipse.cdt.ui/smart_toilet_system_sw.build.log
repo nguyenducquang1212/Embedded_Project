@@ -1,0 +1,28 @@
+21:48:08 **** Build of configuration Debug for project smart_toilet_system_sw ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sequence/oled.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sequence/oled.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../smart_toilet_system_sw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sequence/oled.d" -MT"src/sequence/oled.o" -o "src/sequence/oled.o" "../src/sequence/oled.c"
+Finished building: ../src/sequence/oled.c
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../smart_toilet_system_sw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/platform.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../smart_toilet_system_sw_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: smart_toilet_system_sw.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../smart_toilet_system_sw_bsp/ps7_cortexa9_0/lib -o "smart_toilet_system_sw.elf"  ./src/sequence/oled.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+/tools/Xilinx/SDK/2018.3/gnu/aarch32/lin/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/bin/ld: cannot find -lxil
+collect2: error: ld returned 1 exit status
+make: *** [makefile:42: smart_toilet_system_sw.elf] Error 1
+
+21:48:10 Build Finished (took 1s.622ms)
+

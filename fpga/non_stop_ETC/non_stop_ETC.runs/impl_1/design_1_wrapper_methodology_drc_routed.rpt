@@ -1,0 +1,181 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Sat Jun 25 15:08:02 2022
+| Host         : quangnd12 running 64-bit Ubuntu 20.04.4 LTS
+| Command      : report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
+| Design       : design_1_wrapper
+| Device       : xc7z020clg484-1
+| Speed File   : -1
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 29
++-----------+----------+-----------------------------+------------+
+| Rule      | Severity | Description                 | Violations |
++-----------+----------+-----------------------------+------------+
+| TIMING-17 | Warning  | Non-clocked sequential cell | 15         |
+| TIMING-20 | Warning  | Non-clocked latch           | 14         |
++-----------+----------+-----------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-17#1 Warning
+Non-clocked sequential cell  
+The clock pin design_1_i/top_0/inst/uart_transmitter/TX_shift_reg_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#2 Warning
+Non-clocked sequential cell  
+The clock pin design_1_i/top_0/inst/uart_transmitter/TX_shift_reg_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#3 Warning
+Non-clocked sequential cell  
+The clock pin design_1_i/top_0/inst/uart_transmitter/TX_shift_reg_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#4 Warning
+Non-clocked sequential cell  
+The clock pin design_1_i/top_0/inst/uart_transmitter/TX_shift_reg_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#5 Warning
+Non-clocked sequential cell  
+The clock pin design_1_i/top_0/inst/uart_transmitter/TX_shift_reg_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#6 Warning
+Non-clocked sequential cell  
+The clock pin design_1_i/top_0/inst/uart_transmitter/TX_shift_reg_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#7 Warning
+Non-clocked sequential cell  
+The clock pin design_1_i/top_0/inst/uart_transmitter/TX_shift_reg_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#8 Warning
+Non-clocked sequential cell  
+The clock pin design_1_i/top_0/inst/uart_transmitter/TX_shift_reg_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#9 Warning
+Non-clocked sequential cell  
+The clock pin design_1_i/top_0/inst/uart_transmitter/TX_shift_reg_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#10 Warning
+Non-clocked sequential cell  
+The clock pin design_1_i/top_0/inst/uart_transmitter/bit_count_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#11 Warning
+Non-clocked sequential cell  
+The clock pin design_1_i/top_0/inst/uart_transmitter/bit_count_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#12 Warning
+Non-clocked sequential cell  
+The clock pin design_1_i/top_0/inst/uart_transmitter/bit_count_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#13 Warning
+Non-clocked sequential cell  
+The clock pin design_1_i/top_0/inst/uart_transmitter/bit_count_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#14 Warning
+Non-clocked sequential cell  
+The clock pin design_1_i/top_0/inst/uart_transmitter/state_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#15 Warning
+Non-clocked sequential cell  
+The clock pin design_1_i/top_0/inst/uart_transmitter/state_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#1 Warning
+Non-clocked latch  
+The latch design_1_i/top_0/inst/push_data_DUT/data_reg[0] cannot be properly analyzed as its control pin design_1_i/top_0/inst/push_data_DUT/data_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#2 Warning
+Non-clocked latch  
+The latch design_1_i/top_0/inst/push_data_DUT/data_reg[1] cannot be properly analyzed as its control pin design_1_i/top_0/inst/push_data_DUT/data_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#3 Warning
+Non-clocked latch  
+The latch design_1_i/top_0/inst/push_data_DUT/data_reg[2] cannot be properly analyzed as its control pin design_1_i/top_0/inst/push_data_DUT/data_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#4 Warning
+Non-clocked latch  
+The latch design_1_i/top_0/inst/push_data_DUT/data_reg[3] cannot be properly analyzed as its control pin design_1_i/top_0/inst/push_data_DUT/data_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#5 Warning
+Non-clocked latch  
+The latch design_1_i/top_0/inst/push_data_DUT/data_reg[4] cannot be properly analyzed as its control pin design_1_i/top_0/inst/push_data_DUT/data_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#6 Warning
+Non-clocked latch  
+The latch design_1_i/top_0/inst/push_data_DUT/data_reg[5] cannot be properly analyzed as its control pin design_1_i/top_0/inst/push_data_DUT/data_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#7 Warning
+Non-clocked latch  
+The latch design_1_i/top_0/inst/push_data_DUT/data_reg[6] cannot be properly analyzed as its control pin design_1_i/top_0/inst/push_data_DUT/data_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#8 Warning
+Non-clocked latch  
+The latch design_1_i/top_0/inst/push_data_DUT/data_reg[7] cannot be properly analyzed as its control pin design_1_i/top_0/inst/push_data_DUT/data_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#9 Warning
+Non-clocked latch  
+The latch design_1_i/top_0/inst/uart_fifo_transmitter/read_fifo_transmitter_reg cannot be properly analyzed as its control pin design_1_i/top_0/inst/uart_fifo_transmitter/read_fifo_transmitter_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#10 Warning
+Non-clocked latch  
+The latch design_1_i/top_0/inst/uart_fifo_transmitter/rx_next_state_reg[0] cannot be properly analyzed as its control pin design_1_i/top_0/inst/uart_fifo_transmitter/rx_next_state_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#11 Warning
+Non-clocked latch  
+The latch design_1_i/top_0/inst/uart_fifo_transmitter/rx_next_state_reg[1] cannot be properly analyzed as its control pin design_1_i/top_0/inst/uart_fifo_transmitter/rx_next_state_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#12 Warning
+Non-clocked latch  
+The latch design_1_i/top_0/inst/uart_fifo_transmitter/tx_next_state_reg[0] cannot be properly analyzed as its control pin design_1_i/top_0/inst/uart_fifo_transmitter/tx_next_state_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#13 Warning
+Non-clocked latch  
+The latch design_1_i/top_0/inst/uart_fifo_transmitter/tx_next_state_reg[1] cannot be properly analyzed as its control pin design_1_i/top_0/inst/uart_fifo_transmitter/tx_next_state_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#14 Warning
+Non-clocked latch  
+The latch design_1_i/top_0/inst/uart_fifo_transmitter/write_fifo_receiver_reg cannot be properly analyzed as its control pin design_1_i/top_0/inst/uart_fifo_transmitter/write_fifo_receiver_reg/G is not reached by a timing clock
+Related violations: <none>
+
+

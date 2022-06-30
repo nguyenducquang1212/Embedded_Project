@@ -1,0 +1,51 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Tue Jun 28 23:05:20 2022
+| Host         : quangnd12 running 64-bit Ubuntu 20.04.4 LTS
+| Command      : report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
+| Design       : design_1_wrapper
+| Device       : xc7z020clg484-1
+| Speed File   : -1
+| Design State : Fully Routed
+------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 3
++----------+----------+-------------------+------------+
+| Rule     | Severity | Description       | Violations |
++----------+----------+-------------------+------------+
+| PDRC-153 | Warning  | Gated clock check | 3          |
++----------+----------+-------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+PDRC-153#1 Warning
+Gated clock check  
+Net design_1_i/top_0/inst/push_data_DUT/data_reg[7]_i_2_n_0 is a gated clock net sourced by a combinational pin design_1_i/top_0/inst/push_data_DUT/data_reg[7]_i_2/O, cell design_1_i/top_0/inst/push_data_DUT/data_reg[7]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#2 Warning
+Gated clock check  
+Net design_1_i/top_0/inst/uart_fifo_transmitter/read_fifo_transmitter_reg_i_2_n_0 is a gated clock net sourced by a combinational pin design_1_i/top_0/inst/uart_fifo_transmitter/read_fifo_transmitter_reg_i_2/O, cell design_1_i/top_0/inst/uart_fifo_transmitter/read_fifo_transmitter_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#3 Warning
+Gated clock check  
+Net design_1_i/top_0/inst/uart_fifo_transmitter/write_fifo_receiver_reg_i_2_n_0 is a gated clock net sourced by a combinational pin design_1_i/top_0/inst/uart_fifo_transmitter/write_fifo_receiver_reg_i_2/O, cell design_1_i/top_0/inst/uart_fifo_transmitter/write_fifo_receiver_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+

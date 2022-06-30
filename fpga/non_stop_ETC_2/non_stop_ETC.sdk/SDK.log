@@ -1,0 +1,6 @@
+23:08:59 INFO  : Registering command handlers for SDK TCF services
+23:09:04 INFO  : Launching XSCT server: xsct -n -interactive /home/quangnd12/EmbeddedSystem/Embedded_Project/fpga/non_stop_ETC_2/non_stop_ETC.sdk/temp_xsdb_launch_script.tcl
+23:09:11 INFO  : XSCT server has started successfully.
+23:09:23 INFO  : Successfully done setting XSCT server connection channel  
+23:09:23 INFO  : Successfully done setting SDK workspace  
+23:09:23 INFO  : Processing command line option -hwspec /home/quangnd12/EmbeddedSystem/Embedded_Project/fpga/non_stop_ETC_2/non_stop_ETC.sdk/design_1_wrapper.hdf.
