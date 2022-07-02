@@ -4,42 +4,6 @@ int etc::car1 = 0;
 int etc::car2 = 0;
 int etc::car3 = 0;
 
-void etc::incCar1() {
-    // while (true)
-    // {
-    //     wait(read_sensor1_pos);
-    //     // wait(sensor1->posedge_event());
-    //     {
-    //         car1++;
-    //         cout << "car1: " << car1 << endl;
-    //     }
-    // }
-}
-
-void etc::incCar2() {
-    // while (true)
-    // {
-    //     wait(read_sensor2_pos);
-    //     // wait(sensor2->posedge_event());
-    //     {
-    //         car2++;
-    //         cout << "car2: " << car2 << endl;
-    //     }
-    // }
-}
-
-void etc::incCar3() {
-    // while (true)
-    // {
-    //     wait(read_sensor1_pos);
-    //     // wait(sensor3->posedge_event());
-    //     {
-    //         car3++;
-    //         cout << "car3: " << car3 << endl;
-    //     }
-    // }
-}
-
 void etc::check_sensor1_pos() {
     while (true)
     {
@@ -248,6 +212,42 @@ void etc::cthread() {
         }
 }
 
+
+// void etc::incCar1() {
+//     while (true)
+//     {
+//         wait(read_sensor1_pos);
+//         // wait(sensor1->posedge_event());
+//         {
+//             car1++;
+//             cout << "car1: " << car1 << endl;
+//         }
+//     }
+// }
+
+// void etc::incCar2() {
+//     while (true)
+//     {
+//         wait(read_sensor2_pos);
+//         // wait(sensor2->posedge_event());
+//         {
+//             car2++;
+//             cout << "car2: " << car2 << endl;
+//         }
+//     }
+// }
+
+// void etc::incCar3() {
+//     while (true)
+//     {
+//         wait(read_sensor1_pos);
+//         // wait(sensor3->posedge_event());
+//         {
+//             car3++;
+//             cout << "car3: " << car3 << endl;
+//         }
+//     }
+// }
 
 // void etc::cthread() {
 //         sc_time start(1, SC_MS);

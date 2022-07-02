@@ -42,9 +42,9 @@ SC_MODULE(etc) {
         SC_THREAD(check_Epass);
         SC_THREAD(check_Enable);
         SC_THREAD(down);
-        SC_THREAD(incCar1);
-        SC_THREAD(incCar2);
-        SC_THREAD(incCar3);
+        // SC_THREAD(incCar1);
+        // SC_THREAD(incCar2);
+        // SC_THREAD(incCar3);
     }
 
     void check_sensor1();
@@ -58,9 +58,9 @@ SC_MODULE(etc) {
     void check_Enable();
     void cthread();
     void down();
-    void incCar1();
-    void incCar2();
-    void incCar3();
+    // void incCar1();
+    // void incCar2();
+    // void incCar3();
 
 };
 
