@@ -14,6 +14,7 @@ SC_MODULE(testbench) {
 
     void simulation() {
         // valid Epass
+        cout << "Case 1: Valid Epass" << endl;
         sensor1->write(0);
         sensor2->write(0);
         sensor3->write(0);
@@ -31,8 +32,55 @@ SC_MODULE(testbench) {
         wait(2, SC_SEC);
         sensor2->write(0);
         sensor3->write(1);
+        
+        cout << "Case 2: Valid Epass" << endl;
+        sensor1->write(1);
         wait(3, SC_SEC);
         sensor3->write(0);
+
+       // valid Epass
+        sensor2->write(0);
+        sensor3->write(0);
+        validEpass->write(0);
+        enable->write(0);
+
+        wait(2, SC_SEC);
+        sensor2->write(1);
+        validEpass->write(2);
+        wait(1, SC_SEC);
+        sensor1->write(0);
+        wait(2, SC_SEC);
+        sensor2->write(0);
+        sensor3->write(1);
+        wait(3, SC_SEC);
+        sensor3->write(0);
+
+        wait(4, SC_SEC);
+        cout << "\n\nCase 3: Illegal Epass" << endl;
+        sensor1->write(0);
+        sensor2->write(0);
+        sensor3->write(0);
+        validEpass->write(0);
+        enable->write(0);
+
+        wait(2, SC_SEC);
+
+        sensor1->write(1);
+        wait(2, SC_SEC);
+        sensor2->write(1);
+        validEpass->write(1);
+        wait(1, SC_SEC);
+        sensor1->write(0);
+        wait(1, SC_SEC);
+        enable->write(1);
+        wait(1, SC_SEC);
+        sensor2->write(0);
+        sensor3->write(1);
+        wait(3, SC_SEC);
+        enable->write(0);
+        sensor3->write(0);
+
+        cout << "END!";
     }
 
 };
@@ -41,8 +89,6 @@ int sc_main(int, char*[])
 {
     testbench test("test");
     etc DUT("DUT");
-    //10s period, 5s true, 5s false, start at 10s, start at false.
-    sc_clock clk("clk", 100, SC_NS, 0.5, 100, SC_NS, false);
 
     // sc_signal<bool>  clk;
     sc_signal<bool>  sensor1;
@@ -69,6 +115,7 @@ int sc_main(int, char*[])
     test.enable(enable);
 
 
-
+    sc_start(60, SC_SEC);
+    // sc_start();
     return 0;
 }

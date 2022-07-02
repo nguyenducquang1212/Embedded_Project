@@ -15,7 +15,6 @@ FILE = etc.cpp
 
 # Targets needed to bring the executable up to date
 all: etc.o main.o
-	reset
 	$(CC) $(SCCFLAGS) -o $(TARGET) etc.o main.o
 
 main.o:
@@ -25,9 +24,9 @@ etc.o:
 	$(CC) $(CFLAGS) -o etc.o -c $(FILE)
 
 run:
-	reset
 	chmod +x main
 	./main
 
 clean:
 	rm -rf main *.o
+	reset
